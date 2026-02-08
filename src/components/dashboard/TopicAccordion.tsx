@@ -76,22 +76,22 @@ export function TopicAccordion() {
                             <AccordionContent className="pt-2">
                                 <div className="space-y-6">
                                     {/* Topic Concept Link */}
-                                    <div className="bg-muted/30 border border-border rounded-lg p-4 flex items-center justify-between group hover:border-primary/50 transition-colors cursor-pointer" onClick={() => window.location.href = `/topic/${topic.id}`}>
-                                        <div className="flex items-center gap-3">
-                                            <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                                                <BookOpen className="w-5 h-5" />
+                                    <Link to={`/topic/${topic.id}`} className="block">
+                                        <div className="bg-muted/30 border border-border rounded-lg p-4 flex items-center justify-between group transition-colors">
+                                            <div className="flex items-center gap-3">
+                                                <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                                    <BookOpen className="w-5 h-5" />
+                                                </div>
+                                                <div>
+                                                    <h4 className="font-semibold text-foreground">Start here: The Concept</h4>
+                                                    <p className="text-sm text-muted-foreground">Master the {topic.title} pattern perfectly before solving.</p>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">Start here: The Concept</h4>
-                                                <p className="text-sm text-muted-foreground">Master the {topic.title} pattern perfectly before solving.</p>
-                                            </div>
-                                        </div>
-                                        <Link to={`/topic/${topic.id}`}>
-                                            <Button variant="outline" className="gap-2 group-hover:bg-primary group-hover:text-primary-foreground border-primary/20">
+                                            <Button variant="outline" className="gap-2 border-primary/20">
                                                 Read Guide <ExternalLink className="w-3 h-3" />
                                             </Button>
-                                        </Link>
-                                    </div>
+                                        </div>
+                                    </Link>
 
                                     {topic.id !== 'basics' && topic.subPatterns.map((sub) => (
                                         <div key={sub.id} className="space-y-3">
@@ -105,15 +105,49 @@ export function TopicAccordion() {
                                             <Table>
                                                 <TableHeader>
                                                     <TableRow>
-                                                        <TableHead className="w-[50px] text-center">Status</TableHead>
+                                                        <TableHead className="w-[50px]">Status</TableHead>
                                                         <TableHead>Problem</TableHead>
                                                         <TableHead className="w-[100px]">Rating</TableHead>
-                                                        <TableHead className="w-[100px] text-right">Actions</TableHead>
+                                                        <TableHead className="text-right">Action</TableHead>
                                                     </TableRow>
                                                 </TableHeader>
                                                 <TableBody>
                                                     {sub.problems.map((prob) => (
-                                                        <ProblemRow key={prob.id} problem={prob} />
+                                                        <TableRow key={prob.id}>
+                                                            <TableCell>
+                                                                <Checkbox checked={prob.isSolved} />
+                                                            </TableCell>
+                                                            <TableCell>
+                                                                <div className="flex items-center gap-2">
+                                                                    <span className="font-medium">
+                                                                        {prob.id}. {prob.title}
+                                                                    </span>
+                                                                    {prob.isEssential && (
+                                                                        <Badge variant="outline" className="text-[10px] h-5 px-1.5 border-amber-500/30 text-amber-500 bg-amber-500/5">
+                                                                            Core
+                                                                        </Badge>
+                                                                    )}
+                                                                </div>
+                                                            </TableCell>
+                                                            <TableCell>
+                                                                <span className={`font-mono font-medium ${prob.rating < 1400 ? "text-emerald-500" :
+                                                                    prob.rating < 1700 ? "text-amber-500" :
+                                                                        "text-rose-500"
+                                                                    }`}>
+                                                                    {prob.rating}
+                                                                </span>
+                                                            </TableCell>
+                                                            <TableCell className="text-right">
+                                                                <a
+                                                                    href={prob.url}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    className="inline-flex items-center justify-center p-2 hover:bg-muted rounded-md transition-colors"
+                                                                >
+                                                                    <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                                                                </a>
+                                                            </TableCell>
+                                                        </TableRow>
                                                     ))}
                                                 </TableBody>
                                             </Table>
@@ -126,44 +160,5 @@ export function TopicAccordion() {
                 </Accordion>
             </div>
         </div>
-    );
-}
-
-function ProblemRow({ problem }: { problem: Problem }) {
-    return (
-        <TableRow>
-            <TableCell className="text-center">
-                <Checkbox checked={problem.isSolved} />
-            </TableCell>
-            <TableCell>
-                <div className="flex flex-col gap-1">
-                    <div className="flex items-center gap-2">
-                        <span className="font-medium hover:text-primary cursor-pointer transition-colors">
-                            {problem.id}. {problem.title}
-                        </span>
-                        {problem.isEssential && (
-                            <Badge variant="outline" className="text-[10px] h-5 px-1.5 border-amber-500/30 text-amber-500 bg-amber-500/5">
-                                Core
-                            </Badge>
-                        )}
-                    </div>
-                </div>
-            </TableCell>
-            <TableCell>
-                <span className={`font-mono font-medium ${problem.rating < 1400 ? "text-emerald-500" :
-                    problem.rating < 1700 ? "text-amber-500" :
-                        "text-rose-500"
-                    }`}>
-                    {problem.rating}
-                </span>
-            </TableCell>
-            <TableCell className="text-right">
-                <div className="flex justify-end gap-2">
-                    <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-foreground">
-                        <ExternalLink className="w-4 h-4" />
-                    </Button>
-                </div>
-            </TableCell>
-        </TableRow>
     );
 }
