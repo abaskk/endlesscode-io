@@ -17,7 +17,8 @@ import {
     TableRow,
 } from "@/components/ui/table";
 import { MOCK_GALAXY, type Problem } from "@/data/mock";
-import { ExternalLink, PlayCircle } from "lucide-react";
+import { ExternalLink, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function TopicAccordion() {
     const totalProblems = MOCK_GALAXY.reduce(
@@ -74,30 +75,48 @@ export function TopicAccordion() {
                             </AccordionTrigger>
                             <AccordionContent className="pt-2">
                                 <div className="space-y-6">
-                                    {topic.subPatterns.map((sub) => (
+                                    {/* Topic Concept Link */}
+                                    <div className="bg-muted/30 border border-border rounded-lg p-4 flex items-center justify-between group hover:border-primary/50 transition-colors cursor-pointer" onClick={() => window.location.href = `/topic/${topic.id}`}>
+                                        <div className="flex items-center gap-3">
+                                            <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                                <BookOpen className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">Start here: The Concept</h4>
+                                                <p className="text-sm text-muted-foreground">Master the {topic.title} pattern perfectly before solving.</p>
+                                            </div>
+                                        </div>
+                                        <Link to={`/topic/${topic.id}`}>
+                                            <Button variant="outline" className="gap-2 group-hover:bg-primary group-hover:text-primary-foreground border-primary/20">
+                                                Read Guide <ExternalLink className="w-3 h-3" />
+                                            </Button>
+                                        </Link>
+                                    </div>
+
+                                    {topic.id !== 'basics' && topic.subPatterns.map((sub) => (
                                         <div key={sub.id} className="space-y-3">
                                             <div className="flex flex-col gap-1 border-l-2 border-primary/20 pl-4 py-1">
-                                                <h4 className="text-base font-medium text-foreground">{sub.title}</h4>
+                                                <div className="flex items-center gap-3">
+                                                    <h4 className="text-base font-medium text-foreground">{sub.title}</h4>
+                                                </div>
                                                 <p className="text-sm text-muted-foreground">{sub.description}</p>
                                             </div>
 
-                                            <div className="rounded-md border border-border">
-                                                <Table>
-                                                    <TableHeader>
-                                                        <TableRow className="bg-muted/50 hover:bg-muted/50">
-                                                            <TableHead className="w-[50px] text-center">Status</TableHead>
-                                                            <TableHead>Problem</TableHead>
-                                                            <TableHead className="w-[100px]">Difficulty</TableHead>
-                                                            <TableHead className="w-[100px] text-right">Actions</TableHead>
-                                                        </TableRow>
-                                                    </TableHeader>
-                                                    <TableBody>
-                                                        {sub.problems.map((prob) => (
-                                                            <ProblemRow key={prob.id} problem={prob} />
-                                                        ))}
-                                                    </TableBody>
-                                                </Table>
-                                            </div>
+                                            <Table>
+                                                <TableHeader>
+                                                    <TableRow>
+                                                        <TableHead className="w-[50px] text-center">Status</TableHead>
+                                                        <TableHead>Problem</TableHead>
+                                                        <TableHead className="w-[100px]">Rating</TableHead>
+                                                        <TableHead className="w-[100px] text-right">Actions</TableHead>
+                                                    </TableRow>
+                                                </TableHeader>
+                                                <TableBody>
+                                                    {sub.problems.map((prob) => (
+                                                        <ProblemRow key={prob.id} problem={prob} />
+                                                    ))}
+                                                </TableBody>
+                                            </Table>
                                         </div>
                                     ))}
                                 </div>
@@ -112,7 +131,7 @@ export function TopicAccordion() {
 
 function ProblemRow({ problem }: { problem: Problem }) {
     return (
-        <TableRow className="hover:bg-muted/30">
+        <TableRow>
             <TableCell className="text-center">
                 <Checkbox checked={problem.isSolved} />
             </TableCell>
@@ -131,29 +150,15 @@ function ProblemRow({ problem }: { problem: Problem }) {
                 </div>
             </TableCell>
             <TableCell>
-                <Badge
-                    variant={
-                        problem.difficulty === "Easy"
-                            ? "secondary" // Greenish in custom implementations, but sticking to shadcn defaults for now
-                            : problem.difficulty === "Medium"
-                                ? "secondary" // Yellowish
-                                : "destructive"
-                    }
-                    className={`${problem.difficulty === "Easy"
-                            ? "text-emerald-500 bg-emerald-500/10 hover:bg-emerald-500/20"
-                            : problem.difficulty === "Medium"
-                                ? "text-amber-500 bg-amber-500/10 hover:bg-amber-500/20"
-                                : "text-rose-500 bg-rose-500/10 hover:bg-rose-500/20"
-                        } border-0 font-medium`}
-                >
-                    {problem.difficulty}
-                </Badge>
+                <span className={`font-mono font-medium ${problem.rating < 1400 ? "text-emerald-500" :
+                    problem.rating < 1700 ? "text-amber-500" :
+                        "text-rose-500"
+                    }`}>
+                    {problem.rating}
+                </span>
             </TableCell>
             <TableCell className="text-right">
                 <div className="flex justify-end gap-2">
-                    <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-foreground">
-                        <PlayCircle className="w-4 h-4" />
-                    </Button>
                     <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-foreground">
                         <ExternalLink className="w-4 h-4" />
                     </Button>

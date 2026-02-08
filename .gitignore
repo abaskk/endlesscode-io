@@ -26,3 +26,7 @@ dist-ssr
 
 # planning docs
 docs
+# Galaxy Scraper
+tools/galaxy-scraper/node_modules/
+tools/galaxy-scraper/raw_galaxy_pages/
+src/data/galaxy.csv

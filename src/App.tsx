@@ -1,6 +1,8 @@
 import { TopicAccordion } from "@/components/dashboard/TopicAccordion";
+import { TopicPage } from "@/pages/TopicPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App() {
+function Dashboard() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20">
       <header className="border-b border-border/40 sticky top-0 z-50 bg-background/80 backdrop-blur-md">
@@ -11,14 +13,7 @@ function App() {
             </div>
             <span className="font-bold text-lg tracking-tight">EndlessCode</span>
           </div>
-          <nav className="flex items-center gap-8 text-sm font-medium">
-            <a href="#" className="text-foreground hover:text-primary transition-colors">Roadmap</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Problems</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Discuss</a>
-          </nav>
-          <div className="flex items-center gap-4">
-            <div className="w-8 h-8 rounded-full bg-muted border border-border"></div>
-          </div>
+          {/* Nav removed as per request */}
         </div>
       </header>
 
@@ -35,6 +30,17 @@ function App() {
         <TopicAccordion />
       </main>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/topic/:topicId" element={<TopicPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
