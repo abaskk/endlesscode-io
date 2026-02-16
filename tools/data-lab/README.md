@@ -115,12 +115,15 @@ uv run pytest test_main.py -v
 
 ```
 tools/data-lab/
-├── main.py              # CLI entry point
-├── data/                # All data files (input + output)
-│   ├── lcid.json       # Problem metadata (3,807 problems)
+├── parser.py            # CLI entry point & Pipeline orchestration
+├── train_model.py       # ML logic for rating prediction
+├── source/              # Input datasets (static)
+│   ├── lcid.json        # Metadata for 3,807 problems
+│   ├── taxonomy_mapping.csv # Curriculum structure definition
+│   └── merged_problems.json # Descriptions & tags
+├── generated/           # Output artifacts (ignored by git)
 │   ├── taxonomy_graph.json
-│   └── taxonomy_flat.json
-├── raw_galaxy_pages/    # Raw HTML from LeetCode
-├── test_main.py         # Path configuration tests
-└── pyproject.toml       # uv project config
+│   └── merged_problems_with_ratings.json
+├── raw_pages/           # Scraped HTML material (ignored by git)
+└── pyproject.toml       # uv environment config
 ```

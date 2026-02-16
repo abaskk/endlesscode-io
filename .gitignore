@@ -1,4 +1,4 @@
-# Logs
+# Automatically Generatable Files/Directories
 logs
 *.log
 npm-debug.log*
@@ -12,29 +12,11 @@ dist
 dist-ssr
 *.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-
-# planning docs
-# tools/data-lab
+# Data Lab Output (Generatable)
 tools/data-lab/source/raw_galaxy_pages/
+tools/data-lab/source/raw_pages/
 tools/data-lab/generated/
 tools/data-lab/.venv/
 tools/data-lab/__pycache__/
 __pycache__/
 *.pyc
-
-# Local Data
-src/data/galaxy.csv
-
-# Documentation
-
