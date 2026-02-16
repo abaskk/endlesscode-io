@@ -103,7 +103,7 @@ function adaptProblem(raw: {
  * 
  * V3 Parser Change: 'data-structures' is split into Core and Advanced.
  */
-export const getAdaptedGalaxy = (): Topic[] => {
+export const getTaxonomy = (): Topic[] => {
     const adaptedTopics: Topic[] = [];
 
     // Helper to process a topic
@@ -196,9 +196,9 @@ export const getAdaptedGalaxy = (): Topic[] => {
  * Get total problem count across all topics.
  */
 export const getTotalProblemCount = (): number => {
-    const galaxy = getAdaptedGalaxy();
+    const taxonomy = getTaxonomy();
     let count = 0;
-    for (const topic of galaxy) {
+    for (const topic of taxonomy) {
         for (const section of topic.sections) {
             count += section.problems.length;
             for (const sub of section.subtopics) {

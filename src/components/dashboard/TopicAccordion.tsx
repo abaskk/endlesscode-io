@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { getAdaptedGalaxy, getTotalProblemCount } from "@/data/adapter";
+import { getTaxonomy, getTotalProblemCount } from "@/data/adapter";
 import type { Section, Subtopic } from "@/data/types";
 import { BookOpen, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -69,12 +69,12 @@ function SubtopicBlock({ subtopic, topicId, sectionIdx, subIdx }: {
 }
 
 export function TopicAccordion() {
-    const galaxy = getAdaptedGalaxy();
+    const taxonomy = getTaxonomy();
     const totalProblems = getTotalProblemCount();
     const { isSolved, totalSolvedCount } = useProgress();
 
     // 1. Aggregate sums by Visual Group
-    const groupStats = galaxy.reduce((acc, topic) => {
+    const groupStats = taxonomy.reduce((acc, topic) => {
         const group = topic.group;
         if (!acc[group]) {
             acc[group] = { total: 0, solved: 0, label: group };
@@ -165,7 +165,7 @@ export function TopicAccordion() {
             {/* Topics Accordion */}
             <div className="space-y-4">
                 <Accordion type="multiple" className="w-full space-y-4">
-                    {galaxy.map((topic) => {
+                    {taxonomy.map((topic) => {
                         const topicProblemCount = topic.sections.reduce(
                             (acc, s) => acc + sectionProblemCount(s), 0
                         );
@@ -190,23 +190,24 @@ export function TopicAccordion() {
                                 </AccordionTrigger>
                                 <AccordionContent className="pt-2">
                                     <div className="space-y-2">
-                                        {/* Topic Concept Link */}
-                                        <Link to={`/topic/${topic.id}`} className="block">
-                                            <div className="bg-muted/30 border border-border rounded-lg p-4 flex items-center justify-between group hover:bg-muted/50 transition-colors">
-                                                <div className="flex items-center gap-3">
-                                                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                                                        <BookOpen className="w-5 h-5" />
-                                                    </div>
-                                                    <div>
-                                                        <h4 className="font-semibold text-foreground">Start here: The Concept</h4>
-                                                        <p className="text-sm text-muted-foreground">Master the {topic.title} pattern perfectly before solving.</p>
-                                                    </div>
+                                        {/* Topic Concept Link (Disabled for now) */}
+                                        <div className="bg-muted/10 border border-border/50 rounded-lg p-4 flex items-center justify-between opacity-60 cursor-not-allowed">
+                                            <div className="flex items-center gap-3">
+                                                <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground">
+                                                    <BookOpen className="w-5 h-5" />
                                                 </div>
-                                                <Button variant="outline" className="gap-2 border-primary/20">
-                                                    Read Guide <ExternalLink className="w-3 h-3" />
-                                                </Button>
+                                                <div>
+                                                    <div className="flex items-center gap-2">
+                                                        <h4 className="font-semibold text-foreground">Start here: The Concept</h4>
+                                                        <Badge variant="outline" className="text-[10px] uppercase tracking-widest h-4 px-1 opacity-70">Coming Soon</Badge>
+                                                    </div>
+                                                    <p className="text-sm text-muted-foreground">Master the {topic.title} pattern perfectly before solving.</p>
+                                                </div>
                                             </div>
-                                        </Link>
+                                            <Button variant="outline" disabled className="gap-2 border-border">
+                                                Read Guide <ExternalLink className="w-3 h-3" />
+                                            </Button>
+                                        </div>
 
                                         {/* Sections — Nested Accordion */}
                                         <Accordion type="multiple" className="w-full space-y-1">
