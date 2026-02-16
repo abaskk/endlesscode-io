@@ -303,10 +303,10 @@ def parse_html(html_path: str, lcid: tuple[dict, dict], ml_map: dict) -> list[di
 
 def cmd_download():
     """Download raw HTML pages from LeetCode using urls.json."""
-    print("🚀 Downloading raw pages...")
+    print(" Downloading raw pages...")
     
     if not Path(URLS_FILE).exists():
-        print(f"❌ Error: {URLS_FILE} not found.")
+        print(f" Error: {URLS_FILE} not found.")
         return
 
     with open(URLS_FILE, "r") as f:
@@ -323,10 +323,10 @@ def cmd_download():
     for filename, url in urls.items():
         out_path = out_dir / filename
         if out_path.exists():
-            print(f"  ⏭️  Skipping {filename} (exists)")
+            print(f"    Skipping {filename} (exists)")
             continue
             
-        print(f"  ⬇️  Fetching {filename}...")
+        print(f"    Fetching {filename}...")
         try:
             resp = requests.get(url, headers=headers)
             resp.raise_for_status()
@@ -335,9 +335,9 @@ def cmd_download():
             count += 1
             time.sleep(1) # Be nice to the server
         except Exception as e:
-            print(f"  ❌ Failed to fetch {filename}: {e}")
+            print(f"   Failed to fetch {filename}: {e}")
 
-    print(f"✅ Downloaded {count} new files.")
+    print(f" Downloaded {count} new files.")
 
 def cmd_generate(target: str, deploy: bool):
     """Generate dataset files (UI graph or ML flat file)."""
@@ -373,7 +373,7 @@ def cmd_generate(target: str, deploy: bool):
     for tid, meta in topics_meta.items():
         html_path = Path(HTML_DIR) / meta["file"]
         if not html_path.exists():
-            print(f"⚠  Missing: {meta['file']}")
+            print(f"  Missing: {meta['file']}")
             continue
 
         sections = parse_html(str(html_path), lcid, ml_map)

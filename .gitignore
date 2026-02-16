@@ -20,3 +20,7 @@ tools/data-lab/.venv/
 tools/data-lab/__pycache__/
 __pycache__/
 *.pyc
+
+# Data Lab Downloadable Datasets
+tools/data-lab/source/*.html
+tools/data-lab/**/*.html
