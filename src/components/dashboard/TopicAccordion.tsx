@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { getTaxonomy, getTotalProblemCount } from "@/data/adapter";
 import type { Section, Subtopic } from "@/data/types";
 import { BookOpen, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
 import { ProblemTable } from "./ProblemTable";
 import { useProgress } from "@/context/ProgressContext";
 

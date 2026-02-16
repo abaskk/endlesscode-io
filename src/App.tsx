@@ -71,7 +71,7 @@ function App() {
 
   return (
     <ProgressProvider totalProblems={totalProblems}>
-      <BrowserRouter>
+      <BrowserRouter basename="/endlesscode-io">
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/topic/:topicId" element={<TopicPage />} />

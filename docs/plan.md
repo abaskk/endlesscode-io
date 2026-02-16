@@ -88,9 +88,9 @@ The `taxonomy_mapping.csv` is **flat** (349 rows), but the **UI is hierarchical*
 
 | CSV Column | UI Level | Example | Clickable? |
 |------------|----------|---------|------------|
-| `visual_group` | L1: Visual Divider | **LINEAR FOUNDATIONS** | ❌ No |
-| `top_level_topic` | L2: Topic Accordion | ▼ **Sliding Window** | ✅ Yes (expand/collapse) |
-| `row_title` | L3: Section Row | **Fixed-Length Sliding Window** | ✅ Yes (show problems) |
+| `visual_group` | L1: Visual Divider | **LINEAR FOUNDATIONS** | No |
+| `top_level_topic` | L2: Topic Accordion | ▼ **Sliding Window** | Yes (expand/collapse) |
+| `row_title` | L3: Section Row | **Fixed-Length Sliding Window** | Yes (show problems) |
 
 **Example Unpacking:**
 
@@ -139,7 +139,7 @@ The `parser.py` script groups CSV rows by:
 
 **Description:** The Single Source of Truth for **taxonomy organization + English translation**. Maps Chinese section headers (via regex) to clean English UI rows.
 
-**Coverage:** ✅ 100% parity with raw galaxy pages (349/349 sections mapped and translated)
+**Coverage:** 100% parity with raw galaxy pages (349/349 sections mapped and translated)
 
 ### Hierarchy Model (V3 Parser)
 
@@ -325,7 +325,7 @@ The UI combines the "Dashboard Layout" structure (Sticky Header, Hero, Progress)
 │  │  ▼ Fixed-Length Sliding Window     [CORE]    │  ← L3: Row  │
 │  │  ├─────────────────────────────────┐         │             │
 │  │  │ □  643  Max Avg Subarray  1200  │  Easy   │  ← Problems │
-│  │  │ ✓ 1456  Max Vowels        1263  │  Med    │             │
+│  │  │ X 1456  Max Vowels        1263  │  Med    │             │
 │  │  └─────────────────────────────────┘         │             │
 │  │                                               │             │
 │  │  ▶ Variable-Length Sliding Window [ADVANCED] │  ← L3: Row  │
@@ -349,7 +349,7 @@ The UI combines the "Dashboard Layout" structure (Sticky Header, Hero, Progress)
 | Preamble | Retained |
 | Progress Card | Retained |
 | Topic Accordion | Maps to L2 (Topic) in `taxonomy_graph.json` |
-| Topic Concept Link | Maps to [📖] icon in row header |
+| Topic Concept Link | Maps to book icon in row header |
 | Section Row | Maps to L3 (Section) in `taxonomy_graph.json` |
 | Problem Table | Populated by `problems` array |
 

@@ -13,7 +13,7 @@ uv sync
 
 ```bash
 cd tools/data-lab
-## 🏗️ Reproduction Steps
+## Reproduction Steps
 
 To fully reproduce the dataset and ML model from scratch:
 
@@ -39,7 +39,7 @@ To fully reproduce the dataset and ML model from scratch:
     uv run python parser.py experiment kmeans
     ```
 
-## 📂 Project Structure
+## Project Structure
 
 - `parser.py`: Main CLI tool for data processing and pipeline orchestration.
 - `train_model.py`: ML logic for rating prediction (called by parser).
