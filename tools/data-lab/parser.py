@@ -10,12 +10,16 @@ import argparse
 import requests
 from pathlib import Path
 from bs4 import BeautifulSoup, Tag
+import subprocess
+import sys
+import math
 
 # ── Config ──────────────────────────────────────────────────────────────────
 MAPPING_FILE = "source/taxonomy_mapping.csv"
 URLS_FILE    = "source/urls.json"
 HTML_DIR     = "source/raw_pages/full-practice"
 LCID_FILE    = "source/lcid.json"
+ML_RATINGS_FILE = "generated/merged_problems_with_ratings.json"
 OUTPUT_FILE  = "generated/taxonomy_graph.json"
 FLAT_FILE    = "generated/taxonomy_flat.json"
 
@@ -100,7 +104,37 @@ def load_lcid(path: str) -> tuple[dict, dict]:
             slug_map[meta["titleSlug"]] = {**meta, "id": pid}
     return data, slug_map
 
-def extract_problem(li: Tag, lcid_maps: tuple[dict, dict], extra_tag: str | None = None) -> dict | None:
+def load_ml_ratings(path: str) -> dict:
+    if not Path(path).exists():
+        print(f"Warning: ML ratings file {path} not found.")
+        return {}
+    
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    
+    # Map slug -> {rating, is_predicted}
+    ml_map = {}
+    for q in data.get("questions", []):
+        # Try multiple slug fields and normalize
+        raw_slug = q.get("slug") or q.get("titleSlug") or q.get("problem_slug")
+        if raw_slug:
+            slug = str(raw_slug).lower().strip()
+            rating = q.get("Rating")
+            if rating is not None and (isinstance(rating, float) and math.isnan(rating)):
+                rating = None
+            if rating is not None:
+                try:
+                    rating = int(float(rating))
+                except ValueError:
+                    rating = None
+            
+            ml_map[slug] = {
+                "rating": rating,
+                "is_predicted": q.get("is_predicted", False)
+            }
+    return ml_map
+
+def extract_problem(li: Tag, lcid_maps: tuple[dict, dict], ml_map: dict, extra_tag: str | None = None) -> dict | None:
     lcid_by_id, lcid_by_slug = lcid_maps
     link = li.find("a", href=re.compile(r"leetcode\.cn/problems/"))
     if not link: return None
@@ -119,12 +153,20 @@ def extract_problem(li: Tag, lcid_maps: tuple[dict, dict], extra_tag: str | None
     is_premium = meta.get("paidOnly", False)
     
     rating = None
-    text = li.get_text()
-    for m in re.findall(r"\\b(\d{3,4})\\b", text):
-        v = int(m)
-        if 800 <= v <= 3500 and (pid is None or m != pid):
-            rating = v
-            break
+    is_predicted = False
+    
+    # Priority: 1. ML Data (Merged actual + predicted) 2. Regex
+    if slug in ml_map and ml_map[slug].get("rating"):
+        rating = ml_map[slug]["rating"]
+        is_predicted = ml_map[slug]["is_predicted"]
+    else:
+        # Fallback to regex scraping
+        text = li.get_text()
+        for m in re.findall(r"\\b(\d{3,4})\\b", text):
+            v = int(m)
+            if 800 <= v <= 3500 and (pid is None or m != pid):
+                rating = v
+                break
 
     tags = []
     if extra_tag: tags.append(extra_tag)
@@ -134,6 +176,7 @@ def extract_problem(li: Tag, lcid_maps: tuple[dict, dict], extra_tag: str | None
         "title": title,
         "slug": slug,
         "rating": rating,
+        "is_predicted": is_predicted,
         "difficulty": difficulty,
         "is_premium": is_premium,
         "tags": tags,
@@ -157,16 +200,16 @@ def extract_description(tags: list[Tag]) -> tuple[str, str]:
     en_parts = [translate_description(part) for part in zh_parts]
     return zh, "\n".join(en_parts)
 
-def extract_problems_from_tags(tags: list[Tag], lcid: tuple[dict, dict], extra_tag: str | None = None) -> list[dict]:
+def extract_problems_from_tags(tags: list[Tag], lcid: tuple[dict, dict], ml_map: dict, extra_tag: str | None = None) -> list[dict]:
     problems = []
     for t in tags:
         if t.name in ("ul", "ol"):
             for li in t.find_all("li", recursive=False):
-                prob = extract_problem(li, lcid, extra_tag)
+                prob = extract_problem(li, lcid, ml_map, extra_tag)
                 if prob: problems.append(prob)
     return problems
 
-def parse_html(html_path: str, lcid: tuple[dict, dict]) -> list[dict]:
+def parse_html(html_path: str, lcid: tuple[dict, dict], ml_map: dict) -> list[dict]:
     with open(html_path, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
 
@@ -197,13 +240,13 @@ def parse_html(html_path: str, lcid: tuple[dict, dict]) -> list[dict]:
                     for t in h3_children:
                         if t.name == "h4": break
                         pre_h4_tags.append(t)
-                    h3_problems.extend(extract_problems_from_tags(pre_h4_tags, lcid))
+                    h3_problems.extend(extract_problems_from_tags(pre_h4_tags, lcid, ml_map))
 
                     for h4 in h4s:
                         h4_title = h4.get_text().strip()
                         tag = h4_to_tag(h4_title)
                         h4_children = collect_until_next(h4, ["h2", "h3", "h4"])
-                        h3_problems.extend(extract_problems_from_tags(h4_children, lcid, extra_tag=tag))
+                        h3_problems.extend(extract_problems_from_tags(h4_children, lcid, ml_map, extra_tag=tag))
                     
                     h3_desc_tags = []
                     for t in h3_children:
@@ -223,7 +266,7 @@ def parse_html(html_path: str, lcid: tuple[dict, dict]) -> list[dict]:
                         if t.name in ("ul", "ol"): break
                         h3_desc_tags.append(t)
                     h3_desc_zh, h3_desc_en = extract_description(h3_desc_tags)
-                    h3_problems = extract_problems_from_tags(h3_children, lcid)
+                    h3_problems = extract_problems_from_tags(h3_children, lcid, ml_map)
                     subtopics.append({
                         "title": translate(h3_title),
                         "title_zh": h3_title,
@@ -235,7 +278,7 @@ def parse_html(html_path: str, lcid: tuple[dict, dict]) -> list[dict]:
             for t in h2_children:
                 if t.name == "h3": break
                 pre_h3_tags.append(t)
-            pre_h3_problems = extract_problems_from_tags(pre_h3_tags, lcid)
+            pre_h3_problems = extract_problems_from_tags(pre_h3_tags, lcid, ml_map)
             
             sections.append({
                 "title": translate(h2_title),
@@ -245,7 +288,7 @@ def parse_html(html_path: str, lcid: tuple[dict, dict]) -> list[dict]:
                 "problems": pre_h3_problems,
             })
         else:
-            h2_problems = extract_problems_from_tags(h2_children, lcid)
+            h2_problems = extract_problems_from_tags(h2_children, lcid, ml_map)
             sections.append({
                 "title": translate(h2_title),
                 "title_zh": h2_title,
@@ -299,9 +342,11 @@ def cmd_download():
 def cmd_generate(target: str, deploy: bool):
     """Generate dataset files (UI graph or ML flat file)."""
     start = time.time()
-    print(f"🚀 Generating dataset (Target: {target})...")
+    print(f"[INFO] Generating dataset (Target: {target})...")
 
     lcid = load_lcid(LCID_FILE)
+    ml_map = load_ml_ratings(ML_RATINGS_FILE)
+    
     with open(MAPPING_FILE, "r", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
 
@@ -331,7 +376,7 @@ def cmd_generate(target: str, deploy: bool):
             print(f"⚠  Missing: {meta['file']}")
             continue
 
-        sections = parse_html(str(html_path), lcid)
+        sections = parse_html(str(html_path), lcid, ml_map)
 
         # Count & Flatten
         n_file = 0
@@ -387,13 +432,13 @@ def cmd_generate(target: str, deploy: bool):
         out_path.parent.mkdir(exist_ok=True)
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(graph_output, f, indent=2, ensure_ascii=False)
-        print(f"\n📦 Generated UI Graph: {out_path}")
+        print(f"\n[INFO] Generated UI Graph: {out_path}")
         
         if deploy:
             deploy_path = Path("../../src/data/taxonomy_graph.json")
             with open(deploy_path, "w", encoding="utf-8") as f:
                 json.dump(graph_output, f, indent=2, ensure_ascii=False)
-            print(f"🚚 Deployed to: {deploy_path}")
+            print(f"[INFO] Deployed to: {deploy_path}")
 
     # Output: ML Flat File
     if target in ("ml", "all"):
@@ -403,10 +448,41 @@ def cmd_generate(target: str, deploy: bool):
             writer = csv.DictWriter(f, fieldnames=["slug", "title", "rating", "difficulty", "topic", "section", "subtopic", "tags"])
             writer.writeheader()
             writer.writerows(flat_rows)
-        print(f"📦 Generated ML Dataset: {flat_path}")
+        print(f"[INFO] Generated ML Dataset: {flat_path}")
 
     elapsed = time.time() - start
-    print(f"\n✅ Complete in {elapsed:.2f}s | Total Links: {total_links} | Unique: {len(total_unique)}")
+    print(f"\n[SUCCESS] Complete in {elapsed:.2f}s | Total Links: {total_links} | Unique: {len(total_unique)}")
+
+
+
+def cmd_experiment(name: str):
+    """Run a specific ML experiment."""
+    print(f"[INFO] Running ML Experiment: {name}...")
+    try:
+        subprocess.run([sys.executable, "train_model.py", "--experiment", name], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"[ERROR] Experiment failed with exit code {e.returncode}")
+        sys.exit(1)
+
+def cmd_pipeline(no_deploy: bool):
+    """Run the full data pipeline: Train ML Model -> Generate Dataset."""
+    print("[INFO] Starting Full Data Pipeline...")
+    
+    # Step 1: Train Model (Enhanced + Prediction)
+    print("\n[STEP 1] Training ML Model & Generating Ratings...")
+    try:
+        # Run train_model.py using the same python interpreter
+        # Pipeline uses 'enhanced' model for predictions
+        subprocess.run([sys.executable, "train_model.py", "--experiment", "enhanced", "--predict"], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"[ERROR] ML Model Training failed with exit code {e.returncode}")
+        sys.exit(1)
+        
+    # Step 2: Generate Dataset
+    print("\n[STEP 2] Generating UI Taxonomy Graph...")
+    cmd_generate(target="ui", deploy=not no_deploy)
+    
+    print("\n[SUCCESS] Pipeline Complete!")
 
 
 def main():
@@ -421,12 +497,24 @@ def main():
     cmd_gen.add_argument("--target", choices=["ui", "ml", "all"], default="all", help="Dataset target (ui=graph, ml=flat, all=both)")
     cmd_gen.add_argument("--no-deploy", action="store_true", help="Skip deployment to frontend")
 
+    # Command: pipeline
+    cmd_pipe = subparsers.add_parser("pipeline", help="Run full pipeline (Train ML -> Generate UI)")
+    cmd_pipe.add_argument("--no-deploy", action="store_true", help="Skip deployment to frontend")
+
+    # Command: experiment
+    cmd_exp = subparsers.add_parser("experiment", help="Run a specific ML experiment")
+    cmd_exp.add_argument("name", choices=["baseline", "enhanced", "kmeans", "all"], help="Experiment name")
+
     args = parser.parse_args()
 
     if args.command == "download":
         cmd_download()
     elif args.command == "generate":
         cmd_generate(args.target, not args.no_deploy)
+    elif args.command == "pipeline":
+        cmd_pipeline(args.no_deploy)
+    elif args.command == "experiment":
+        cmd_experiment(args.name)
 
 if __name__ == "__main__":
     main()

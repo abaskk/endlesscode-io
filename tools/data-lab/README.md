@@ -13,25 +13,40 @@ uv sync
 
 ```bash
 cd tools/data-lab
-uv sync
-```
+## 🏗️ Reproduction Steps
 
-## Commands
+To fully reproduce the dataset and ML model from scratch:
 
-### 1. Run the Pipeline (Recommended)
+1.  **Environment Setup**:
+    ```bash
+    cd tools/data-lab
+    uv sync
+    ```
 
-This script runs the parser, validates output, and deploys it to the frontend (`src/data`).
+2.  **Run Full Pipeline**:
+    This command trains the model (using cached embeddings if available), predicts missing ratings, and generates the frontend dataset.
+    ```bash
+    uv run python parser.py pipeline
+    ```
+    - Output: `src/data/taxonomy_graph.json` (deployed automatically)
+    - Cache: `generated/embeddings_cache.pkl` (speeds up subsequent runs)
 
-```bash
-./run_parser.sh
-```
+3.  **Run Individual Experiments**:
+    To test different model configurations:
+    ```bash
+    uv run python parser.py experiment baseline
+    uv run python parser.py experiment enhanced
+    uv run python parser.py experiment kmeans
+    ```
 
-### 2. Manual Execution
+## 📂 Project Structure
 
-```bash
-# Run the parser python script directly
-uv run python parser.py
-```
+- `parser.py`: Main CLI tool for data processing and pipeline orchestration.
+- `train_model.py`: ML logic for rating prediction (called by parser).
+- `source/`: Raw input files (`lcid.json`, `zerotrac.json`, HTML mappings).
+- `generated/`: Output files (`merged_problems_with_ratings.json`, `taxonomy_graph.json`).
+- `experiments/`: Logs from ML experiments.
+
 
 ## Data Sources
 
@@ -60,6 +75,34 @@ curl -sL https://raw.githubusercontent.com/bunnyxt/lcid/830e6ce035326d9c26e0707b
 - **`source/translations.json`**: Dictionary for structured title translation.
 - **`source/description_translations.json`**: Dictionary for description text translation.
 - **`generated/`**: Output directory for JSON/CSV datasets. for analysis and search
+
+## Rating Predictor (ML)
+
+A machine learning pipeline to predict difficulty ratings for problems that are missing them.
+
+### Usage
+
+1. **Train Model & Predict**:
+   ```bash
+   uv run python parser.py pipeline
+   ```
+   - Features: TF-IDF (descriptions) + Tags + Acceptance Rate
+   - Output: `generated/merged_problems_with_ratings.json`
+   - Metrics: Prints RMSE, MAE, R² for Baseline & Enhanced models
+
+2. **Visualize Results**:
+   ```bash
+   uv run python visualize_results.py
+   ```
+   - Generates plots in `generated/plots/`:
+     - `rating_distribution.png`: Actual vs Predicted distribution
+     - `predictions_by_difficulty.png`: Boxplots by difficulty label
+
+### Files
+- `train_model.py`: Main training and prediction script
+- `visualize_results.py`: Analysis and plotting script
+- `rating_predictor.ipynb`: (Deprecated/Removed) Original prototype
+- `EXPERIMENTS.md`: Log of ML model performance and iterations
 
 ## Development
 

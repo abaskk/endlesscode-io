@@ -7,6 +7,7 @@ export type Problem = {
     is_premium: boolean;
     tags: string[]; // CORE, ADVANCED, OPTIONAL, THINKING (from H4 headers)
     url: string; // Computed from slug
+    is_predicted?: boolean;
 };
 
 export type Subtopic = {

@@ -10,8 +10,14 @@ import {
     TableRow,
 } from "@/components/ui/table";
 import type { Problem } from "@/data/types";
-import { ArrowDown, ArrowUp, ArrowUpDown, ExternalLink, Lock } from "lucide-react";
+import { ArrowDown, ArrowUp, ArrowUpDown, ExternalLink, Lock, Sparkles } from "lucide-react";
 import { useState } from "react";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface ProblemTableProps {
     problems: Problem[];
@@ -115,6 +121,18 @@ export function ProblemTable({ problems }: ProblemTableProps) {
                                         "text-rose-500"
                                     }`}>
                                     {prob.rating}
+                                    {prob.is_predicted && (
+                                        <TooltipProvider delayDuration={100}>
+                                            <Tooltip>
+                                                <TooltipTrigger asChild>
+                                                    <Sparkles className="inline-block w-3 h-3 ml-1 text-white/50 hover:text-white cursor-help transition-colors" />
+                                                </TooltipTrigger>
+                                                <TooltipContent>
+                                                    <p>ML Predicted Rating</p>
+                                                </TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    )}
                                 </span>
                             ) : (
                                 <span className="text-muted-foreground text-sm">—</span>

@@ -21,6 +21,7 @@ const TAXONOMY_DATA = RAW_DATA as Array<{
                 title: string;
                 slug: string;
                 rating: number | null;
+                is_predicted?: boolean;
                 difficulty: string;
                 is_premium: boolean;
                 tags: string[];
@@ -31,6 +32,7 @@ const TAXONOMY_DATA = RAW_DATA as Array<{
             title: string;
             slug: string;
             rating: number | null;
+            is_predicted?: boolean;
             difficulty: string;
             is_premium: boolean;
             tags: string[];
@@ -77,6 +79,7 @@ function adaptProblem(raw: {
     title: string;
     slug: string;
     rating: number | null;
+    is_predicted?: boolean;
     difficulty: string;
     is_premium: boolean;
     tags: string[];
@@ -88,6 +91,7 @@ function adaptProblem(raw: {
         rating: raw.rating,
         difficulty: raw.difficulty as Problem['difficulty'],
         is_premium: raw.is_premium,
+        is_predicted: raw.is_predicted,
         tags: raw.tags || [],
         url: `https://leetcode.com/problems/${raw.slug}/`
     };
