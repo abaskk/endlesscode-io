@@ -2,6 +2,19 @@
 
 This file tracks the results of different machine learning experiments for predicting LeetCode problem ratings.
 
+
+The final approach that I went with was asking Claude to manually assign rating based on its knowledge as the ML models had a terrible correlation coefficient and RMSE.
+
+
+## Final Approach - Claude
+It justified its approach as:
+
+Pattern recognition from my training data on common LeetCode problems
+Relative difficulty within each category
+Typical rating distributions (Easy: 1200-1600, Medium: 1400-2100, Hard: 1900-3000+)
+Implementation complexity (how many concepts/techniques you need to combine)
+
+
 ## Experiment 1: Baseline vs. Enhanced (Embeddings)
 **Date**: 2026-02-15
 **Objective**: Establish a baseline using TF-IDF and metadata, and test if adding SentenceTransformer embeddings improves performance.

@@ -1,4 +1,4 @@
-import RAW_DATA from './taxonomy_graph.json';
+import RAW_DATA from './taxonomy_graph_manual.json';
 import type { Topic, Problem } from './types';
 
 // Cast the imported JSON to match V3 parser output

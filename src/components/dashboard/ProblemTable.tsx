@@ -116,9 +116,10 @@ export function ProblemTable({ problems }: ProblemTableProps) {
                         </TableCell>
                         <TableCell>
                             {prob.rating !== null ? (
-                                <span className={`font-mono font-medium ${prob.rating < 1400 ? "text-emerald-500" :
-                                    prob.rating < 1700 ? "text-amber-500" :
-                                        "text-rose-500"
+                                <span className={`font-mono font-medium ${prob.difficulty === "Easy" ? "text-emerald-500" :
+                                        prob.difficulty === "Medium" ? "text-amber-500" :
+                                            prob.difficulty === "Hard" ? "text-rose-500" :
+                                                "text-muted-foreground"
                                     }`}>
                                     {prob.rating}
                                     {prob.is_predicted && (
