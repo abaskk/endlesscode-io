@@ -1,0 +1,20 @@
+[project]
+name = "data-lab"
+version = "0.1.0"
+description = "Data processing and laboratory for EndlessCode"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "rich>=13.9.4",
+    "beautifulsoup4>=4.12.3",
+    "lxml>=5.3.0",
+    "requests>=2.32.3",
+    "marko>=2.2.2",
+    "pandas>=3.0.0",
+    "pydantic>=2.12.5",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.4",
+]

@@ -13,7 +13,6 @@ function Dashboard() {
             </div>
             <span className="font-bold text-lg tracking-tight">EndlessCode</span>
           </div>
-          {/* Nav removed as per request */}
         </div>
       </header>
 
@@ -33,14 +32,21 @@ function Dashboard() {
   );
 }
 
+import { ProgressProvider } from "@/context/ProgressContext";
+import { getTotalProblemCount } from "@/data/adapter";
+
 function App() {
+  const totalProblems = getTotalProblemCount();
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/topic/:topicId" element={<TopicPage />} />
-      </Routes>
-    </BrowserRouter>
+    <ProgressProvider totalProblems={totalProblems}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/topic/:topicId" element={<TopicPage />} />
+        </Routes>
+      </BrowserRouter>
+    </ProgressProvider>
   )
 }
 

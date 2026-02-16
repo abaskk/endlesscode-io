@@ -25,8 +25,16 @@ dist-ssr
 
 
 # planning docs
-docs
-# Galaxy Scraper
-tools/galaxy-scraper/node_modules/
-tools/galaxy-scraper/raw_galaxy_pages/
+# tools/data-lab
+tools/data-lab/source/raw_galaxy_pages/
+tools/data-lab/generated/
+tools/data-lab/.venv/
+tools/data-lab/__pycache__/
+__pycache__/
+*.pyc
+
+# Local Data
 src/data/galaxy.csv
+
+# Documentation
+docs/
