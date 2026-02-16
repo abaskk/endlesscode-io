@@ -51,19 +51,15 @@ curl -sL https://raw.githubusercontent.com/bunnyxt/lcid/830e6ce035326d9c26e0707b
 ### Taxonomy Source
 
 **File:** `source/taxonomy_mapping.csv`  
-**Purpose:** Defines the mapping from LeetCode topics to Visual Groups and output structure.
+**Purpose:**## Architecture
 
-### Raw HTML Pages
-
-**Directory:** `raw_galaxy_pages/`  
-**Source:** LeetCode problem lists (fetched via `uv run main.py fetch`)
-
-## Output Files
-
-All generated files are stored in `data/`:
-
-- **`taxonomy_graph.json`** - Hierarchical structure for frontend tree view
-- **`taxonomy_flat.json`** - Flattened dataset for analysis and search
+- **`parser.py`**: The CLI tool (Entry point).
+- **`source/taxonomy_mapping.csv`**: Defines the topic structure and maps source files to topic names.
+- **`source/urls.json`**: Maps source filenames to LeetCode discussion URLs for downloading.
+- **`source/lcid.json`**: LeetCode problem metadata (ID, Slug, Difficulty, Premium status).
+- **`source/translations.json`**: Dictionary for structured title translation.
+- **`source/description_translations.json`**: Dictionary for description text translation.
+- **`generated/`**: Output directory for JSON/CSV datasets. for analysis and search
 
 ## Development
 
