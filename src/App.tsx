@@ -1,4 +1,4 @@
-import { TopicAccordion } from "@/components/dashboard/TopicAccordion";
+import { TaxonomyTabs } from "@/components/dashboard/TaxonomyTabs";
 import { TopicPage } from "@/pages/TopicPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
@@ -57,7 +57,7 @@ function Dashboard() {
           </Accordion>
         </div>
 
-        <TopicAccordion />
+        <TaxonomyTabs />
       </main>
     </div>
   );

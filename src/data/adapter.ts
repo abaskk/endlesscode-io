@@ -1,44 +1,16 @@
 import RAW_DATA from './taxonomy_graph_manual.json';
 import type { Topic, Problem } from './types';
+import { validateTaxonomy, type RawTaxonomy, type RawProblem } from './schema';
 
-// Cast the imported JSON to match V3 parser output
-const TAXONOMY_DATA = RAW_DATA as Array<{
-    id: string;
-    group: string;
-    title: string;
-    sections: Array<{
-        title: string;
-        title_zh?: string;
-        description?: string;
-        description_zh?: string;
-        subtopics: Array<{
-            title: string;
-            title_zh?: string;
-            description?: string;
-            description_zh?: string;
-            problems: Array<{
-                id: string;
-                title: string;
-                slug: string;
-                rating: number | null;
-                is_predicted?: boolean;
-                difficulty: string;
-                is_premium: boolean;
-                tags: string[];
-            }>;
-        }>;
-        problems: Array<{
-            id: string;
-            title: string;
-            slug: string;
-            rating: number | null;
-            is_predicted?: boolean;
-            difficulty: string;
-            is_premium: boolean;
-            tags: string[];
-        }>;
-    }>;
-}>;
+// Validate the imported JSON at runtime
+const TAXONOMY_DATA: RawTaxonomy = (() => {
+    try {
+        return validateTaxonomy(RAW_DATA);
+    } catch (error) {
+        console.error('Failed to validate taxonomy data:', error);
+        throw new Error('Taxonomy data validation failed. Please check the JSON format.');
+    }
+})();
 
 // Better topic titles
 const TOPIC_TITLE_MAP: Record<string, string> = {
@@ -74,16 +46,7 @@ const TOPIC_ORDER = [
     'strings'
 ];
 
-function adaptProblem(raw: {
-    id: string;
-    title: string;
-    slug: string;
-    rating: number | null;
-    is_predicted?: boolean;
-    difficulty: string;
-    is_premium: boolean;
-    tags: string[];
-}): Problem {
+function adaptProblem(raw: RawProblem): Problem {
     return {
         id: raw.id,
         title: raw.title,
@@ -98,16 +61,14 @@ function adaptProblem(raw: {
 }
 
 /**
- * Adapter to consume the V3 taxonomy_graph.json.
- * Maintains "Road to 2000" order from plan.md.
- * 
- * V3 Parser Change: 'data-structures' is split into Core and Advanced.
+ * Adapts a raw taxonomy into the app's Topic format.
+ * This allows loading different taxonomies for different tabs.
  */
-export const getTaxonomy = (): Topic[] => {
+export function adaptRawTaxonomy(rawData: RawTaxonomy): Topic[] {
     const adaptedTopics: Topic[] = [];
 
     // Helper to process a topic
-    const processTopic = (id: string, group: string, title: string, sections: typeof TAXONOMY_DATA[0]['sections']) => {
+    const processTopic = (id: string, group: string, title: string, sections: RawTaxonomy[0]['sections']) => {
         return {
             id,
             group,
@@ -129,7 +90,7 @@ export const getTaxonomy = (): Topic[] => {
         };
     };
 
-    for (const rawTopic of TAXONOMY_DATA) {
+    for (const rawTopic of rawData) {
         if (rawTopic.id === 'data-structures') {
             // Split logic for Data Structures
             // Core: Common Enumeration, Prefix Sum, Difference Array, Stack, Queue, Heap, Union-Find
@@ -190,15 +151,25 @@ export const getTaxonomy = (): Topic[] => {
             s.problems.length > 0 || s.subtopics.some(st => st.problems.length > 0)
         );
     });
+}
+
+/**
+ * Adapter to consume the V3 taxonomy_graph.json.
+ * Maintains "Road to 2000" order from plan.md.
+ *
+ * V3 Parser Change: 'data-structures' is split into Core and Advanced.
+ */
+export const getTaxonomy = (): Topic[] => {
+    return adaptRawTaxonomy(TAXONOMY_DATA);
 };
 
 /**
  * Get total problem count across all topics.
  */
-export const getTotalProblemCount = (): number => {
-    const taxonomy = getTaxonomy();
+export const getTotalProblemCount = (taxonomy?: Topic[]): number => {
+    const topics = taxonomy ?? getTaxonomy();
     let count = 0;
-    for (const topic of taxonomy) {
+    for (const topic of topics) {
         for (const section of topic.sections) {
             count += section.problems.length;
             for (const sub of section.subtopics) {

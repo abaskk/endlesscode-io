@@ -5,12 +5,11 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { getTaxonomy, getTotalProblemCount } from "@/data/adapter";
 import type { Section, Subtopic } from "@/data/types";
-import { BookOpen, ExternalLink } from "lucide-react";
 import { ProblemTable } from "./ProblemTable";
 import { useProgress } from "@/context/ProgressContext";
+import type { TabId } from "@/types/tabs";
 
 // 2. Define Colors for Groups (Progress Bar)
 const GROUP_COLORS: Record<string, string> = {
@@ -67,7 +66,8 @@ function SubtopicBlock({ subtopic, topicId, sectionIdx, subIdx }: {
     );
 }
 
-export function TopicAccordion() {
+export function TopicAccordion({ activeTab: _activeTab }: { activeTab?: TabId }) {
+    // activeTab is for future use when multiple taxonomies are loaded
     const taxonomy = getTaxonomy();
     const totalProblems = getTotalProblemCount();
     const { isSolved, totalSolvedCount } = useProgress();
@@ -188,28 +188,8 @@ export function TopicAccordion() {
                                     </div>
                                 </AccordionTrigger>
                                 <AccordionContent className="pt-2">
-                                    <div className="space-y-2">
-                                        {/* Topic Concept Link (Disabled for now) */}
-                                        <div className="bg-muted/10 border border-border/50 rounded-lg p-4 flex items-center justify-between opacity-60 cursor-not-allowed">
-                                            <div className="flex items-center gap-3">
-                                                <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground">
-                                                    <BookOpen className="w-5 h-5" />
-                                                </div>
-                                                <div>
-                                                    <div className="flex items-center gap-2">
-                                                        <h4 className="font-semibold text-foreground">Start here: The Concept</h4>
-                                                        <Badge variant="outline" className="text-[10px] uppercase tracking-widest h-4 px-1 opacity-70">Coming Soon</Badge>
-                                                    </div>
-                                                    <p className="text-sm text-muted-foreground">Master the {topic.title} pattern perfectly before solving.</p>
-                                                </div>
-                                            </div>
-                                            <Button variant="outline" disabled className="gap-2 border-border">
-                                                Read Guide <ExternalLink className="w-3 h-3" />
-                                            </Button>
-                                        </div>
-
-                                        {/* Sections — Nested Accordion */}
-                                        <Accordion type="multiple" className="w-full space-y-1">
+                                    {/* Sections — Nested Accordion */}
+                                    <Accordion type="multiple" className="w-full space-y-1">
                                             {topic.sections.map((section, idx) => {
                                                 const sCount = sectionProblemCount(section);
                                                 if (sCount === 0) return null;
@@ -260,7 +240,6 @@ export function TopicAccordion() {
                                                 );
                                             })}
                                         </Accordion>
-                                    </div>
                                 </AccordionContent>
                             </AccordionItem>
                         );
