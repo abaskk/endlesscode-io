@@ -67,7 +67,6 @@ function SubtopicBlock({ subtopic, topicId, sectionIdx, subIdx }: {
 }
 
 export function TopicAccordion({ activeTab: _activeTab }: { activeTab?: TabId }) {
-    // activeTab is for future use when multiple taxonomies are loaded
     const taxonomy = getTaxonomy();
     const totalProblems = getTotalProblemCount();
     const { isSolved, totalSolvedCount } = useProgress();

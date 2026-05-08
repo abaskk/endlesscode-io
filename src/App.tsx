@@ -1,6 +1,5 @@
 import { TaxonomyTabs } from "@/components/dashboard/TaxonomyTabs";
-import { TopicPage } from "@/pages/TopicPage";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
@@ -71,10 +70,10 @@ function App() {
 
   return (
     <ProgressProvider totalProblems={totalProblems}>
-      <BrowserRouter basename="/endlesscode-io">
+      <BrowserRouter basename="/">
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/topic/:topicId" element={<TopicPage />} />
+          <Route path="/" element={<Navigate to="/all" replace />} />
+          <Route path="/all" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
     </ProgressProvider>
