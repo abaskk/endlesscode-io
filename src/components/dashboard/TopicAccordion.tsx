@@ -74,11 +74,11 @@ export function TopicAccordion({ activeTab: _activeTab }: { activeTab?: TabId })
     const taxonomy = getTaxonomy();
     const totalProblems = getTotalProblemCount();
     const { isSolved, totalSolvedCount } = useProgress();
-    const { searchQuery, selectedTags } = useSearch();
+    const { searchQuery, selectedTags, selectedSections } = useSearch();
 
     const filteredTaxonomy = useMemo(() =>
-        filterTaxonomy(taxonomy, searchQuery, selectedTags),
-    [taxonomy, searchQuery, selectedTags]
+        filterTaxonomy(taxonomy, searchQuery, selectedTags, selectedSections),
+    [taxonomy, searchQuery, selectedTags, selectedSections]
     );
 
     const groupStats = useMemo(() =>

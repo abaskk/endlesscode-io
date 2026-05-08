@@ -4,9 +4,10 @@ import type { Problem, Section, Subtopic, Topic } from './types';
 export function filterTaxonomy(
   taxonomy: Topic[],
   searchQuery: string,
-  selectedTags: string[]
+  selectedTags: string[],
+  selectedSections: string[]
 ): Topic[] {
-  if (searchQuery.length === 0 && selectedTags.length === 0) {
+  if (searchQuery.length === 0 && selectedTags.length === 0 && selectedSections.length === 0) {
     return taxonomy;
   }
 
@@ -75,18 +76,26 @@ export function filterTaxonomy(
   return Array.from(topicSet.values()).map(topic => ({
     ...topic,
     sections: topic.sections
+      .filter(section => {
+        const sectionKey = `${topic.id}-${section.title}`;
+        if (selectedSections.length > 0 && !selectedSections.includes(sectionKey)) {
+          return false;
+        }
+        return true;
+      })
       .map(section => ({
         ...section,
-        subtopics: section.subtopics.filter(subtopic => {
-          const subtopicKey = `${topic.id}-${section.title}-${subtopic.title}`;
-          const inSet = subtopicSet.has(subtopicKey);
-          if (!inSet) return false;
-          const { subtopic: filteredSubtopic } = subtopicSet.get(subtopicKey)!;
-          return {
-            ...filteredSubtopic,
-            problems: filteredSubtopic.problems.filter(p => problemIds.has(p.id)),
-          };
-        }),
+        subtopics: section.subtopics
+          .filter(subtopic => {
+            const subtopicKey = `${topic.id}-${section.title}-${subtopic.title}`;
+            const inSet = subtopicSet.has(subtopicKey);
+            if (!inSet) return false;
+            const { subtopic: filteredSubtopic } = subtopicSet.get(subtopicKey)!;
+            return {
+              ...filteredSubtopic,
+              problems: filteredSubtopic.problems.filter(p => problemIds.has(p.id)),
+            };
+          }),
         problems: section.problems.filter(p => problemIds.has(p.id)),
       }))
       .filter(section => section.problems.length > 0 || section.subtopics.length > 0),
