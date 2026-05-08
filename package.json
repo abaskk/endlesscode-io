@@ -22,6 +22,7 @@
     "@types/react-syntax-highlighter": "^15.5.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "fuse.js": "^7.3.0",
     "lucide-react": "^0.563.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
+    "@types/fuse": "^2.6.2",
     "@types/node": "^25.2.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

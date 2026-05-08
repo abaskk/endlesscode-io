@@ -1,5 +1,6 @@
 import { TaxonomyTabs } from "@/components/dashboard/TaxonomyTabs";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { SearchProvider } from "@/context/SearchContext";
 import {
   Accordion,
   AccordionContent,
@@ -70,12 +71,14 @@ function App() {
 
   return (
     <ProgressProvider totalProblems={totalProblems}>
-      <BrowserRouter basename="/">
+      <SearchProvider>
+        <BrowserRouter basename="/">
         <Routes>
           <Route path="/" element={<Navigate to="/all" replace />} />
           <Route path="/all" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
+      </SearchProvider>
     </ProgressProvider>
   )
 }

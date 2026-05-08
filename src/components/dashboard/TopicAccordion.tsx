@@ -6,10 +6,14 @@ import {
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { getTaxonomy, getTotalProblemCount } from "@/data/adapter";
+import { filterTaxonomy } from "@/data/filterTaxonomy";
 import type { Section, Subtopic } from "@/data/types";
 import { ProblemTable } from "./ProblemTable";
+import { SearchBar } from "./SearchBar";
 import { useProgress } from "@/context/ProgressContext";
+import { useSearch } from "@/context/SearchContext";
 import type { TabId } from "@/types/tabs";
+import { useMemo } from "react";
 
 // 2. Define Colors for Groups (Progress Bar)
 const GROUP_COLORS: Record<string, string> = {
@@ -70,29 +74,36 @@ export function TopicAccordion({ activeTab: _activeTab }: { activeTab?: TabId })
     const taxonomy = getTaxonomy();
     const totalProblems = getTotalProblemCount();
     const { isSolved, totalSolvedCount } = useProgress();
+    const { searchQuery, selectedTags } = useSearch();
 
-    // 1. Aggregate sums by Visual Group
-    const groupStats = taxonomy.reduce((acc, topic) => {
-        const group = topic.group;
-        if (!acc[group]) {
-            acc[group] = { total: 0, solved: 0, label: group };
-        }
+    const filteredTaxonomy = useMemo(() =>
+        filterTaxonomy(taxonomy, searchQuery, selectedTags),
+    [taxonomy, searchQuery, selectedTags]
+    );
 
-        // Count problems in this topic
-        topic.sections.forEach(section => {
-            section.problems.forEach(p => {
-                acc[group].total++;
-                if (isSolved(p.id)) acc[group].solved++;
-            });
-            section.subtopics.forEach(sub => {
-                sub.problems.forEach(p => {
+    const groupStats = useMemo(() =>
+        taxonomy.reduce((acc, topic) => {
+            const group = topic.group;
+            if (!acc[group]) {
+                acc[group] = { total: 0, solved: 0, label: group };
+            }
+
+            topic.sections.forEach(section => {
+                section.problems.forEach(p => {
                     acc[group].total++;
                     if (isSolved(p.id)) acc[group].solved++;
                 });
+                section.subtopics.forEach(sub => {
+                    sub.problems.forEach(p => {
+                        acc[group].total++;
+                        if (isSolved(p.id)) acc[group].solved++;
+                    });
+                });
             });
-        });
-        return acc;
-    }, {} as Record<string, { total: number; solved: number; label: string }>);
+            return acc;
+        }, {} as Record<string, { total: number; solved: number; label: string }>),
+    [taxonomy, isSolved]
+    );
 
     return (
         <div className="w-full max-w-5xl mx-auto space-y-8">
@@ -160,10 +171,13 @@ export function TopicAccordion({ activeTab: _activeTab }: { activeTab?: TabId })
                 </div>
             </div>
 
+            {/* Search Bar */}
+            <SearchBar />
+
             {/* Topics Accordion */}
             <div className="space-y-4">
                 <Accordion type="multiple" className="w-full space-y-4">
-                    {taxonomy.map((topic) => {
+                    {filteredTaxonomy.map((topic) => {
                         const topicProblemCount = topic.sections.reduce(
                             (acc, s) => acc + sectionProblemCount(s), 0
                         );
