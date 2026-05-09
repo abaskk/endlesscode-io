@@ -35,7 +35,7 @@ function App() {
   return (
     <ProgressProvider totalProblems={totalProblems}>
       <SearchProvider>
-        <BrowserRouter basename="/">
+        <BrowserRouter basename="/endlesscode-io/">
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="*" element={<Navigate to="/" replace />} />
