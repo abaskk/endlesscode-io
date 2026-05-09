@@ -1,12 +1,7 @@
 import { TaxonomyTabs } from "@/components/dashboard/TaxonomyTabs";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { SearchProvider } from "@/context/SearchContext";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+
 
 function Dashboard() {
   return (
@@ -23,39 +18,7 @@ function Dashboard() {
       </header>
 
       <main className="max-w-5xl mx-auto px-6 py-12">
-        <div className="max-w-xl mb-8">
-          <Accordion type="single" collapsible>
-            <AccordionItem value="source" className="border-none">
-              <AccordionTrigger className="text-sm font-medium text-foreground py-2 justify-start gap-2 hover:no-underline">
-                <span>Source Material</span>
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-sm">
-                <p className="mb-2">
-                  This roadmap is adapted from the highly acclaimed "Scientific刷题" (Scientific Coding) guide on LeetCode China by
-                  <a
-                    href="https://leetcode.cn/u/endlesscheng/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline font-medium mx-1"
-                  >
-                    EndlessCheng
-                  </a>.
-                </p>
-                <p>
-                  Original Post:
-                  <a
-                    href="https://leetcode.cn/discuss/post/3141566/ru-he-ke-xue-shua-ti-by-endlesscheng-q3yd/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline ml-1"
-                  >
-                    How to practice scientifically?
-                  </a>
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
+
 
         <TaxonomyTabs />
       </main>
