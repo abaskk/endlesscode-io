@@ -20,7 +20,7 @@ export function TaxonomyTabs() {
     const tabParam = searchParams.get('tab');
 
     // Determine active tab
-    let activeTab: TabId = 'all';
+    let activeTab: TabId = TABS[0].id as TabId;
     if (tabParam && TABS.some(t => t.id === tabParam)) {
         activeTab = tabParam as TabId;
     } else {
