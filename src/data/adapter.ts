@@ -64,7 +64,7 @@ function adaptProblem(raw: RawProblem): Problem {
  * Adapts a raw taxonomy into the app's Topic format.
  * This allows loading different taxonomies for different tabs.
  */
-export function adaptRawTaxonomy(rawData: RawTaxonomy): Topic[] {
+function adaptRawTaxonomy(rawData: RawTaxonomy): Topic[] {
     const adaptedTopics: Topic[] = [];
 
     // Helper to process a topic

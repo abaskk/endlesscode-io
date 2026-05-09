@@ -12,15 +12,6 @@ dist
 dist-ssr
 *.local
 
-# Data Lab Output (Generatable)
-tools/data-lab/source/raw_galaxy_pages/
-tools/data-lab/source/raw_pages/
-tools/data-lab/generated/
-tools/data-lab/.venv/
-tools/data-lab/__pycache__/
-__pycache__/
-*.pyc
-
-# Data Lab Downloadable Datasets
-tools/data-lab/source/*.html
-tools/data-lab/**/*.html
+# Editor
+.vscode/
+.idea/

@@ -12,7 +12,6 @@ import { ProblemTable } from "./ProblemTable";
 import { SearchBar } from "./SearchBar";
 import { useProgress } from "@/context/ProgressContext";
 import { useSearch } from "@/context/SearchContext";
-import type { TabId } from "@/types/tabs";
 import { useMemo } from "react";
 
 // 2. Define Colors for Groups (Progress Bar)
@@ -70,7 +69,7 @@ function SubtopicBlock({ subtopic, topicId, sectionIdx, subIdx }: {
     );
 }
 
-export function TopicAccordion({ activeTab: _activeTab }: { activeTab?: TabId }) {
+export function TopicAccordion() {
     const taxonomy = getTaxonomy();
     const totalProblems = getTotalProblemCount();
     const { isSolved, totalSolvedCount } = useProgress();

@@ -35,7 +35,7 @@ export function TaxonomyTabs() {
 
             {TABS.map((tab) => (
                 <TabsContent key={tab.id} value={tab.id} className="mt-0">
-                    <TopicAccordion activeTab={tab.id} />
+                    <TopicAccordion />
                 </TabsContent>
             ))}
         </Tabs>
