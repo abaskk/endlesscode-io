@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useSearch } from '@/context/SearchContext';
 import { Badge } from '@/components/ui/badge';
 import { X } from 'lucide-react';
-import { getTaxonomy } from '@/data/adapter';
+import type { Topic } from '@/data/types';
 import {
   Combobox,
   ComboboxChip,
@@ -23,9 +23,8 @@ const TAG_COLORS: Record<string, string> = {
   'ADVANCED': 'bg-orange-500/15 text-orange-600 border-orange-500/30 hover:bg-orange-500/25',
 };
 
-export function SearchBar() {
+export function SearchBar({ taxonomy }: { taxonomy: Topic[] }) {
   const { searchQuery, selectedTags, selectedSections, setSearchQuery, toggleTag, toggleSection, clearSearch } = useSearch();
-  const taxonomy = useMemo(() => getTaxonomy(), []);
   const hasFilters = searchQuery.length > 0 || selectedTags.length > 0 || selectedSections.length > 0;
 
   const anchor = useComboboxAnchor();

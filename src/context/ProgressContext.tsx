@@ -4,6 +4,7 @@ interface ProgressContextType {
     solvedProblems: Set<string>;
     toggleProblem: (id: string) => void;
     isSolved: (id: string) => boolean;
+    resetProgress: () => void;
     progressPercentage: number;
     totalSolvedCount: number;
 }
@@ -32,6 +33,10 @@ export function ProgressProvider({ children, totalProblems }: { children: React.
         setSolvedProblems(newSolved);
     };
 
+    const resetProgress = () => {
+        setSolvedProblems(new Set());
+    };
+
     const isSolved = (id: string) => solvedProblems.has(id);
 
     const totalSolvedCount = solvedProblems.size;
@@ -44,6 +49,7 @@ export function ProgressProvider({ children, totalProblems }: { children: React.
             solvedProblems,
             toggleProblem,
             isSolved,
+            resetProgress,
             progressPercentage,
             totalSolvedCount
         }}>

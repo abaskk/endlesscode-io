@@ -1,4 +1,5 @@
 import RAW_DATA from './taxonomy_graph_manual.json';
+import RAW_DATA_DISTILLED from './taxonomy_graph_distilled_v1.json';
 import type { Topic, Problem } from './types';
 import { validateTaxonomy, type RawTaxonomy, type RawProblem } from './schema';
 
@@ -9,6 +10,15 @@ const TAXONOMY_DATA: RawTaxonomy = (() => {
     } catch (error) {
         console.error('Failed to validate taxonomy data:', error);
         throw new Error('Taxonomy data validation failed. Please check the JSON format.');
+    }
+})();
+
+const TAXONOMY_DATA_DISTILLED: RawTaxonomy = (() => {
+    try {
+        return validateTaxonomy(RAW_DATA_DISTILLED);
+    } catch (error) {
+        console.error('Failed to validate distilled taxonomy data:', error);
+        throw new Error('Distilled taxonomy data validation failed. Please check the JSON format.');
     }
 })();
 
@@ -64,7 +74,7 @@ function adaptProblem(raw: RawProblem): Problem {
  * Adapts a raw taxonomy into the app's Topic format.
  * This allows loading different taxonomies for different tabs.
  */
-function adaptRawTaxonomy(rawData: RawTaxonomy): Topic[] {
+export function adaptRawTaxonomy(rawData: RawTaxonomy): Topic[] {
     const adaptedTopics: Topic[] = [];
 
     // Helper to process a topic
@@ -161,6 +171,13 @@ function adaptRawTaxonomy(rawData: RawTaxonomy): Topic[] {
  */
 export const getTaxonomy = (): Topic[] => {
     return adaptRawTaxonomy(TAXONOMY_DATA);
+};
+
+/**
+ * Get distilled taxonomy (curated subset of problems).
+ */
+export const getDistilledTaxonomy = (): Topic[] => {
+    return adaptRawTaxonomy(TAXONOMY_DATA_DISTILLED);
 };
 
 /**

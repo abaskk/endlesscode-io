@@ -5,14 +5,15 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { getTaxonomy, getTotalProblemCount } from "@/data/adapter";
+import { getTotalProblemCount } from "@/data/adapter";
 import { filterTaxonomy } from "@/data/filterTaxonomy";
-import type { Section, Subtopic } from "@/data/types";
+import type { Section, Subtopic, Topic } from "@/data/types";
 import { ProblemTable } from "./ProblemTable";
 import { SearchBar } from "./SearchBar";
 import { useProgress } from "@/context/ProgressContext";
 import { useSearch } from "@/context/SearchContext";
 import { useMemo } from "react";
+import { RotateCcw } from "lucide-react";
 
 // 2. Define Colors for Groups (Progress Bar)
 const GROUP_COLORS: Record<string, string> = {
@@ -69,10 +70,9 @@ function SubtopicBlock({ subtopic, topicId, sectionIdx, subIdx }: {
     );
 }
 
-export function TopicAccordion() {
-    const taxonomy = getTaxonomy();
-    const totalProblems = getTotalProblemCount();
-    const { isSolved, totalSolvedCount } = useProgress();
+export function TopicAccordion({ taxonomy }: { taxonomy: Topic[] }) {
+    const totalProblems = getTotalProblemCount(taxonomy);
+    const { isSolved, totalSolvedCount, resetProgress } = useProgress();
     const { searchQuery, selectedTags, selectedSections } = useSearch();
 
     const filteredTaxonomy = useMemo(() =>
@@ -119,9 +119,24 @@ export function TopicAccordion() {
                         <span className="text-3xl font-bold text-primary block leading-none">
                             {totalSolvedCount} <span className="text-lg text-muted-foreground">/ {totalProblems}</span>
                         </span>
-                        <span className="text-xs text-muted-foreground font-mono mt-1 block uppercase tracking-wider">
-                            Problems Solved
-                        </span>
+                        <div className="flex items-center justify-end gap-2 mt-1">
+                            <span className="text-sm text-muted-foreground mt-1">
+                                Problems Solved
+                            </span>
+                            {totalSolvedCount > 0 && (
+                                <button
+                                    onClick={() => {
+                                        if (window.confirm('Reset all progress? This cannot be undone.')) {
+                                            resetProgress();
+                                        }
+                                    }}
+                                    className="p-1 rounded-md text-muted-foreground/50 hover:text-destructive hover:bg-destructive/10 transition-colors"
+                                    title="Reset progress"
+                                >
+                                    <RotateCcw className="w-3 h-3" />
+                                </button>
+                            )}
+                        </div>
                     </div>
                 </div>
 
@@ -171,7 +186,7 @@ export function TopicAccordion() {
             </div>
 
             {/* Search Bar */}
-            <SearchBar />
+            <SearchBar taxonomy={taxonomy} />
 
             {/* Topics Accordion */}
             <div className="space-y-4">
