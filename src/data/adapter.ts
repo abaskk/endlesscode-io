@@ -1,5 +1,6 @@
 import RAW_DATA from './taxonomy_graph_manual.json';
-import RAW_DATA_DISTILLED from './taxonomy_graph_distilled_v1.json';
+import RAW_DATA_MASTERY from './taxonomy_graph_mastery_v1.json';
+import RAW_DATA_NEETCODE from './taxonomy_graph_neetcode150.json';
 import type { Topic, Problem } from './types';
 import { validateTaxonomy, type RawTaxonomy, type RawProblem } from './schema';
 
@@ -13,12 +14,21 @@ const TAXONOMY_DATA: RawTaxonomy = (() => {
     }
 })();
 
-const TAXONOMY_DATA_DISTILLED: RawTaxonomy = (() => {
+const TAXONOMY_DATA_MASTERY: RawTaxonomy = (() => {
     try {
-        return validateTaxonomy(RAW_DATA_DISTILLED);
+        return validateTaxonomy(RAW_DATA_MASTERY);
     } catch (error) {
-        console.error('Failed to validate distilled taxonomy data:', error);
-        throw new Error('Distilled taxonomy data validation failed. Please check the JSON format.');
+        console.error('Failed to validate mastery taxonomy data:', error);
+        throw new Error('Mastery taxonomy data validation failed. Please check the JSON format.');
+    }
+})();
+
+const TAXONOMY_DATA_NEETCODE: RawTaxonomy = (() => {
+    try {
+        return validateTaxonomy(RAW_DATA_NEETCODE);
+    } catch (error) {
+        console.error('Failed to validate neetcode taxonomy data:', error);
+        throw new Error('Neetcode taxonomy data validation failed. Please check the JSON format.');
     }
 })();
 
@@ -174,10 +184,17 @@ export const getTaxonomy = (): Topic[] => {
 };
 
 /**
- * Get distilled taxonomy (curated subset of problems).
+ * Get mastery taxonomy (curated subset of problems).
  */
-export const getDistilledTaxonomy = (): Topic[] => {
-    return adaptRawTaxonomy(TAXONOMY_DATA_DISTILLED);
+export const getMasteryTaxonomy = (): Topic[] => {
+    return adaptRawTaxonomy(TAXONOMY_DATA_MASTERY);
+};
+
+/**
+ * Get neetcode taxonomy
+ */
+export const getNeetcodeTaxonomy = (): Topic[] => {
+    return adaptRawTaxonomy(TAXONOMY_DATA_NEETCODE);
 };
 
 /**

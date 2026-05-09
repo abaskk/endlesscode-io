@@ -1,32 +1,44 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { TopicAccordion } from './TopicAccordion';
 import { TABS } from '@/data/tabs';
 import type { TabId } from '@/types/tabs';
-import { getTaxonomy, getDistilledTaxonomy } from '@/data/adapter';
+import { getTaxonomy, getMasteryTaxonomy, getNeetcodeTaxonomy } from '@/data/adapter';
 import type { Topic } from '@/data/types';
 
 const STORAGE_KEY = 'endlesscode-active-tab';
 
 const TAB_TAXONOMY_MAP: Record<string, () => Topic[]> = {
     'all': getTaxonomy,
-    'distilled': getDistilledTaxonomy,
+    'mastery': getMasteryTaxonomy,
+    'neetcode': getNeetcodeTaxonomy,
 };
 
 export function TaxonomyTabs() {
-    const [activeTab, setActiveTab] = useState<TabId>('all');
+    const [searchParams, setSearchParams] = useSearchParams();
+    const tabParam = searchParams.get('tab');
 
-    // Load saved tab from localStorage on mount
-    useEffect(() => {
+    // Determine active tab
+    let activeTab: TabId = 'all';
+    if (tabParam && TABS.some(t => t.id === tabParam)) {
+        activeTab = tabParam as TabId;
+    } else {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved && TABS.some(t => t.id === saved)) {
-            setActiveTab(saved as TabId);
+            activeTab = saved as TabId;
         }
-    }, []);
+    }
 
-    // Save tab to localStorage when it changes
+    // Sync URL if it doesn't match the active tab
+    useEffect(() => {
+        if (searchParams.get('tab') !== activeTab) {
+            setSearchParams({ tab: activeTab }, { replace: true });
+        }
+    }, [activeTab, searchParams, setSearchParams]);
+
     const handleTabChange = (tabId: string) => {
-        setActiveTab(tabId as TabId);
+        setSearchParams({ tab: tabId });
         localStorage.setItem(STORAGE_KEY, tabId);
     };
 

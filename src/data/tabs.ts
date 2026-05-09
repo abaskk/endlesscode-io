@@ -7,8 +7,13 @@ export const TABS: Tab[] = [
         dataFile: './taxonomy_graph_manual.json',
     },
     {
-        id: 'distilled',
-        label: 'Distilled',
-        dataFile: './taxonomy_graph_distilled_v1.json',
+        id: 'mastery',
+        label: 'Mastery',
+        dataFile: './taxonomy_graph_mastery_v1.json',
+    },
+    {
+        id: 'neetcode',
+        label: 'NeetCode 150',
+        dataFile: './taxonomy_graph_neetcode150.json',
     },
 ];

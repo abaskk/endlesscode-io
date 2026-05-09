@@ -74,9 +74,8 @@ function App() {
       <SearchProvider>
         <BrowserRouter basename="/">
         <Routes>
-          <Route path="/" element={<Navigate to="/all" replace />} />
-          <Route path="/all" element={<Dashboard />} />
-          <Route path="/distilled" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
       </SearchProvider>
