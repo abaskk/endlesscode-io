@@ -6,19 +6,19 @@
     "sections": [
       {
         "title": "Binary Search",
-        "title_zh": "一、二分查找",
+        "title_zh": "\u4e00\u3001\u4e8c\u5206\u67e5\u627e",
         "description": "Explanation: Binary Search Red-Blue Coloring [Core Algorithm Essentials 04]\nLet nums be increasing (non-decreasing), length n.\nNote <x and >=x are complements (sum to n). Same for <=x and >x.",
-        "description_zh": "讲解：二分查找 红蓝染色法【基础算法精讲 04】\n设 nums 为递增（非递减）数组，长为 n。\n注意 <x 和 ≥x 互为补集，元素个数之和为 n。≤x 和 >x 同理。",
+        "description_zh": "\u8bb2\u89e3\uff1a\u4e8c\u5206\u67e5\u627e \u7ea2\u84dd\u67d3\u8272\u6cd5\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 04\u3011\n\u8bbe nums \u4e3a\u9012\u589e\uff08\u975e\u9012\u51cf\uff09\u6570\u7ec4\uff0c\u957f\u4e3a n\u3002\n\u6ce8\u610f <x \u548c \u2265x \u4e92\u4e3a\u8865\u96c6\uff0c\u5143\u7d20\u4e2a\u6570\u4e4b\u548c\u4e3a n\u3002\u2264x \u548c >x \u540c\u7406\u3002",
         "subtopics": [
           {
             "title": "Basics",
-            "title_zh": "§1.1 基础",
+            "title_zh": "\u00a71.1 \u57fa\u7840",
             "problems": [
               {
                 "id": "704",
                 "title": "Binary Search",
                 "slug": "binary-search",
-                "rating": 1250,
+                "rating": 1078,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -28,9 +28,9 @@
           },
           {
             "title": "Advanced",
-            "title_zh": "§1.2 进阶",
+            "title_zh": "\u00a71.2 \u8fdb\u9636",
             "description": "Sort first, then Binary Search.",
-            "description_zh": "部分题目需要先排序，然后在有序数组上二分查找。",
+            "description_zh": "\u90e8\u5206\u9898\u76ee\u9700\u8981\u5148\u6392\u5e8f\uff0c\u7136\u540e\u5728\u6709\u5e8f\u6570\u7ec4\u4e0a\u4e8c\u5206\u67e5\u627e\u3002",
             "problems": [
               {
                 "id": "981",
@@ -49,15 +49,15 @@
       },
       {
         "title": "Binary Search on Answer",
-        "title_zh": "二、二分答案",
-        "description": "\"Spend a log time to add a condition.\" — Binary Search on Answer.",
-        "description_zh": "“花费一个 log 的时间，增加了一个条件。” —— 二分答案",
+        "title_zh": "\u4e8c\u3001\u4e8c\u5206\u7b54\u6848",
+        "description": "\"Spend a log time to add a condition.\" \u2014 Binary Search on Answer.",
+        "description_zh": "\u201c\u82b1\u8d39\u4e00\u4e2a log \u7684\u65f6\u95f4\uff0c\u589e\u52a0\u4e86\u4e00\u4e2a\u6761\u4ef6\u3002\u201d \u2014\u2014 \u4e8c\u5206\u7b54\u6848",
         "subtopics": [
           {
             "title": "Find Minimum",
-            "title_zh": "§2.1 求最小",
+            "title_zh": "\u00a72.1 \u6c42\u6700\u5c0f",
             "description": "Binary Search whatever the problem asks for.",
-            "description_zh": "题目求什么，就二分什么。",
+            "description_zh": "\u9898\u76ee\u6c42\u4ec0\u4e48\uff0c\u5c31\u4e8c\u5206\u4ec0\u4e48\u3002",
             "problems": [
               {
                 "id": "875",
@@ -73,9 +73,9 @@
           },
           {
             "title": "Minimize Maximum",
-            "title_zh": "§2.4 最小化最大值",
+            "title_zh": "\u00a72.4 \u6700\u5c0f\u5316\u6700\u5927\u503c",
             "description": "Essentially Binary Search for Min. 'mid' represents the upper bound.\nLike using a lid (upper bound) to press down the max value. Check if it fits.",
-            "description_zh": "本质是二分答案求最小。二分的 mid 表示上界。\n好比用一个盖子（上界）去压住最大值，看看能否压住（check 函数）。",
+            "description_zh": "\u672c\u8d28\u662f\u4e8c\u5206\u7b54\u6848\u6c42\u6700\u5c0f\u3002\u4e8c\u5206\u7684 mid \u8868\u793a\u4e0a\u754c\u3002\n\u597d\u6bd4\u7528\u4e00\u4e2a\u76d6\u5b50\uff08\u4e0a\u754c\uff09\u53bb\u538b\u4f4f\u6700\u5927\u503c\uff0c\u770b\u770b\u80fd\u5426\u538b\u4f4f\uff08check \u51fd\u6570\uff09\u3002",
             "problems": [
               {
                 "id": "778",
@@ -94,14 +94,14 @@
       },
       {
         "title": "Miscellaneous",
-        "title_zh": "四、其他",
+        "title_zh": "\u56db\u3001\u5176\u4ed6",
         "subtopics": [],
         "problems": [
           {
             "id": "74",
             "title": "Search a 2D Matrix",
             "slug": "search-a-2d-matrix",
-            "rating": 1846,
+            "rating": 1327,
             "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
@@ -111,7 +111,7 @@
             "id": "153",
             "title": "Find Minimum in Rotated Sorted Array",
             "slug": "find-minimum-in-rotated-sorted-array",
-            "rating": 1671,
+            "rating": 1587,
             "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
@@ -121,7 +121,7 @@
             "id": "33",
             "title": "Search in Rotated Sorted Array",
             "slug": "search-in-rotated-sorted-array",
-            "rating": 2034,
+            "rating": 1532,
             "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
@@ -131,7 +131,7 @@
             "id": "4",
             "title": "Median of Two Sorted Arrays",
             "slug": "median-of-two-sorted-arrays",
-            "rating": 1878,
+            "rating": 2385,
             "is_predicted": true,
             "difficulty": "Hard",
             "is_premium": false,
@@ -148,14 +148,14 @@
     "sections": [
       {
         "title": "Basics",
-        "title_zh": "一、基础题",
+        "title_zh": "\u4e00\u3001\u57fa\u7840\u9898",
         "subtopics": [],
         "problems": [
           {
             "id": "191",
             "title": "Number of 1 Bits",
             "slug": "number-of-1-bits",
-            "rating": 1350,
+            "rating": 1187,
             "is_predicted": true,
             "difficulty": "Easy",
             "is_premium": false,
@@ -165,7 +165,7 @@
             "id": "338",
             "title": "Counting Bits",
             "slug": "counting-bits",
-            "rating": 1600,
+            "rating": 1213,
             "is_predicted": true,
             "difficulty": "Easy",
             "is_premium": false,
@@ -175,7 +175,7 @@
             "id": "190",
             "title": "Reverse Bits",
             "slug": "reverse-bits",
-            "rating": 1547,
+            "rating": 1248,
             "is_predicted": true,
             "difficulty": "Easy",
             "is_premium": false,
@@ -185,17 +185,17 @@
       },
       {
         "title": "XOR Properties",
-        "title_zh": "二、异或（XOR）的性质",
+        "title_zh": "\u4e8c\u3001\u5f02\u6216\uff08XOR\uff09\u7684\u6027\u8d28",
         "description": "Essentially addition in Modulo-2 Residue System (XOR).",
-        "description_zh": "本质是模 2 剩余系的加法。",
+        "description_zh": "\u672c\u8d28\u662f\u6a21 2 \u5269\u4f59\u7cfb\u7684\u52a0\u6cd5\u3002",
         "subtopics": [],
         "problems": [
           {
             "id": "268",
             "title": "Missing Number",
             "slug": "missing-number",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1217,
+            "is_predicted": true,
             "difficulty": "Easy",
             "is_premium": false,
             "tags": []
@@ -204,14 +204,14 @@
       },
       {
         "title": "Miscellaneous",
-        "title_zh": "九、其他",
+        "title_zh": "\u4e5d\u3001\u5176\u4ed6",
         "subtopics": [],
         "problems": [
           {
             "id": "136",
             "title": "Single Number",
             "slug": "single-number",
-            "rating": 1500,
+            "rating": 1123,
             "is_predicted": true,
             "difficulty": "Easy",
             "is_premium": false,
@@ -221,7 +221,7 @@
             "id": "371",
             "title": "Sum of Two Integers",
             "slug": "sum-of-two-integers",
-            "rating": 1620,
+            "rating": 1423,
             "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
@@ -238,19 +238,19 @@
     "sections": [
       {
         "title": "Common Enumeration Techniques",
-        "title_zh": "零、常用枚举技巧",
+        "title_zh": "\u96f6\u3001\u5e38\u7528\u679a\u4e3e\u6280\u5de7",
         "subtopics": [
           {
             "title": "Enumerate Right, Maintain Left",
-            "title_zh": "§0.1 枚举右，维护左",
+            "title_zh": "\u00a70.1 \u679a\u4e3e\u53f3\uff0c\u7ef4\u62a4\u5de6",
             "description": "For Two-Variable problems (e.g. ai+aj=t), enumerate the right variable aj to convert to a Single-Variable problem: Find ai=t-aj to the left (using Hash Table).\nI call this technique 'Enumerate Right, Maintain Left'.\nSolve these with one pass if possible.",
-            "description_zh": "对于 双变量问题，例如两数之和 ai​+aj​=t，可以枚举右边的 aj​，转换成 单变量问题，也就是在 aj​ 左边查找是否有 ai​=t−aj​，这可以用哈希表维护。\n我把这个技巧叫做 枚举右，维护左。\n下面这些题目，如果可以，请用一次遍历实现。",
+            "description_zh": "\u5bf9\u4e8e \u53cc\u53d8\u91cf\u95ee\u9898\uff0c\u4f8b\u5982\u4e24\u6570\u4e4b\u548c ai\u200b+aj\u200b=t\uff0c\u53ef\u4ee5\u679a\u4e3e\u53f3\u8fb9\u7684 aj\u200b\uff0c\u8f6c\u6362\u6210 \u5355\u53d8\u91cf\u95ee\u9898\uff0c\u4e5f\u5c31\u662f\u5728 aj\u200b \u5de6\u8fb9\u67e5\u627e\u662f\u5426\u6709 ai\u200b=t\u2212aj\u200b\uff0c\u8fd9\u53ef\u4ee5\u7528\u54c8\u5e0c\u8868\u7ef4\u62a4\u3002\n\u6211\u628a\u8fd9\u4e2a\u6280\u5de7\u53eb\u505a \u679a\u4e3e\u53f3\uff0c\u7ef4\u62a4\u5de6\u3002\n\u4e0b\u9762\u8fd9\u4e9b\u9898\u76ee\uff0c\u5982\u679c\u53ef\u4ee5\uff0c\u8bf7\u7528\u4e00\u6b21\u904d\u5386\u5b9e\u73b0\u3002",
             "problems": [
               {
                 "id": "1",
                 "title": "Two Sum",
                 "slug": "two-sum",
-                "rating": 1250,
+                "rating": 823,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -262,7 +262,7 @@
                 "id": "121",
                 "title": "Best Time to Buy and Sell Stock",
                 "slug": "best-time-to-buy-and-sell-stock",
-                "rating": 1550,
+                "rating": 1238,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -278,8 +278,8 @@
             "id": "2013",
             "title": "Detect Squares",
             "slug": "detect-squares",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1841,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -288,8 +288,8 @@
             "id": "202",
             "title": "Happy Number",
             "slug": "happy-number",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1187,
+            "is_predicted": true,
             "difficulty": "Easy",
             "is_premium": false,
             "tags": []
@@ -298,8 +298,8 @@
             "id": "73",
             "title": "Set Matrix Zeroes",
             "slug": "set-matrix-zeroes",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1420,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -308,8 +308,8 @@
             "id": "54",
             "title": "Spiral Matrix",
             "slug": "spiral-matrix",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1432,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -318,8 +318,8 @@
             "id": "48",
             "title": "Rotate Image",
             "slug": "rotate-image",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1412,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -328,8 +328,8 @@
             "id": "128",
             "title": "Longest Consecutive Sequence",
             "slug": "longest-consecutive-sequence",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1487,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -338,8 +338,8 @@
             "id": "36",
             "title": "Valid Sudoku",
             "slug": "valid-sudoku",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1387,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -348,8 +348,8 @@
             "id": "217",
             "title": "Contains Duplicate",
             "slug": "contains-duplicate",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1087,
+            "is_predicted": true,
             "difficulty": "Easy",
             "is_premium": false,
             "tags": []
@@ -358,19 +358,19 @@
       },
       {
         "title": "Prefix Sum",
-        "title_zh": "一、前缀和",
+        "title_zh": "\u4e00\u3001\u524d\u7f00\u548c",
         "subtopics": [
           {
             "title": "Basics",
-            "title_zh": "§1.1 基础",
+            "title_zh": "\u00a71.1 \u57fa\u7840",
             "description": "Left-Closed Right-Open formula: Subarray [left, right) sum = sum[right] - sum[left]. Avoids +1/-1 errors.",
-            "description_zh": "左闭右开公式：子数组 [left,right) 的元素和为 sum[right]−sum[left]。把下标区间定义成左闭右开，就不需要加一减一了。",
+            "description_zh": "\u5de6\u95ed\u53f3\u5f00\u516c\u5f0f\uff1a\u5b50\u6570\u7ec4 [left,right) \u7684\u5143\u7d20\u548c\u4e3a sum[right]\u2212sum[left]\u3002\u628a\u4e0b\u6807\u533a\u95f4\u5b9a\u4e49\u6210\u5de6\u95ed\u53f3\u5f00\uff0c\u5c31\u4e0d\u9700\u8981\u52a0\u4e00\u51cf\u4e00\u4e86\u3002",
             "problems": [
               {
                 "id": "53",
                 "title": "Maximum Subarray",
                 "slug": "maximum-subarray",
-                "rating": 1650,
+                "rating": 1432,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -383,19 +383,19 @@
       },
       {
         "title": "Difference Array",
-        "title_zh": "二、差分",
+        "title_zh": "\u4e8c\u3001\u5dee\u5206",
         "subtopics": [
           {
             "title": "1D Difference Array",
-            "title_zh": "§2.1 一维差分",
+            "title_zh": "\u00a72.1 \u4e00\u7ef4\u5dee\u5206",
             "description": "Difference Array vs Prefix Sum is like Derivative vs Integral.\nThe Prefix Sum of the Difference Array of A is A itself.",
-            "description_zh": "差分与前缀和的关系，类似导数与积分的关系。\n数组 a 的差分的前缀和就是数组 a（不变）。",
+            "description_zh": "\u5dee\u5206\u4e0e\u524d\u7f00\u548c\u7684\u5173\u7cfb\uff0c\u7c7b\u4f3c\u5bfc\u6570\u4e0e\u79ef\u5206\u7684\u5173\u7cfb\u3002\n\u6570\u7ec4 a \u7684\u5dee\u5206\u7684\u524d\u7f00\u548c\u5c31\u662f\u6570\u7ec4 a\uff08\u4e0d\u53d8\uff09\u3002",
             "problems": [
               {
                 "id": "56",
                 "title": "Merge Intervals",
                 "slug": "merge-intervals",
-                "rating": 1814,
+                "rating": 1427,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -407,7 +407,7 @@
                 "id": "57",
                 "title": "Insert Interval",
                 "slug": "insert-interval",
-                "rating": 1853,
+                "rating": 1437,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -419,7 +419,7 @@
                 "id": "253",
                 "title": "Meeting Rooms II",
                 "slug": "meeting-rooms-ii",
-                "rating": 1900,
+                "rating": 1713,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": true,
@@ -434,17 +434,17 @@
       },
       {
         "title": "Stack",
-        "title_zh": "三、栈",
+        "title_zh": "\u4e09\u3001\u6808",
         "subtopics": [
           {
             "title": "Advanced",
-            "title_zh": "§3.2 进阶",
+            "title_zh": "\u00a73.2 \u8fdb\u9636",
             "problems": [
               {
                 "id": "155",
                 "title": "Min Stack",
                 "slug": "min-stack",
-                "rating": 1810,
+                "rating": 1412,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -454,15 +454,15 @@
           },
           {
             "title": "Valid Parentheses (RBS)",
-            "title_zh": "§3.4 合法括号字符串（RBS）",
+            "title_zh": "\u00a73.4 \u5408\u6cd5\u62ec\u53f7\u5b57\u7b26\u4e32\uff08RBS\uff09",
             "description": "Note: Some solvable with just a depth counter, no Stack needed.",
-            "description_zh": "注：部分题目可以不用栈，而是用一个数字记录嵌套深度。",
+            "description_zh": "\u6ce8\uff1a\u90e8\u5206\u9898\u76ee\u53ef\u4ee5\u4e0d\u7528\u6808\uff0c\u800c\u662f\u7528\u4e00\u4e2a\u6570\u5b57\u8bb0\u5f55\u5d4c\u5957\u6df1\u5ea6\u3002",
             "problems": [
               {
                 "id": "20",
                 "title": "Valid Parentheses",
                 "slug": "valid-parentheses",
-                "rating": 1546,
+                "rating": 1123,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -472,7 +472,7 @@
                 "id": "678",
                 "title": "Valid Parenthesis String",
                 "slug": "valid-parenthesis-string",
-                "rating": 1695,
+                "rating": 1623,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -482,13 +482,13 @@
           },
           {
             "title": "Expression Parsing",
-            "title_zh": "§3.5 表达式解析",
+            "title_zh": "\u00a73.5 \u8868\u8fbe\u5f0f\u89e3\u6790",
             "problems": [
               {
                 "id": "150",
                 "title": "Evaluate Reverse Polish Notation",
                 "slug": "evaluate-reverse-polish-notation",
-                "rating": 1799,
+                "rating": 1387,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -501,21 +501,21 @@
       },
       {
         "title": "Queue",
-        "title_zh": "四、队列",
+        "title_zh": "\u56db\u3001\u961f\u5217",
         "description": "Queue used in BFS (Grid/Graph). Stack used in DFS (implicit via recursion).",
-        "description_zh": "队列常用在 BFS 中，见 网格图题单 和 图论题单。与此相比，栈常用在 DFS 中，但无需我们手动维护。",
+        "description_zh": "\u961f\u5217\u5e38\u7528\u5728 BFS \u4e2d\uff0c\u89c1 \u7f51\u683c\u56fe\u9898\u5355 \u548c \u56fe\u8bba\u9898\u5355\u3002\u4e0e\u6b64\u76f8\u6bd4\uff0c\u6808\u5e38\u7528\u5728 DFS \u4e2d\uff0c\u4f46\u65e0\u9700\u6211\u4eec\u624b\u52a8\u7ef4\u62a4\u3002",
         "subtopics": [
           {
             "title": "Monotonic Queue",
-            "title_zh": "§4.4 单调队列",
+            "title_zh": "\u00a74.4 \u5355\u8c03\u961f\u5217",
             "description": "I think 'Monotonic Deque' is more accurate.\nMonotonic Queue = Sliding Window + Monotonic Stack. Master those two first.\nQ: How to order Enqueue, Dequeue, and Update Answer?\nA: Two cases. If the answer depends on the current element, Enqueue -> Update. If not, Update -> Enqueue. Dequeue usually happens first: remove invalid elements from the front before accurate calculations.",
-            "description_zh": "个人觉得叫单调双端队列更准确。\n单调队列 = 滑动窗口 + 单调栈。必须先掌握滑动窗口和单调栈这两个知识点，再学单调队列。\n问：入队、出队、更新答案，这三步的顺序如何思考？\n答：有两种情况。如果更新答案时，用到的数据包含当前元素，那么就需要先入队，再更新答案；如果用到的数据不包含当前元素，那么就需要先更新答案，再入队。至于出队，一般写在前面，每遍历到一个新的元素，就看看队首元素是否失效（不满足要求），失效则弹出队首。",
+            "description_zh": "\u4e2a\u4eba\u89c9\u5f97\u53eb\u5355\u8c03\u53cc\u7aef\u961f\u5217\u66f4\u51c6\u786e\u3002\n\u5355\u8c03\u961f\u5217 = \u6ed1\u52a8\u7a97\u53e3 + \u5355\u8c03\u6808\u3002\u5fc5\u987b\u5148\u638c\u63e1\u6ed1\u52a8\u7a97\u53e3\u548c\u5355\u8c03\u6808\u8fd9\u4e24\u4e2a\u77e5\u8bc6\u70b9\uff0c\u518d\u5b66\u5355\u8c03\u961f\u5217\u3002\n\u95ee\uff1a\u5165\u961f\u3001\u51fa\u961f\u3001\u66f4\u65b0\u7b54\u6848\uff0c\u8fd9\u4e09\u6b65\u7684\u987a\u5e8f\u5982\u4f55\u601d\u8003\uff1f\n\u7b54\uff1a\u6709\u4e24\u79cd\u60c5\u51b5\u3002\u5982\u679c\u66f4\u65b0\u7b54\u6848\u65f6\uff0c\u7528\u5230\u7684\u6570\u636e\u5305\u542b\u5f53\u524d\u5143\u7d20\uff0c\u90a3\u4e48\u5c31\u9700\u8981\u5148\u5165\u961f\uff0c\u518d\u66f4\u65b0\u7b54\u6848\uff1b\u5982\u679c\u7528\u5230\u7684\u6570\u636e\u4e0d\u5305\u542b\u5f53\u524d\u5143\u7d20\uff0c\u90a3\u4e48\u5c31\u9700\u8981\u5148\u66f4\u65b0\u7b54\u6848\uff0c\u518d\u5165\u961f\u3002\u81f3\u4e8e\u51fa\u961f\uff0c\u4e00\u822c\u5199\u5728\u524d\u9762\uff0c\u6bcf\u904d\u5386\u5230\u4e00\u4e2a\u65b0\u7684\u5143\u7d20\uff0c\u5c31\u770b\u770b\u961f\u9996\u5143\u7d20\u662f\u5426\u5931\u6548\uff08\u4e0d\u6ee1\u8db3\u8981\u6c42\uff09\uff0c\u5931\u6548\u5219\u5f39\u51fa\u961f\u9996\u3002",
             "problems": [
               {
                 "id": "239",
                 "title": "Sliding Window Maximum",
                 "slug": "sliding-window-maximum",
-                "rating": 1685,
+                "rating": 2147,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -528,13 +528,13 @@
       },
       {
         "title": "Heap (Priority Queue)",
-        "title_zh": "五、堆（优先队列）",
+        "title_zh": "\u4e94\u3001\u5806\uff08\u4f18\u5148\u961f\u5217\uff09",
         "subtopics": [
           {
             "title": "Basics",
-            "title_zh": "§5.1 基础",
+            "title_zh": "\u00a75.1 \u57fa\u7840",
             "description": "Why is Heapify time complexity O(n)?",
-            "description_zh": "为什么堆化的时间复杂度是 O(n)？",
+            "description_zh": "\u4e3a\u4ec0\u4e48\u5806\u5316\u7684\u65f6\u95f4\u590d\u6742\u5ea6\u662f O(n)\uff1f",
             "problems": [
               {
                 "id": "1046",
@@ -550,7 +550,7 @@
                 "id": "703",
                 "title": "Kth Largest Element in a Stream",
                 "slug": "kth-largest-element-in-a-stream",
-                "rating": 1550,
+                "rating": 1217,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -560,13 +560,13 @@
           },
           {
             "title": "Advanced",
-            "title_zh": "§5.2 进阶",
+            "title_zh": "\u00a75.2 \u8fdb\u9636",
             "problems": [
               {
                 "id": "23",
                 "title": "Merge k Sorted Lists",
                 "slug": "merge-k-sorted-lists",
-                "rating": 2000,
+                "rating": 1987,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -586,13 +586,13 @@
           },
           {
             "title": "Rearrange Elements",
-            "title_zh": "§5.4 重排元素",
+            "title_zh": "\u00a75.4 \u91cd\u6392\u5143\u7d20",
             "problems": [
               {
                 "id": "621",
                 "title": "Task Scheduler",
                 "slug": "task-scheduler",
-                "rating": 1850,
+                "rating": 1578,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -602,15 +602,15 @@
           },
           {
             "title": "Double-Ended Heap (Sliding Window Kth Element)",
-            "title_zh": "§5.7 对顶堆（滑动窗口第 K 小/大）",
+            "title_zh": "\u00a75.7 \u5bf9\u9876\u5806\uff08\u6ed1\u52a8\u7a97\u53e3\u7b2c K \u5c0f/\u5927\uff09",
             "description": "Lazy Deletion Heap required.\nMultiple methods: Ordered Set, Value BIT, etc.",
-            "description_zh": "部分题目需要结合懒删除堆。\n做法不止一种，部分题目也可以用有序集合/权值树状数组等数据结构解决。",
+            "description_zh": "\u90e8\u5206\u9898\u76ee\u9700\u8981\u7ed3\u5408\u61d2\u5220\u9664\u5806\u3002\n\u505a\u6cd5\u4e0d\u6b62\u4e00\u79cd\uff0c\u90e8\u5206\u9898\u76ee\u4e5f\u53ef\u4ee5\u7528\u6709\u5e8f\u96c6\u5408/\u6743\u503c\u6811\u72b6\u6570\u7ec4\u7b49\u6570\u636e\u7ed3\u6784\u89e3\u51b3\u3002",
             "problems": [
               {
                 "id": "295",
                 "title": "Find Median from Data Stream",
                 "slug": "find-median-from-data-stream",
-                "rating": 2100,
+                "rating": 2087,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -624,8 +624,8 @@
             "id": "355",
             "title": "Design Twitter",
             "slug": "design-twitter",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1623,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -634,8 +634,8 @@
             "id": "973",
             "title": "K Closest Points to Origin",
             "slug": "k-closest-points-to-origin",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1413,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -644,8 +644,8 @@
             "id": "347",
             "title": "Top K Frequent Elements",
             "slug": "top-k-frequent-elements",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1523,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -654,17 +654,17 @@
       },
       {
         "title": "Trie",
-        "title_zh": "六、字典树（trie）",
+        "title_zh": "\u516d\u3001\u5b57\u5178\u6811\uff08trie\uff09",
         "subtopics": [
           {
             "title": "Basics",
-            "title_zh": "§6.1 基础",
+            "title_zh": "\u00a76.1 \u57fa\u7840",
             "problems": [
               {
                 "id": "208",
                 "title": "Implement Trie (Prefix Tree)",
                 "slug": "implement-trie-prefix-tree",
-                "rating": 1700,
+                "rating": 1487,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -674,13 +674,13 @@
           },
           {
             "title": "Advanced",
-            "title_zh": "§6.2 进阶",
+            "title_zh": "\u00a76.2 \u8fdb\u9636",
             "problems": [
               {
                 "id": "211",
                 "title": "Design Add and Search Words Data Structure",
                 "slug": "design-add-and-search-words-data-structure",
-                "rating": 1850,
+                "rating": 1723,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -690,7 +690,7 @@
                 "id": "212",
                 "title": "Word Search II",
                 "slug": "word-search-ii",
-                "rating": 1981,
+                "rating": 2047,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -700,13 +700,13 @@
           },
           {
             "title": "Trie DP Optimization",
-            "title_zh": "§6.3 字典树优化 DP",
+            "title_zh": "\u00a76.3 \u5b57\u5178\u6811\u4f18\u5316 DP",
             "problems": [
               {
                 "id": "139",
                 "title": "Word Break",
                 "slug": "word-break",
-                "rating": 1813,
+                "rating": 1623,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -719,17 +719,17 @@
       },
       {
         "title": "Union-Find",
-        "title_zh": "七、并查集",
+        "title_zh": "\u4e03\u3001\u5e76\u67e5\u96c6",
         "subtopics": [
           {
             "title": "Basics",
-            "title_zh": "§7.1 基础",
+            "title_zh": "\u00a77.1 \u57fa\u7840",
             "problems": [
               {
                 "id": "684",
                 "title": "Redundant Connection",
                 "slug": "redundant-connection",
-                "rating": 1700,
+                "rating": 1432,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -742,9 +742,9 @@
       },
       {
         "title": "Programming Skills Training",
-        "title_zh": "编程能力强化训练",
+        "title_zh": "\u7f16\u7a0b\u80fd\u529b\u5f3a\u5316\u8bad\u7ec3",
         "description": "Known approach but hard implementation. Some are Simulation.",
-        "description_zh": "知道大概怎么做，但不好实现的题目。部分题目是模拟题。",
+        "description_zh": "\u77e5\u9053\u5927\u6982\u600e\u4e48\u505a\uff0c\u4f46\u4e0d\u597d\u5b9e\u73b0\u7684\u9898\u76ee\u3002\u90e8\u5206\u9898\u76ee\u662f\u6a21\u62df\u9898\u3002",
         "subtopics": [
           {
             "title": "Part B",
@@ -754,7 +754,7 @@
                 "id": "146",
                 "title": "LRU Cache",
                 "slug": "lru-cache",
-                "rating": 1850,
+                "rating": 1587,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -774,17 +774,17 @@
     "sections": [
       {
         "title": "Intro DP",
-        "title_zh": "一、入门 DP",
+        "title_zh": "\u4e00\u3001\u5165\u95e8 DP",
         "subtopics": [
           {
             "title": "Climbing Stairs",
-            "title_zh": "§1.1 爬楼梯",
+            "title_zh": "\u00a71.1 \u722c\u697c\u68af",
             "problems": [
               {
                 "id": "70",
                 "title": "Climbing Stairs",
                 "slug": "climbing-stairs",
-                "rating": 1400,
+                "rating": 1023,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -804,13 +804,13 @@
           },
           {
             "title": "House Robber",
-            "title_zh": "§1.2 打家劫舍",
+            "title_zh": "\u00a71.2 \u6253\u5bb6\u52ab\u820d",
             "problems": [
               {
                 "id": "198",
                 "title": "House Robber",
                 "slug": "house-robber",
-                "rating": 1550,
+                "rating": 1427,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -820,7 +820,7 @@
                 "id": "213",
                 "title": "House Robber II",
                 "slug": "house-robber-ii",
-                "rating": 1700,
+                "rating": 1427,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -830,15 +830,15 @@
           },
           {
             "title": "Maximum Subarray Sum",
-            "title_zh": "§1.3 最大子数组和（最大子段和）",
+            "title_zh": "\u00a71.3 \u6700\u5927\u5b50\u6570\u7ec4\u548c\uff08\u6700\u5927\u5b50\u6bb5\u548c\uff09",
             "description": "Two approaches:",
-            "description_zh": "有两种做法：",
+            "description_zh": "\u6709\u4e24\u79cd\u505a\u6cd5\uff1a",
             "problems": [
               {
                 "id": "152",
                 "title": "Maximum Product Subarray",
                 "slug": "maximum-product-subarray",
-                "rating": 1800,
+                "rating": 1623,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -851,19 +851,19 @@
       },
       {
         "title": "Grid DP",
-        "title_zh": "二、网格图 DP",
+        "title_zh": "\u4e8c\u3001\u7f51\u683c\u56fe DP",
         "description": "For 2D DP (Knapsack, LCS), visualizing the DP matrix shows transitions as grid movements. Grid DP helps understand abstract 2D DP (e.g., why 0-1 Knapsack space optimization needs reverse iteration).",
-        "description_zh": "对于一些二维 DP（例如背包、最长公共子序列），如果把 DP 矩阵画出来，其实状态转移可以视作在网格图上的移动。所以在学习相对更抽象的二维 DP 之前，做一些形象的网格图 DP 会让后续的学习更轻松（比如 0-1 背包的空间优化写法为什么要倒序遍历）。",
+        "description_zh": "\u5bf9\u4e8e\u4e00\u4e9b\u4e8c\u7ef4 DP\uff08\u4f8b\u5982\u80cc\u5305\u3001\u6700\u957f\u516c\u5171\u5b50\u5e8f\u5217\uff09\uff0c\u5982\u679c\u628a DP \u77e9\u9635\u753b\u51fa\u6765\uff0c\u5176\u5b9e\u72b6\u6001\u8f6c\u79fb\u53ef\u4ee5\u89c6\u4f5c\u5728\u7f51\u683c\u56fe\u4e0a\u7684\u79fb\u52a8\u3002\u6240\u4ee5\u5728\u5b66\u4e60\u76f8\u5bf9\u66f4\u62bd\u8c61\u7684\u4e8c\u7ef4 DP \u4e4b\u524d\uff0c\u505a\u4e00\u4e9b\u5f62\u8c61\u7684\u7f51\u683c\u56fe DP \u4f1a\u8ba9\u540e\u7eed\u7684\u5b66\u4e60\u66f4\u8f7b\u677e\uff08\u6bd4\u5982 0-1 \u80cc\u5305\u7684\u7a7a\u95f4\u4f18\u5316\u5199\u6cd5\u4e3a\u4ec0\u4e48\u8981\u5012\u5e8f\u904d\u5386\uff09\u3002",
         "subtopics": [
           {
             "title": "Basics",
-            "title_zh": "§2.1 基础",
+            "title_zh": "\u00a72.1 \u57fa\u7840",
             "problems": [
               {
                 "id": "62",
                 "title": "Unique Paths",
                 "slug": "unique-paths",
-                "rating": 1700,
+                "rating": 1443,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -873,13 +873,13 @@
           },
           {
             "title": "Advanced",
-            "title_zh": "§2.2 进阶",
+            "title_zh": "\u00a72.2 \u8fdb\u9636",
             "problems": [
               {
                 "id": "329",
                 "title": "Longest Increasing Path in a Matrix",
                 "slug": "longest-increasing-path-in-a-matrix",
-                "rating": 1941,
+                "rating": 2017,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -892,21 +892,21 @@
       },
       {
         "title": "Knapsack",
-        "title_zh": "三、背包",
+        "title_zh": "\u4e09\u3001\u80cc\u5305",
         "description": "Explanation: 0-1 & Unbounded Knapsack [Core Algorithm Essentials 18]",
-        "description_zh": "讲解：0-1 背包 完全背包【基础算法精讲 18】",
+        "description_zh": "\u8bb2\u89e3\uff1a0-1 \u80cc\u5305 \u5b8c\u5168\u80cc\u5305\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 18\u3011",
         "subtopics": [
           {
             "title": "0-1 Knapsack",
-            "title_zh": "§3.1 0-1 背包",
-            "description": "Each item picked at most once. 0-1 Knapsack represents 'Pick or Not'.\nFor 'Enumerate Which to Pick', see '§4.2 LIS'.",
-            "description_zh": "每个物品只能选一次，即要么选，要么不选。所以 0-1 背包是「选或不选」的代表。\n关于「枚举选哪个」的代表，见本题单的「§4.2 最长递增子序列」。",
+            "title_zh": "\u00a73.1 0-1 \u80cc\u5305",
+            "description": "Each item picked at most once. 0-1 Knapsack represents 'Pick or Not'.\nFor 'Enumerate Which to Pick', see '\u00a74.2 LIS'.",
+            "description_zh": "\u6bcf\u4e2a\u7269\u54c1\u53ea\u80fd\u9009\u4e00\u6b21\uff0c\u5373\u8981\u4e48\u9009\uff0c\u8981\u4e48\u4e0d\u9009\u3002\u6240\u4ee5 0-1 \u80cc\u5305\u662f\u300c\u9009\u6216\u4e0d\u9009\u300d\u7684\u4ee3\u8868\u3002\n\u5173\u4e8e\u300c\u679a\u4e3e\u9009\u54ea\u4e2a\u300d\u7684\u4ee3\u8868\uff0c\u89c1\u672c\u9898\u5355\u7684\u300c\u00a74.2 \u6700\u957f\u9012\u589e\u5b50\u5e8f\u5217\u300d\u3002",
             "problems": [
               {
                 "id": "416",
                 "title": "Partition Equal Subset Sum",
                 "slug": "partition-equal-subset-sum",
-                "rating": 1800,
+                "rating": 1523,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -916,7 +916,7 @@
                 "id": "494",
                 "title": "Target Sum",
                 "slug": "target-sum",
-                "rating": 1850,
+                "rating": 1623,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -926,15 +926,15 @@
           },
           {
             "title": "Unbounded Knapsack",
-            "title_zh": "§3.2 完全背包",
+            "title_zh": "\u00a73.2 \u5b8c\u5168\u80cc\u5305",
             "description": "Items can be picked repeatedly (unlimited).",
-            "description_zh": "物品可以重复选，无个数限制。",
+            "description_zh": "\u7269\u54c1\u53ef\u4ee5\u91cd\u590d\u9009\uff0c\u65e0\u4e2a\u6570\u9650\u5236\u3002",
             "problems": [
               {
                 "id": "322",
                 "title": "Coin Change",
                 "slug": "coin-change",
-                "rating": 1900,
+                "rating": 1478,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -944,7 +944,7 @@
                 "id": "518",
                 "title": "Coin Change II",
                 "slug": "coin-change-ii",
-                "rating": 1850,
+                "rating": 1623,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -957,19 +957,19 @@
       },
       {
         "title": "Classic Linear DP",
-        "title_zh": "四、经典线性 DP",
+        "title_zh": "\u56db\u3001\u7ecf\u5178\u7ebf\u6027 DP",
         "subtopics": [
           {
             "title": "Longest Common Subsequence (LCS)",
-            "title_zh": "§4.1 最长公共子序列（LCS）",
+            "title_zh": "\u00a74.1 \u6700\u957f\u516c\u5171\u5b50\u5e8f\u5217\uff08LCS\uff09",
             "description": "Explanation: LCS & Edit Distance [Core Algorithm Essentials 19]\nGenerally define f[i][j] for result of (s[:i], t[:j]).",
-            "description_zh": "讲解：最长公共子序列 编辑距离【基础算法精讲 19】\n一般定义 f[i][j] 表示对 (s[:i],t[:j]) 的求解结果。",
+            "description_zh": "\u8bb2\u89e3\uff1a\u6700\u957f\u516c\u5171\u5b50\u5e8f\u5217 \u7f16\u8f91\u8ddd\u79bb\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 19\u3011\n\u4e00\u822c\u5b9a\u4e49 f[i][j] \u8868\u793a\u5bf9 (s[:i],t[:j]) \u7684\u6c42\u89e3\u7ed3\u679c\u3002",
             "problems": [
               {
                 "id": "1143",
                 "title": "Longest Common Subsequence",
                 "slug": "longest-common-subsequence",
-                "rating": 1800,
+                "rating": 1423,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -981,7 +981,7 @@
                 "id": "72",
                 "title": "Edit Distance",
                 "slug": "edit-distance",
-                "rating": 2000,
+                "rating": 1623,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -993,7 +993,7 @@
                 "id": "115",
                 "title": "Distinct Subsequences",
                 "slug": "distinct-subsequences",
-                "rating": 2000,
+                "rating": 1942,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -1005,7 +1005,7 @@
                 "id": "97",
                 "title": "Interleaving String",
                 "slug": "interleaving-string",
-                "rating": 2000,
+                "rating": 1573,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1017,7 +1017,7 @@
                 "id": "10",
                 "title": "Regular Expression Matching",
                 "slug": "regular-expression-matching",
-                "rating": 2300,
+                "rating": 2137,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -1029,15 +1029,15 @@
           },
           {
             "title": "Longest Increasing Subsequence (LIS)",
-            "title_zh": "§4.2 最长递增子序列（LIS）",
+            "title_zh": "\u00a74.2 \u6700\u957f\u9012\u589e\u5b50\u5e8f\u5217\uff08LIS\uff09",
             "description": "Explanation: LIS [Core Algorithm Essentials 20]\nMany approaches:",
-            "description_zh": "讲解：最长递增子序列【基础算法精讲 20】\n做法有很多：",
+            "description_zh": "\u8bb2\u89e3\uff1a\u6700\u957f\u9012\u589e\u5b50\u5e8f\u5217\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 20\u3011\n\u505a\u6cd5\u6709\u5f88\u591a\uff1a",
             "problems": [
               {
                 "id": "300",
                 "title": "Longest Increasing Subsequence",
                 "slug": "longest-increasing-subsequence",
-                "rating": 1835,
+                "rating": 1623,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1052,19 +1052,19 @@
       },
       {
         "title": "Partition DP",
-        "title_zh": "五、划分型 DP",
+        "title_zh": "\u4e94\u3001\u5212\u5206\u578b DP",
         "subtopics": [
           {
             "title": "Optimal Partition",
-            "title_zh": "§5.2 最优划分",
-            "description": "Min/Max segments, optimal partition score, etc.\nGenerally define f[i] max/min segments for prefix a[:i].\n枚举最后一个子数组的左端点 L，从 f[L] 转移到 f[i]，并考虑 a[L:i] 对最优解的影响。",
-            "description_zh": "计算最少（最多）可以划分出多少段、最优划分得分等。\n一般定义 f[i] 表示长为 i 的前缀 a[:i] 在题目约束下，分割出的最少（最多）子数组个数（或者定义成分割方案数）。\n枚举最后一个子数组的左端点 L，从 f[L] 转移到 f[i]，并考虑 a[L:i] 对最优解的影响。",
+            "title_zh": "\u00a75.2 \u6700\u4f18\u5212\u5206",
+            "description": "Min/Max segments, optimal partition score, etc.\nGenerally define f[i] max/min segments for prefix a[:i].\n\u679a\u4e3e\u6700\u540e\u4e00\u4e2a\u5b50\u6570\u7ec4\u7684\u5de6\u7aef\u70b9 L\uff0c\u4ece f[L] \u8f6c\u79fb\u5230 f[i]\uff0c\u5e76\u8003\u8651 a[L:i] \u5bf9\u6700\u4f18\u89e3\u7684\u5f71\u54cd\u3002",
+            "description_zh": "\u8ba1\u7b97\u6700\u5c11\uff08\u6700\u591a\uff09\u53ef\u4ee5\u5212\u5206\u51fa\u591a\u5c11\u6bb5\u3001\u6700\u4f18\u5212\u5206\u5f97\u5206\u7b49\u3002\n\u4e00\u822c\u5b9a\u4e49 f[i] \u8868\u793a\u957f\u4e3a i \u7684\u524d\u7f00 a[:i] \u5728\u9898\u76ee\u7ea6\u675f\u4e0b\uff0c\u5206\u5272\u51fa\u7684\u6700\u5c11\uff08\u6700\u591a\uff09\u5b50\u6570\u7ec4\u4e2a\u6570\uff08\u6216\u8005\u5b9a\u4e49\u6210\u5206\u5272\u65b9\u6848\u6570\uff09\u3002\n\u679a\u4e3e\u6700\u540e\u4e00\u4e2a\u5b50\u6570\u7ec4\u7684\u5de6\u7aef\u70b9 L\uff0c\u4ece f[L] \u8f6c\u79fb\u5230 f[i]\uff0c\u5e76\u8003\u8651 a[L:i] \u5bf9\u6700\u4f18\u89e3\u7684\u5f71\u54cd\u3002",
             "problems": [
               {
                 "id": "91",
                 "title": "Decode Ways",
                 "slug": "decode-ways",
-                "rating": 1750,
+                "rating": 1427,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1077,21 +1077,21 @@
       },
       {
         "title": "State Machine DP",
-        "title_zh": "六、状态机 DP",
+        "title_zh": "\u516d\u3001\u72b6\u6001\u673a DP",
         "description": "Generally define f[i][j] as the optimal value for prefix a[:i] in state j. j is usually small.",
-        "description_zh": "一般定义 f[i][j] 表示前缀 a[:i] 在状态 j 下的最优值。j 一般很小。",
+        "description_zh": "\u4e00\u822c\u5b9a\u4e49 f[i][j] \u8868\u793a\u524d\u7f00 a[:i] \u5728\u72b6\u6001 j \u4e0b\u7684\u6700\u4f18\u503c\u3002j \u4e00\u822c\u5f88\u5c0f\u3002",
         "subtopics": [
           {
             "title": "Stock Trading",
-            "title_zh": "§6.1 买卖股票",
+            "title_zh": "\u00a76.1 \u4e70\u5356\u80a1\u7968",
             "description": "Explanation [Core Algorithm Essentials 21]",
-            "description_zh": "讲解【基础算法精讲 21】",
+            "description_zh": "\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 21\u3011",
             "problems": [
               {
                 "id": "309",
                 "title": "Best Time to Buy and Sell Stock with Cooldown",
                 "slug": "best-time-to-buy-and-sell-stock-with-cooldown",
-                "rating": 2000,
+                "rating": 1728,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1104,21 +1104,21 @@
       },
       {
         "title": "Interval DP",
-        "title_zh": "八、区间 DP",
+        "title_zh": "\u516b\u3001\u533a\u95f4 DP",
         "description": "Explanation: Interval DP [Core Algorithm Essentials 22]\nShrink from both ends to solve for sticky index interval.\nGenerally define f[i][j] as optimal value for interval [i, j].",
-        "description_zh": "讲解：区间 DP【基础算法精讲 22】\n从数组的左右两端不断缩短，求解关于某段下标区间的最优值。\n一般定义 f[i][j] 表示下标区间 [i,j] 的最优值。",
+        "description_zh": "\u8bb2\u89e3\uff1a\u533a\u95f4 DP\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 22\u3011\n\u4ece\u6570\u7ec4\u7684\u5de6\u53f3\u4e24\u7aef\u4e0d\u65ad\u7f29\u77ed\uff0c\u6c42\u89e3\u5173\u4e8e\u67d0\u6bb5\u4e0b\u6807\u533a\u95f4\u7684\u6700\u4f18\u503c\u3002\n\u4e00\u822c\u5b9a\u4e49 f[i][j] \u8868\u793a\u4e0b\u6807\u533a\u95f4 [i,j] \u7684\u6700\u4f18\u503c\u3002",
         "subtopics": [
           {
             "title": "Interval DP",
-            "title_zh": "§8.2 区间 DP",
+            "title_zh": "\u00a78.2 \u533a\u95f4 DP",
             "description": "For Regular Bracket String (RBS) elimination problems, properties usually include:",
-            "description_zh": "对于类似合法括号字符串（RBS）的消除问题，通常根据题意，会有如下性质：",
+            "description_zh": "\u5bf9\u4e8e\u7c7b\u4f3c\u5408\u6cd5\u62ec\u53f7\u5b57\u7b26\u4e32\uff08RBS\uff09\u7684\u6d88\u9664\u95ee\u9898\uff0c\u901a\u5e38\u6839\u636e\u9898\u610f\uff0c\u4f1a\u6709\u5982\u4e0b\u6027\u8d28\uff1a",
             "problems": [
               {
                 "id": "5",
                 "title": "Longest Palindromic Substring",
                 "slug": "longest-palindromic-substring",
-                "rating": 1750,
+                "rating": 1587,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1128,7 +1128,7 @@
                 "id": "647",
                 "title": "Palindromic Substrings",
                 "slug": "palindromic-substrings",
-                "rating": 1900,
+                "rating": 1423,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1138,7 +1138,7 @@
                 "id": "312",
                 "title": "Burst Balloons",
                 "slug": "burst-balloons",
-                "rating": 2400,
+                "rating": 2093,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -1151,21 +1151,21 @@
       },
       {
         "title": "Tree DP",
-        "title_zh": "十二、树形 DP",
+        "title_zh": "\u5341\u4e8c\u3001\u6811\u5f62 DP",
         "description": "Note: Some argue Tree DP isn't DP (no overlapping subproblems), just recursion. But the Bottom-Up thinking aligns with DP. Top-Down recursion does have overlapping subproblems (Memoization needed).",
-        "description_zh": "注：可能有同学觉得树形 DP 没有重复访问同一个状态（重叠子问题），并不能算作 DP，而是算作普通的递归。这么说也有一定道理，不过考虑到思维方式和 DP 是一样的自底向上，所以仍然叫做树形 DP。此外，如果是自顶向下的递归做法，是存在重叠子问题的，一般要结合记忆化搜索实现。",
+        "description_zh": "\u6ce8\uff1a\u53ef\u80fd\u6709\u540c\u5b66\u89c9\u5f97\u6811\u5f62 DP \u6ca1\u6709\u91cd\u590d\u8bbf\u95ee\u540c\u4e00\u4e2a\u72b6\u6001\uff08\u91cd\u53e0\u5b50\u95ee\u9898\uff09\uff0c\u5e76\u4e0d\u80fd\u7b97\u4f5c DP\uff0c\u800c\u662f\u7b97\u4f5c\u666e\u901a\u7684\u9012\u5f52\u3002\u8fd9\u4e48\u8bf4\u4e5f\u6709\u4e00\u5b9a\u9053\u7406\uff0c\u4e0d\u8fc7\u8003\u8651\u5230\u601d\u7ef4\u65b9\u5f0f\u548c DP \u662f\u4e00\u6837\u7684\u81ea\u5e95\u5411\u4e0a\uff0c\u6240\u4ee5\u4ecd\u7136\u53eb\u505a\u6811\u5f62 DP\u3002\u6b64\u5916\uff0c\u5982\u679c\u662f\u81ea\u9876\u5411\u4e0b\u7684\u9012\u5f52\u505a\u6cd5\uff0c\u662f\u5b58\u5728\u91cd\u53e0\u5b50\u95ee\u9898\u7684\uff0c\u4e00\u822c\u8981\u7ed3\u5408\u8bb0\u5fc6\u5316\u641c\u7d22\u5b9e\u73b0\u3002",
         "subtopics": [
           {
             "title": "Tree Diameter",
-            "title_zh": "§12.1 树的直径",
+            "title_zh": "\u00a712.1 \u6811\u7684\u76f4\u5f84",
             "description": "Explanation: Tree DP: Tree Diameter [Core Algorithm Essentials 23]",
-            "description_zh": "讲解：树形 DP：树的直径【基础算法精讲 23】",
+            "description_zh": "\u8bb2\u89e3\uff1a\u6811\u5f62 DP\uff1a\u6811\u7684\u76f4\u5f84\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 23\u3011",
             "problems": [
               {
                 "id": "543",
                 "title": "Diameter of Binary Tree",
                 "slug": "diameter-of-binary-tree",
-                "rating": 1650,
+                "rating": 1123,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -1175,7 +1175,7 @@
                 "id": "124",
                 "title": "Binary Tree Maximum Path Sum",
                 "slug": "binary-tree-maximum-path-sum",
-                "rating": 2000,
+                "rating": 1927,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -1188,7 +1188,7 @@
       },
       {
         "title": "Graph DP",
-        "title_zh": "十三、图 DP",
+        "title_zh": "\u5341\u4e09\u3001\u56fe DP",
         "subtopics": [],
         "problems": [
           {
@@ -1205,16 +1205,16 @@
       },
       {
         "title": "Prefix-Suffix Decomposition",
-        "title_zh": "专题：前后缀分解",
+        "title_zh": "\u4e13\u9898\uff1a\u524d\u540e\u7f00\u5206\u89e3",
         "description": "Solvable by State Machine DP.\nIf about elements (not ranges), try 'Enumerate Right, Maintain Left' (see DS topic).",
-        "description_zh": "部分题目也可以用状态机 DP 解决。\n如果涉及到的只是若干元素，而不是前缀/后缀这样的一段元素，也可以用「枚举右，维护左」思考，详见数据结构题单。",
+        "description_zh": "\u90e8\u5206\u9898\u76ee\u4e5f\u53ef\u4ee5\u7528\u72b6\u6001\u673a DP \u89e3\u51b3\u3002\n\u5982\u679c\u6d89\u53ca\u5230\u7684\u53ea\u662f\u82e5\u5e72\u5143\u7d20\uff0c\u800c\u4e0d\u662f\u524d\u7f00/\u540e\u7f00\u8fd9\u6837\u7684\u4e00\u6bb5\u5143\u7d20\uff0c\u4e5f\u53ef\u4ee5\u7528\u300c\u679a\u4e3e\u53f3\uff0c\u7ef4\u62a4\u5de6\u300d\u601d\u8003\uff0c\u8be6\u89c1\u6570\u636e\u7ed3\u6784\u9898\u5355\u3002",
         "subtopics": [],
         "problems": [
           {
             "id": "238",
             "title": "Product of Array Except Self",
             "slug": "product-of-array-except-self",
-            "rating": 1393,
+            "rating": 1482,
             "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
@@ -1224,7 +1224,7 @@
             "id": "42",
             "title": "Trapping Rain Water",
             "slug": "trapping-rain-water",
-            "rating": 1900,
+            "rating": 1934,
             "is_predicted": true,
             "difficulty": "Hard",
             "is_premium": false,
@@ -1241,19 +1241,19 @@
     "sections": [
       {
         "title": "Graph Traversal",
-        "title_zh": "一、图的遍历",
+        "title_zh": "\u4e00\u3001\u56fe\u7684\u904d\u5386",
         "subtopics": [
           {
             "title": "Depth-First Search (DFS)",
-            "title_zh": "§1.1 深度优先搜索（DFS）",
+            "title_zh": "\u00a71.1 \u6df1\u5ea6\u4f18\u5148\u641c\u7d22\uff08DFS\uff09",
             "description": "Find Connected Components, detect cycles (e.g. 207). Multiple methods often exist.\nTemplate (Calculate size of each connected component):",
-            "description_zh": "找连通块、判断是否有环（如 207 题）等。部分题目做法不止一种。\n模板（计算每个连通块的大小）：",
+            "description_zh": "\u627e\u8fde\u901a\u5757\u3001\u5224\u65ad\u662f\u5426\u6709\u73af\uff08\u5982 207 \u9898\uff09\u7b49\u3002\u90e8\u5206\u9898\u76ee\u505a\u6cd5\u4e0d\u6b62\u4e00\u79cd\u3002\n\u6a21\u677f\uff08\u8ba1\u7b97\u6bcf\u4e2a\u8fde\u901a\u5757\u7684\u5927\u5c0f\uff09\uff1a",
             "problems": [
               {
                 "id": "207",
                 "title": "Course Schedule",
                 "slug": "course-schedule",
-                "rating": 1750,
+                "rating": 1423,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1263,7 +1263,7 @@
                 "id": "261",
                 "title": "Graph Valid Tree",
                 "slug": "graph-valid-tree",
-                "rating": 1800,
+                "rating": 1483,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": true,
@@ -1273,7 +1273,7 @@
                 "id": "323",
                 "title": "Number of Connected Components in an Undirected Graph",
                 "slug": "number-of-connected-components-in-an-undirected-graph",
-                "rating": 1752,
+                "rating": 1432,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": true,
@@ -1283,15 +1283,15 @@
           },
           {
             "title": "Graph Modeling + BFS Shortest Path",
-            "title_zh": "§1.3 图论建模 + BFS 最短路",
+            "title_zh": "\u00a71.3 \u56fe\u8bba\u5efa\u6a21 + BFS \u6700\u77ed\u8def",
             "description": "Abstract states as graph nodes, use BFS to find shortest path from Start to Target.\nGood for practicing state design.",
-            "description_zh": "把状态抽象成图上的点，用 BFS 遍历这张图，计算从初始状态到目标状态的最短路长度。\n可以锻炼状态设计能力。",
+            "description_zh": "\u628a\u72b6\u6001\u62bd\u8c61\u6210\u56fe\u4e0a\u7684\u70b9\uff0c\u7528 BFS \u904d\u5386\u8fd9\u5f20\u56fe\uff0c\u8ba1\u7b97\u4ece\u521d\u59cb\u72b6\u6001\u5230\u76ee\u6807\u72b6\u6001\u7684\u6700\u77ed\u8def\u957f\u5ea6\u3002\n\u53ef\u4ee5\u953b\u70bc\u72b6\u6001\u8bbe\u8ba1\u80fd\u529b\u3002",
             "problems": [
               {
                 "id": "127",
                 "title": "Word Ladder",
                 "slug": "word-ladder",
-                "rating": 1677,
+                "rating": 2047,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -1305,8 +1305,8 @@
             "id": "133",
             "title": "Clone Graph",
             "slug": "clone-graph",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1427,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -1315,21 +1315,21 @@
       },
       {
         "title": "Topological Sort",
-        "title_zh": "二、拓扑排序",
+        "title_zh": "\u4e8c\u3001\u62d3\u6251\u6392\u5e8f",
         "description": "Think of Topological Sort as a black box: Input messy prerequisites, Output valid schedule.\nIt sorts graph nodes linearly. Precondition: No cycles (DAG). For edge x->y, x comes before y.",
-        "description_zh": "把拓扑排序想象成一个黑盒，给它一堆杂乱的先修课约束，它会给你一个井井有条的课程学习安排。\n这一种在图上的「排序」，可以把杂乱的点排成一排。前提条件是图中无环，从而保证每条边都是从排在前面的点，指向排在后面的点。即对于任意有向边 x→y，x 一定在 y 之前。",
+        "description_zh": "\u628a\u62d3\u6251\u6392\u5e8f\u60f3\u8c61\u6210\u4e00\u4e2a\u9ed1\u76d2\uff0c\u7ed9\u5b83\u4e00\u5806\u6742\u4e71\u7684\u5148\u4fee\u8bfe\u7ea6\u675f\uff0c\u5b83\u4f1a\u7ed9\u4f60\u4e00\u4e2a\u4e95\u4e95\u6709\u6761\u7684\u8bfe\u7a0b\u5b66\u4e60\u5b89\u6392\u3002\n\u8fd9\u4e00\u79cd\u5728\u56fe\u4e0a\u7684\u300c\u6392\u5e8f\u300d\uff0c\u53ef\u4ee5\u628a\u6742\u4e71\u7684\u70b9\u6392\u6210\u4e00\u6392\u3002\u524d\u63d0\u6761\u4ef6\u662f\u56fe\u4e2d\u65e0\u73af\uff0c\u4ece\u800c\u4fdd\u8bc1\u6bcf\u6761\u8fb9\u90fd\u662f\u4ece\u6392\u5728\u524d\u9762\u7684\u70b9\uff0c\u6307\u5411\u6392\u5728\u540e\u9762\u7684\u70b9\u3002\u5373\u5bf9\u4e8e\u4efb\u610f\u6709\u5411\u8fb9 x\u2192y\uff0cx \u4e00\u5b9a\u5728 y \u4e4b\u524d\u3002",
         "subtopics": [
           {
             "title": "Topological Sort",
-            "title_zh": "§2.1 拓扑排序",
+            "title_zh": "\u00a72.1 \u62d3\u6251\u6392\u5e8f",
             "description": "Before Topological Sort, do 1557. Minimum Number of Vertices to Reach All Nodes.",
-            "description_zh": "学习拓扑排序前，请先完成 1557. 可以到达所有点的最少点数目，有助于理解拓扑排序。",
+            "description_zh": "\u5b66\u4e60\u62d3\u6251\u6392\u5e8f\u524d\uff0c\u8bf7\u5148\u5b8c\u6210 1557. \u53ef\u4ee5\u5230\u8fbe\u6240\u6709\u70b9\u7684\u6700\u5c11\u70b9\u6570\u76ee\uff0c\u6709\u52a9\u4e8e\u7406\u89e3\u62d3\u6251\u6392\u5e8f\u3002",
             "problems": [
               {
                 "id": "210",
                 "title": "Course Schedule II",
                 "slug": "course-schedule-ii",
-                "rating": 1850,
+                "rating": 1427,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1339,7 +1339,7 @@
                 "id": "269",
                 "title": "Alien Dictionary",
                 "slug": "alien-dictionary",
-                "rating": 2150,
+                "rating": 2173,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": true,
@@ -1349,13 +1349,13 @@
           },
           {
             "title": "Pseudoforest (Functional Graph)",
-            "title_zh": "§2.3 基环树",
+            "title_zh": "\u00a72.3 \u57fa\u73af\u6811",
             "problems": [
               {
                 "id": "287",
                 "title": "Find the Duplicate Number",
                 "slug": "find-the-duplicate-number",
-                "rating": 1523,
+                "rating": 1732,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1368,19 +1368,19 @@
       },
       {
         "title": "Shortest Paths",
-        "title_zh": "三、最短路",
+        "title_zh": "\u4e09\u3001\u6700\u77ed\u8def",
         "subtopics": [
           {
             "title": "Single-Source Shortest Path: Dijkstra",
-            "title_zh": "§3.1 单源最短路：Dijkstra 算法",
+            "title_zh": "\u00a73.1 \u5355\u6e90\u6700\u77ed\u8def\uff1aDijkstra \u7b97\u6cd5",
             "description": "Introduction to Dijkstra Algorithm",
-            "description_zh": "Dijkstra 算法介绍",
+            "description_zh": "Dijkstra \u7b97\u6cd5\u4ecb\u7ecd",
             "problems": [
               {
                 "id": "743",
                 "title": "Network Delay Time",
                 "slug": "network-delay-time",
-                "rating": 1900,
+                "rating": 1453,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1393,9 +1393,9 @@
       },
       {
         "title": "Minimum Spanning Tree",
-        "title_zh": "四、最小生成树",
+        "title_zh": "\u56db\u3001\u6700\u5c0f\u751f\u6210\u6811",
         "description": "Involves Kruskal (Sparse) and Prim (Dense).\nNote: For Max Spanning Tree, sort edges distinct.\nKruskal Template (uses Union-Find, see DS topic):",
-        "description_zh": "涉及到 Kruskal 算法和 Prim 算法。前者一般用于稀疏图，后者一般用于稠密图。\n注：如果要求最大生成树，把边权从大到小排序。\nKruskal 算法模板（用到了并查集，完整模板见 数据结构题单）：",
+        "description_zh": "\u6d89\u53ca\u5230 Kruskal \u7b97\u6cd5\u548c Prim \u7b97\u6cd5\u3002\u524d\u8005\u4e00\u822c\u7528\u4e8e\u7a00\u758f\u56fe\uff0c\u540e\u8005\u4e00\u822c\u7528\u4e8e\u7a20\u5bc6\u56fe\u3002\n\u6ce8\uff1a\u5982\u679c\u8981\u6c42\u6700\u5927\u751f\u6210\u6811\uff0c\u628a\u8fb9\u6743\u4ece\u5927\u5230\u5c0f\u6392\u5e8f\u3002\nKruskal \u7b97\u6cd5\u6a21\u677f\uff08\u7528\u5230\u4e86\u5e76\u67e5\u96c6\uff0c\u5b8c\u6574\u6a21\u677f\u89c1 \u6570\u636e\u7ed3\u6784\u9898\u5355\uff09\uff1a",
         "subtopics": [],
         "problems": [
           {
@@ -1412,16 +1412,16 @@
       },
       {
         "title": "Eulerian Path / Circuit",
-        "title_zh": "五、欧拉路径/欧拉回路",
+        "title_zh": "\u4e94\u3001\u6b27\u62c9\u8def\u5f84/\u6b27\u62c9\u56de\u8def",
         "description": "Involves Hierholzer's Algorithm.",
-        "description_zh": "涉及到 Hierholzer 算法。",
+        "description_zh": "\u6d89\u53ca\u5230 Hierholzer \u7b97\u6cd5\u3002",
         "subtopics": [],
         "problems": [
           {
             "id": "332",
             "title": "Reconstruct Itinerary",
             "slug": "reconstruct-itinerary",
-            "rating": 2100,
+            "rating": 2213,
             "is_predicted": true,
             "difficulty": "Hard",
             "is_premium": false,
@@ -1438,17 +1438,17 @@
     "sections": [
       {
         "title": "Introduction",
-        "title_zh": "前言",
+        "title_zh": "\u524d\u8a00",
         "description": "For practice, standard greedy problems are first, followed by flexible thinking/constructive problems. Sorted by difficulty.\nIf stuck, check the 'Thinking Checklist' in Chapter 5.",
-        "description_zh": "为方便大家练习，我把比较套路的贪心题目放在前面，更灵活的思维题和构造题放在后面。每个小节的题目均按照从易到难的顺序排列。\n如果做题时没有思路，推荐看看本文第五章的「思考清单」。",
+        "description_zh": "\u4e3a\u65b9\u4fbf\u5927\u5bb6\u7ec3\u4e60\uff0c\u6211\u628a\u6bd4\u8f83\u5957\u8def\u7684\u8d2a\u5fc3\u9898\u76ee\u653e\u5728\u524d\u9762\uff0c\u66f4\u7075\u6d3b\u7684\u601d\u7ef4\u9898\u548c\u6784\u9020\u9898\u653e\u5728\u540e\u9762\u3002\u6bcf\u4e2a\u5c0f\u8282\u7684\u9898\u76ee\u5747\u6309\u7167\u4ece\u6613\u5230\u96be\u7684\u987a\u5e8f\u6392\u5217\u3002\n\u5982\u679c\u505a\u9898\u65f6\u6ca1\u6709\u601d\u8def\uff0c\u63a8\u8350\u770b\u770b\u672c\u6587\u7b2c\u4e94\u7ae0\u7684\u300c\u601d\u8003\u6e05\u5355\u300d\u3002",
         "subtopics": [],
         "problems": [
           {
             "id": "846",
             "title": "Hand of Straights",
             "slug": "hand-of-straights",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1512,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -1457,19 +1457,19 @@
       },
       {
         "title": "Interval Greedy",
-        "title_zh": "二、区间贪心",
+        "title_zh": "\u4e8c\u3001\u533a\u95f4\u8d2a\u5fc3",
         "description": "Classic Interval Greedy problems:",
-        "description_zh": "区间贪心有如下经典问题：",
+        "description_zh": "\u533a\u95f4\u8d2a\u5fc3\u6709\u5982\u4e0b\u7ecf\u5178\u95ee\u9898\uff1a",
         "subtopics": [
           {
             "title": "Non-Overlapping Intervals",
-            "title_zh": "§2.1 不相交区间",
+            "title_zh": "\u00a72.1 \u4e0d\u76f8\u4ea4\u533a\u95f4",
             "problems": [
               {
                 "id": "435",
                 "title": "Non-overlapping Intervals",
                 "slug": "non-overlapping-intervals",
-                "rating": 1973,
+                "rating": 1437,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1479,13 +1479,13 @@
           },
           {
             "title": "Interval Covering",
-            "title_zh": "§2.4 区间覆盖",
+            "title_zh": "\u00a72.4 \u533a\u95f4\u8986\u76d6",
             "problems": [
               {
                 "id": "45",
                 "title": "Jump Game II",
                 "slug": "jump-game-ii",
-                "rating": 1850,
+                "rating": 1623,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1495,15 +1495,15 @@
           },
           {
             "title": "Merge Intervals",
-            "title_zh": "§2.5 合并区间",
+            "title_zh": "\u00a72.5 \u5408\u5e76\u533a\u95f4",
             "description": "Might not be strictly Greedy, but included for completeness.",
-            "description_zh": "可能算不上贪心，但为了题单的完整性，也放到这个分类中。",
+            "description_zh": "\u53ef\u80fd\u7b97\u4e0d\u4e0a\u8d2a\u5fc3\uff0c\u4f46\u4e3a\u4e86\u9898\u5355\u7684\u5b8c\u6574\u6027\uff0c\u4e5f\u653e\u5230\u8fd9\u4e2a\u5206\u7c7b\u4e2d\u3002",
             "problems": [
               {
                 "id": "55",
                 "title": "Jump Game",
                 "slug": "jump-game",
-                "rating": 1750,
+                "rating": 1423,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1527,8 +1527,8 @@
             "id": "252",
             "title": "Meeting Rooms",
             "slug": "meeting-rooms",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1073,
+            "is_predicted": true,
             "difficulty": "Easy",
             "is_premium": true,
             "tags": []
@@ -1537,19 +1537,19 @@
       },
       {
         "title": "Brainteasers",
-        "title_zh": "五、思维题",
+        "title_zh": "\u4e94\u3001\u601d\u7ef4\u9898",
         "description": "Recall math exam problems: first calculate special cases, then generalize. In algorithms (especially constructive ones), start from simple/special cases to discover properties, then generalize.",
-        "description_zh": "回想一下高考数学的最后一题，三个小问，前两小问让你计算一些特殊情况，第三小问让你计算/证明一个一般的结论。这其实就是从特殊到一般的思考方式，我们在做算法题（尤其是思维题和构造题）时，也可以从最简单、最特殊的情况开始，去探索题目的性质，逐渐过渡到一般情况。",
+        "description_zh": "\u56de\u60f3\u4e00\u4e0b\u9ad8\u8003\u6570\u5b66\u7684\u6700\u540e\u4e00\u9898\uff0c\u4e09\u4e2a\u5c0f\u95ee\uff0c\u524d\u4e24\u5c0f\u95ee\u8ba9\u4f60\u8ba1\u7b97\u4e00\u4e9b\u7279\u6b8a\u60c5\u51b5\uff0c\u7b2c\u4e09\u5c0f\u95ee\u8ba9\u4f60\u8ba1\u7b97/\u8bc1\u660e\u4e00\u4e2a\u4e00\u822c\u7684\u7ed3\u8bba\u3002\u8fd9\u5176\u5b9e\u5c31\u662f\u4ece\u7279\u6b8a\u5230\u4e00\u822c\u7684\u601d\u8003\u65b9\u5f0f\uff0c\u6211\u4eec\u5728\u505a\u7b97\u6cd5\u9898\uff08\u5c24\u5176\u662f\u601d\u7ef4\u9898\u548c\u6784\u9020\u9898\uff09\u65f6\uff0c\u4e5f\u53ef\u4ee5\u4ece\u6700\u7b80\u5355\u3001\u6700\u7279\u6b8a\u7684\u60c5\u51b5\u5f00\u59cb\uff0c\u53bb\u63a2\u7d22\u9898\u76ee\u7684\u6027\u8d28\uff0c\u9010\u6e10\u8fc7\u6e21\u5230\u4e00\u822c\u60c5\u51b5\u3002",
         "subtopics": [
           {
             "title": "Equivalent Transformation",
-            "title_zh": "§5.3 等价转换",
+            "title_zh": "\u00a75.3 \u7b49\u4ef7\u8f6c\u6362",
             "problems": [
               {
                 "id": "49",
                 "title": "Group Anagrams",
                 "slug": "group-anagrams",
-                "rating": 1379,
+                "rating": 1427,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1559,13 +1559,13 @@
           },
           {
             "title": "Reverse Thinking",
-            "title_zh": "§5.4 逆向思维",
+            "title_zh": "\u00a75.4 \u9006\u5411\u601d\u7ef4",
             "problems": [
               {
                 "id": "417",
                 "title": "Pacific Atlantic Water Flow",
                 "slug": "pacific-atlantic-water-flow",
-                "rating": 1724,
+                "rating": 1623,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1578,7 +1578,7 @@
       },
       {
         "title": "Miscellaneous",
-        "title_zh": "八、其他",
+        "title_zh": "\u516b\u3001\u5176\u4ed6",
         "subtopics": [],
         "problems": [
           {
@@ -1595,7 +1595,7 @@
             "id": "134",
             "title": "Gas Station",
             "slug": "gas-station",
-            "rating": 1759,
+            "rating": 1623,
             "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
@@ -1612,16 +1612,16 @@
     "sections": [
       {
         "title": "Grid DFS",
-        "title_zh": "一、网格图 DFS",
+        "title_zh": "\u4e00\u3001\u7f51\u683c\u56fe DFS",
         "description": "For Connected Components count/size.\nAlternative methods: BFS, Union-Find.\nDiff between Binary Tree DFS and Grid DFS:\nTemplate (Calculate size of each connected component):",
-        "description_zh": "适用于需要计算连通块个数、大小的题目。\n部分题目做法不止一种，也可以用 BFS 或并查集解决。\n二叉树 DFS 与网格图 DFS 的区别：\n模板（计算每个连通块的大小）：",
+        "description_zh": "\u9002\u7528\u4e8e\u9700\u8981\u8ba1\u7b97\u8fde\u901a\u5757\u4e2a\u6570\u3001\u5927\u5c0f\u7684\u9898\u76ee\u3002\n\u90e8\u5206\u9898\u76ee\u505a\u6cd5\u4e0d\u6b62\u4e00\u79cd\uff0c\u4e5f\u53ef\u4ee5\u7528 BFS \u6216\u5e76\u67e5\u96c6\u89e3\u51b3\u3002\n\u4e8c\u53c9\u6811 DFS \u4e0e\u7f51\u683c\u56fe DFS \u7684\u533a\u522b\uff1a\n\u6a21\u677f\uff08\u8ba1\u7b97\u6bcf\u4e2a\u8fde\u901a\u5757\u7684\u5927\u5c0f\uff09\uff1a",
         "subtopics": [],
         "problems": [
           {
             "id": "200",
             "title": "Number of Islands",
             "slug": "number-of-islands",
-            "rating": 1695,
+            "rating": 1423,
             "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
@@ -1631,7 +1631,7 @@
             "id": "695",
             "title": "Max Area of Island",
             "slug": "max-area-of-island",
-            "rating": 1684,
+            "rating": 1412,
             "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
@@ -1641,7 +1641,7 @@
             "id": "130",
             "title": "Surrounded Regions",
             "slug": "surrounded-regions",
-            "rating": 1776,
+            "rating": 1623,
             "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
@@ -1651,9 +1651,9 @@
       },
       {
         "title": "Grid BFS",
-        "title_zh": "二、网格图 BFS",
+        "title_zh": "\u4e8c\u3001\u7f51\u683c\u56fe BFS",
         "description": "For Shortest Path problems.\nDFS: Hit the wall before turning. BFS: Throw stone in pond, ripples spread (Near before Far).\nTemplate (Single Source Shortest Path):",
-        "description_zh": "适用于需要计算最短距离（最短路）的题目。\nDFS 是不撞南墙不回头；BFS 是往水塘中扔石头（起点），荡起一圈圈涟漪（先访问近的，再访问远的）。\n模板（单源最短路）：",
+        "description_zh": "\u9002\u7528\u4e8e\u9700\u8981\u8ba1\u7b97\u6700\u77ed\u8ddd\u79bb\uff08\u6700\u77ed\u8def\uff09\u7684\u9898\u76ee\u3002\nDFS \u662f\u4e0d\u649e\u5357\u5899\u4e0d\u56de\u5934\uff1bBFS \u662f\u5f80\u6c34\u5858\u4e2d\u6254\u77f3\u5934\uff08\u8d77\u70b9\uff09\uff0c\u8361\u8d77\u4e00\u5708\u5708\u6d9f\u6f2a\uff08\u5148\u8bbf\u95ee\u8fd1\u7684\uff0c\u518d\u8bbf\u95ee\u8fdc\u7684\uff09\u3002\n\u6a21\u677f\uff08\u5355\u6e90\u6700\u77ed\u8def\uff09\uff1a",
         "subtopics": [],
         "problems": [
           {
@@ -1670,7 +1670,7 @@
             "id": "286",
             "title": "Walls and Gates",
             "slug": "walls-and-gates",
-            "rating": 1638,
+            "rating": 1472,
             "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": true,
@@ -1687,21 +1687,21 @@
     "sections": [
       {
         "title": "Linked List",
-        "title_zh": "一、链表",
+        "title_zh": "\u4e00\u3001\u94fe\u8868",
         "description": "Note: Weekly Contest Linked List problems can be converted to Array (easier), so no difficulty rating.\nSolve while thinking about:",
-        "description_zh": "注：由于周赛中的链表题可以转成数组处理，难度比直接处理链表低，故不标明难度分。\n带着问题去做下面的题目：",
+        "description_zh": "\u6ce8\uff1a\u7531\u4e8e\u5468\u8d5b\u4e2d\u7684\u94fe\u8868\u9898\u53ef\u4ee5\u8f6c\u6210\u6570\u7ec4\u5904\u7406\uff0c\u96be\u5ea6\u6bd4\u76f4\u63a5\u5904\u7406\u94fe\u8868\u4f4e\uff0c\u6545\u4e0d\u6807\u660e\u96be\u5ea6\u5206\u3002\n\u5e26\u7740\u95ee\u9898\u53bb\u505a\u4e0b\u9762\u7684\u9898\u76ee\uff1a",
         "subtopics": [
           {
             "title": "Reverse Linked List",
-            "title_zh": "§1.4 反转链表",
+            "title_zh": "\u00a71.4 \u53cd\u8f6c\u94fe\u8868",
             "description": "Video Explanation [Core Algorithm Essentials 06]",
-            "description_zh": "视频讲解【基础算法精讲 06】",
+            "description_zh": "\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 06\u3011",
             "problems": [
               {
                 "id": "206",
                 "title": "Reverse Linked List",
                 "slug": "reverse-linked-list",
-                "rating": 1400,
+                "rating": 1123,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -1711,7 +1711,7 @@
                 "id": "25",
                 "title": "Reverse Nodes in k-Group",
                 "slug": "reverse-nodes-in-k-group",
-                "rating": 2000,
+                "rating": 1965,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -1721,15 +1721,15 @@
           },
           {
             "title": "Front-Back Pointers",
-            "title_zh": "§1.5 前后指针",
+            "title_zh": "\u00a71.5 \u524d\u540e\u6307\u9488",
             "description": "Video Explanation [Core Algorithm Essentials 08]",
-            "description_zh": "视频讲解【基础算法精讲 08】",
+            "description_zh": "\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 08\u3011",
             "problems": [
               {
                 "id": "19",
                 "title": "Remove Nth Node From End of List",
                 "slug": "remove-nth-node-from-end-of-list",
-                "rating": 1500,
+                "rating": 1315,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1739,15 +1739,15 @@
           },
           {
             "title": "Fast-Slow Pointers",
-            "title_zh": "§1.6 快慢指针",
+            "title_zh": "\u00a71.6 \u5feb\u6162\u6307\u9488",
             "description": "Video Explanation [Core Algorithm Essentials 07]",
-            "description_zh": "视频讲解【基础算法精讲 07】",
+            "description_zh": "\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 07\u3011",
             "problems": [
               {
                 "id": "143",
                 "title": "Reorder List",
                 "slug": "reorder-list",
-                "rating": 1750,
+                "rating": 1523,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1757,7 +1757,7 @@
                 "id": "141",
                 "title": "Linked List Cycle",
                 "slug": "linked-list-cycle",
-                "rating": 1400,
+                "rating": 1123,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -1767,13 +1767,13 @@
           },
           {
             "title": "Merge Linked List",
-            "title_zh": "§1.8 合并链表",
+            "title_zh": "\u00a71.8 \u5408\u5e76\u94fe\u8868",
             "problems": [
               {
                 "id": "2",
                 "title": "Add Two Numbers",
                 "slug": "add-two-numbers",
-                "rating": 1673,
+                "rating": 1347,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1783,7 +1783,7 @@
                 "id": "21",
                 "title": "Merge Two Sorted Lists",
                 "slug": "merge-two-sorted-lists",
-                "rating": 1350,
+                "rating": 1123,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -1793,13 +1793,13 @@
           },
           {
             "title": "Miscellaneous",
-            "title_zh": "§1.11 其他",
+            "title_zh": "\u00a71.11 \u5176\u4ed6",
             "problems": [
               {
                 "id": "138",
                 "title": "Copy List with Random Pointer",
                 "slug": "copy-list-with-random-pointer",
-                "rating": 1800,
+                "rating": 1437,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1812,21 +1812,21 @@
       },
       {
         "title": "Binary Tree",
-        "title_zh": "二、二叉树",
+        "title_zh": "\u4e8c\u3001\u4e8c\u53c9\u6811",
         "description": "Start learning Recursion with Binary Trees.\nStruggling with recursion? Watch [Core Algorithm Essentials 09].\nGenerally three traversal methods:",
-        "description_zh": "学习递归，从二叉树开始。\n晕递归的同学，请先看视频讲解【基础算法精讲 09】，欢迎点赞~\n一般有三种遍历方式：",
+        "description_zh": "\u5b66\u4e60\u9012\u5f52\uff0c\u4ece\u4e8c\u53c9\u6811\u5f00\u59cb\u3002\n\u6655\u9012\u5f52\u7684\u540c\u5b66\uff0c\u8bf7\u5148\u770b\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 09\u3011\uff0c\u6b22\u8fce\u70b9\u8d5e~\n\u4e00\u822c\u6709\u4e09\u79cd\u904d\u5386\u65b9\u5f0f\uff1a",
         "subtopics": [
           {
             "title": "Top-Down DFS (Pre-Order)",
-            "title_zh": "§2.2 自顶向下 DFS（先序遍历）",
+            "title_zh": "\u00a72.2 \u81ea\u9876\u5411\u4e0b DFS\uff08\u5148\u5e8f\u904d\u5386\uff09",
             "description": "Maintain values during the 'Forward' (Pre-order) phase.\nSome problems can be done Top-Down or Bottom-Up. Some also solvable by BFS.",
-            "description_zh": "在「递」的过程中维护值。\n有些题目自顶向下和自底向上都可以做。有些题目也可以用 BFS 做。",
+            "description_zh": "\u5728\u300c\u9012\u300d\u7684\u8fc7\u7a0b\u4e2d\u7ef4\u62a4\u503c\u3002\n\u6709\u4e9b\u9898\u76ee\u81ea\u9876\u5411\u4e0b\u548c\u81ea\u5e95\u5411\u4e0a\u90fd\u53ef\u4ee5\u505a\u3002\u6709\u4e9b\u9898\u76ee\u4e5f\u53ef\u4ee5\u7528 BFS \u505a\u3002",
             "problems": [
               {
                 "id": "104",
                 "title": "Maximum Depth of Binary Tree",
                 "slug": "maximum-depth-of-binary-tree",
-                "rating": 1350,
+                "rating": 823,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -1836,7 +1836,7 @@
                 "id": "199",
                 "title": "Binary Tree Right Side View",
                 "slug": "binary-tree-right-side-view",
-                "rating": 1488,
+                "rating": 1327,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1856,15 +1856,15 @@
           },
           {
             "title": "Bottom-Up DFS (Post-Order)",
-            "title_zh": "§2.3 自底向上 DFS（后序遍历）",
+            "title_zh": "\u00a72.3 \u81ea\u5e95\u5411\u4e0a DFS\uff08\u540e\u5e8f\u904d\u5386\uff09",
             "description": "Calculate during the 'Return' (Post-order) phase.\nHow to use Recursion flexibly? [Core Algorithm Essentials 10]",
-            "description_zh": "在「归」的过程中计算。\n如何灵活运用递归？【基础算法精讲 10】",
+            "description_zh": "\u5728\u300c\u5f52\u300d\u7684\u8fc7\u7a0b\u4e2d\u8ba1\u7b97\u3002\n\u5982\u4f55\u7075\u6d3b\u8fd0\u7528\u9012\u5f52\uff1f\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 10\u3011",
             "problems": [
               {
                 "id": "100",
                 "title": "Same Tree",
                 "slug": "same-tree",
-                "rating": 1350,
+                "rating": 1123,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -1874,7 +1874,7 @@
                 "id": "110",
                 "title": "Balanced Binary Tree",
                 "slug": "balanced-binary-tree",
-                "rating": 1500,
+                "rating": 1287,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -1884,7 +1884,7 @@
                 "id": "226",
                 "title": "Invert Binary Tree",
                 "slug": "invert-binary-tree",
-                "rating": 1400,
+                "rating": 1023,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -1894,7 +1894,7 @@
                 "id": "572",
                 "title": "Subtree of Another Tree",
                 "slug": "subtree-of-another-tree",
-                "rating": 1795,
+                "rating": 1278,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -1904,15 +1904,15 @@
           },
           {
             "title": "Lowest Common Ancestor (LCA)",
-            "title_zh": "§2.8 最近公共祖先",
+            "title_zh": "\u00a72.8 \u6700\u8fd1\u516c\u5171\u7956\u5148",
             "description": "Video Explanation [Core Algorithm Essentials 12]",
-            "description_zh": "视频讲解【基础算法精讲 12】",
+            "description_zh": "\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 12\u3011",
             "problems": [
               {
                 "id": "235",
                 "title": "Lowest Common Ancestor of a Binary Search Tree",
                 "slug": "lowest-common-ancestor-of-a-binary-search-tree",
-                "rating": 1600,
+                "rating": 1372,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1922,15 +1922,15 @@
           },
           {
             "title": "Binary Search Tree (BST)",
-            "title_zh": "§2.9 二叉搜索树",
+            "title_zh": "\u00a72.9 \u4e8c\u53c9\u641c\u7d22\u6811",
             "description": "Usually In-Order Traversal.\nVideo Explanation [Core Algorithm Essentials 11]",
-            "description_zh": "一般是中序遍历。\n视频讲解【基础算法精讲 11】",
+            "description_zh": "\u4e00\u822c\u662f\u4e2d\u5e8f\u904d\u5386\u3002\n\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 11\u3011",
             "problems": [
               {
                 "id": "230",
                 "title": "Kth Smallest Element in a BST",
                 "slug": "kth-smallest-element-in-a-bst",
-                "rating": 1700,
+                "rating": 1362,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1940,7 +1940,7 @@
                 "id": "98",
                 "title": "Validate Binary Search Tree",
                 "slug": "validate-binary-search-tree",
-                "rating": 1700,
+                "rating": 1427,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1950,13 +1950,13 @@
           },
           {
             "title": "Build Binary Tree",
-            "title_zh": "§2.10 创建二叉树",
+            "title_zh": "\u00a72.10 \u521b\u5efa\u4e8c\u53c9\u6811",
             "problems": [
               {
                 "id": "105",
                 "title": "Construct Binary Tree from Preorder and Inorder Traversal",
                 "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
-                "rating": 1800,
+                "rating": 1623,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1966,15 +1966,15 @@
           },
           {
             "title": "Binary Tree BFS",
-            "title_zh": "§2.13 二叉树 BFS",
+            "title_zh": "\u00a72.13 \u4e8c\u53c9\u6811 BFS",
             "description": "Video Explanation [Core Algorithm Essentials 13]",
-            "description_zh": "视频讲解【基础算法精讲 13】",
+            "description_zh": "\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 13\u3011",
             "problems": [
               {
                 "id": "102",
                 "title": "Binary Tree Level Order Traversal",
                 "slug": "binary-tree-level-order-traversal",
-                "rating": 1550,
+                "rating": 1327,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -1984,13 +1984,13 @@
           },
           {
             "title": "Miscellaneous",
-            "title_zh": "§2.16 其他",
+            "title_zh": "\u00a72.16 \u5176\u4ed6",
             "problems": [
               {
                 "id": "297",
                 "title": "Serialize and Deserialize Binary Tree",
                 "slug": "serialize-and-deserialize-binary-tree",
-                "rating": 2000,
+                "rating": 2063,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -2003,21 +2003,21 @@
       },
       {
         "title": "Backtracking",
-        "title_zh": "四、回溯",
-        "description": "Essentially DFS on a Search Tree.\nDo §2.7 first. Understand Binary Tree Backtracking before General Backtracking.",
-        "description_zh": "本质是搜索树上的 DFS。\n推荐先完成 §2.7 节。先理解二叉树上的回溯，再来学习一般情况下的回溯。",
+        "title_zh": "\u56db\u3001\u56de\u6eaf",
+        "description": "Essentially DFS on a Search Tree.\nDo \u00a72.7 first. Understand Binary Tree Backtracking before General Backtracking.",
+        "description_zh": "\u672c\u8d28\u662f\u641c\u7d22\u6811\u4e0a\u7684 DFS\u3002\n\u63a8\u8350\u5148\u5b8c\u6210 \u00a72.7 \u8282\u3002\u5148\u7406\u89e3\u4e8c\u53c9\u6811\u4e0a\u7684\u56de\u6eaf\uff0c\u518d\u6765\u5b66\u4e60\u4e00\u822c\u60c5\u51b5\u4e0b\u7684\u56de\u6eaf\u3002",
         "subtopics": [
           {
             "title": "Intro Backtracking",
-            "title_zh": "§4.1 入门回溯",
+            "title_zh": "\u00a74.1 \u5165\u95e8\u56de\u6eaf",
             "description": "Video Explanation [Core Algorithm Essentials 14]",
-            "description_zh": "视频讲解【基础算法精讲 14】",
+            "description_zh": "\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 14\u3011",
             "problems": [
               {
                 "id": "17",
                 "title": "Letter Combinations of a Phone Number",
                 "slug": "letter-combinations-of-a-phone-number",
-                "rating": 1580,
+                "rating": 1327,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2027,15 +2027,15 @@
           },
           {
             "title": "Subset Backtracking",
-            "title_zh": "§4.2 子集型回溯",
+            "title_zh": "\u00a74.2 \u5b50\u96c6\u578b\u56de\u6eaf",
             "description": "Video Explanation [Core Algorithm Essentials 14]\nTwo styles: 'Select or Not' vs 'Enumerate Which'.\nCan also use Binary Enumeration.",
-            "description_zh": "视频讲解【基础算法精讲 14】\n有「选或不选」和「枚举选哪个」两种写法。\n也可以用二进制枚举做。",
+            "description_zh": "\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 14\u3011\n\u6709\u300c\u9009\u6216\u4e0d\u9009\u300d\u548c\u300c\u679a\u4e3e\u9009\u54ea\u4e2a\u300d\u4e24\u79cd\u5199\u6cd5\u3002\n\u4e5f\u53ef\u4ee5\u7528\u4e8c\u8fdb\u5236\u679a\u4e3e\u505a\u3002",
             "problems": [
               {
                 "id": "78",
                 "title": "Subsets",
                 "slug": "subsets",
-                "rating": 1452,
+                "rating": 1342,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2045,7 +2045,7 @@
                 "id": "39",
                 "title": "Combination Sum",
                 "slug": "combination-sum",
-                "rating": 1389,
+                "rating": 1427,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2055,15 +2055,15 @@
           },
           {
             "title": "Partition Backtracking",
-            "title_zh": "§4.3 划分型回溯",
+            "title_zh": "\u00a74.3 \u5212\u5206\u578b\u56de\u6eaf",
             "description": "Video Explanation [Core Algorithm Essentials 14]\nTreat separator (comma) as 'Select or Not'. Essentially Subset Backtracking.",
-            "description_zh": "视频讲解【基础算法精讲 14】\n把分割线（逗号）看成是可以「选或不选」的东西，本质是子集型回溯。",
+            "description_zh": "\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 14\u3011\n\u628a\u5206\u5272\u7ebf\uff08\u9017\u53f7\uff09\u770b\u6210\u662f\u53ef\u4ee5\u300c\u9009\u6216\u4e0d\u9009\u300d\u7684\u4e1c\u897f\uff0c\u672c\u8d28\u662f\u5b50\u96c6\u578b\u56de\u6eaf\u3002",
             "problems": [
               {
                 "id": "131",
                 "title": "Palindrome Partitioning",
                 "slug": "palindrome-partitioning",
-                "rating": 1785,
+                "rating": 1423,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2073,15 +2073,15 @@
           },
           {
             "title": "Combination Backtracking",
-            "title_zh": "§4.4 组合型回溯",
+            "title_zh": "\u00a74.4 \u7ec4\u5408\u578b\u56de\u6eaf",
             "description": "Video Explanation [Core Algorithm Essentials 15]\nHas count constraint. Also Subset Backtracking.",
-            "description_zh": "视频讲解【基础算法精讲 15】\n有个数上的约束。也算作子集型回溯。",
+            "description_zh": "\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 15\u3011\n\u6709\u4e2a\u6570\u4e0a\u7684\u7ea6\u675f\u3002\u4e5f\u7b97\u4f5c\u5b50\u96c6\u578b\u56de\u6eaf\u3002",
             "problems": [
               {
                 "id": "22",
                 "title": "Generate Parentheses",
                 "slug": "generate-parentheses",
-                "rating": 1891,
+                "rating": 1423,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2091,15 +2091,15 @@
           },
           {
             "title": "Permutation Backtracking",
-            "title_zh": "§4.5 排列型回溯",
+            "title_zh": "\u00a74.5 \u6392\u5217\u578b\u56de\u6eaf",
             "description": "Video Explanation [Core Algorithm Essentials 16]\nSome solvable by Bitmask DP.",
-            "description_zh": "视频讲解【基础算法精讲 16】\n部分题目也可以用状压 DP 做。",
+            "description_zh": "\u89c6\u9891\u8bb2\u89e3\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 16\u3011\n\u90e8\u5206\u9898\u76ee\u4e5f\u53ef\u4ee5\u7528\u72b6\u538b DP \u505a\u3002",
             "problems": [
               {
                 "id": "46",
                 "title": "Permutations",
                 "slug": "permutations",
-                "rating": 1414,
+                "rating": 1327,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2109,7 +2109,7 @@
                 "id": "51",
                 "title": "N-Queens",
                 "slug": "n-queens",
-                "rating": 1466,
+                "rating": 1942,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -2119,13 +2119,13 @@
           },
           {
             "title": "Backtracking with Duplicates",
-            "title_zh": "§4.6 有重复元素的回溯",
+            "title_zh": "\u00a74.6 \u6709\u91cd\u590d\u5143\u7d20\u7684\u56de\u6eaf",
             "problems": [
               {
                 "id": "90",
                 "title": "Subsets II",
                 "slug": "subsets-ii",
-                "rating": 1491,
+                "rating": 1423,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2135,7 +2135,7 @@
                 "id": "40",
                 "title": "Combination Sum II",
                 "slug": "combination-sum-ii",
-                "rating": 1721,
+                "rating": 1483,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2145,13 +2145,13 @@
           },
           {
             "title": "Search",
-            "title_zh": "§4.7 搜索",
+            "title_zh": "\u00a74.7 \u641c\u7d22",
             "problems": [
               {
                 "id": "79",
                 "title": "Word Search",
                 "slug": "word-search",
-                "rating": 1653,
+                "rating": 1423,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2164,14 +2164,14 @@
       },
       {
         "title": "Other Recursion/Divide & Conquer",
-        "title_zh": "五、其他递归/分治",
+        "title_zh": "\u4e94\u3001\u5176\u4ed6\u9012\u5f52/\u5206\u6cbb",
         "subtopics": [],
         "problems": [
           {
             "id": "215",
             "title": "Kth Largest Element in an Array",
             "slug": "kth-largest-element-in-an-array",
-            "rating": 1650,
+            "rating": 1378,
             "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
@@ -2188,17 +2188,17 @@
     "sections": [
       {
         "title": "Introduction",
-        "title_zh": "前言",
+        "title_zh": "\u524d\u8a00",
         "description": "Comprehensive compilation of Math problems on LeetCode (mostly Number Theory / Combinatorics).\nSome problems involve modulo. See my tutorial: 'The World of Modular Arithmetic'.",
-        "description_zh": "本文全面整理了力扣上的数学相关题目，其中数论和组合数学的题目比较多。\n部分题目（尤其是组合数学）会涉及到取模，我写了一篇详细的取模教程，请看 模运算的世界：当加减乘除遇上取模。",
+        "description_zh": "\u672c\u6587\u5168\u9762\u6574\u7406\u4e86\u529b\u6263\u4e0a\u7684\u6570\u5b66\u76f8\u5173\u9898\u76ee\uff0c\u5176\u4e2d\u6570\u8bba\u548c\u7ec4\u5408\u6570\u5b66\u7684\u9898\u76ee\u6bd4\u8f83\u591a\u3002\n\u90e8\u5206\u9898\u76ee\uff08\u5c24\u5176\u662f\u7ec4\u5408\u6570\u5b66\uff09\u4f1a\u6d89\u53ca\u5230\u53d6\u6a21\uff0c\u6211\u5199\u4e86\u4e00\u7bc7\u8be6\u7ec6\u7684\u53d6\u6a21\u6559\u7a0b\uff0c\u8bf7\u770b \u6a21\u8fd0\u7b97\u7684\u4e16\u754c\uff1a\u5f53\u52a0\u51cf\u4e58\u9664\u9047\u4e0a\u53d6\u6a21\u3002",
         "subtopics": [],
         "problems": [
           {
             "id": "7",
             "title": "Reverse Integer",
             "slug": "reverse-integer",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1423,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -2207,8 +2207,8 @@
             "id": "43",
             "title": "Multiply Strings",
             "slug": "multiply-strings",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1437,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -2217,8 +2217,8 @@
             "id": "50",
             "title": "Pow(x, n)",
             "slug": "powx-n",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1623,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": false,
             "tags": []
@@ -2227,8 +2227,8 @@
             "id": "66",
             "title": "Plus One",
             "slug": "plus-one",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1178,
+            "is_predicted": true,
             "difficulty": "Easy",
             "is_premium": false,
             "tags": []
@@ -2244,19 +2244,19 @@
     "sections": [
       {
         "title": "Monotonic Stack",
-        "title_zh": "一、单调栈",
+        "title_zh": "\u4e00\u3001\u5355\u8c03\u6808",
         "subtopics": [
           {
             "title": "Basics",
-            "title_zh": "§1.1 基础",
+            "title_zh": "\u00a71.1 \u57fa\u7840",
             "description": "Principle: Monotonic Stack [Core Algorithm Essentials 26]",
-            "description_zh": "原理讲解：单调栈【基础算法精讲 26】",
+            "description_zh": "\u539f\u7406\u8bb2\u89e3\uff1a\u5355\u8c03\u6808\u3010\u57fa\u7840\u7b97\u6cd5\u7cbe\u8bb2 26\u3011",
             "problems": [
               {
                 "id": "739",
                 "title": "Daily Temperatures",
                 "slug": "daily-temperatures",
-                "rating": 1500,
+                "rating": 1483,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2279,14 +2279,14 @@
       },
       {
         "title": "Rectangles",
-        "title_zh": "二、矩形",
+        "title_zh": "\u4e8c\u3001\u77e9\u5f62",
         "subtopics": [],
         "problems": [
           {
             "id": "84",
             "title": "Largest Rectangle in Histogram",
             "slug": "largest-rectangle-in-histogram",
-            "rating": 2000,
+            "rating": 1938,
             "is_predicted": true,
             "difficulty": "Hard",
             "is_premium": false,
@@ -2303,17 +2303,17 @@
     "sections": [
       {
         "title": "Fixed-Length Sliding Window",
-        "title_zh": "一、定长滑动窗口",
+        "title_zh": "\u4e00\u3001\u5b9a\u957f\u6ed1\u52a8\u7a97\u53e3",
         "subtopics": [
           {
             "title": "Advanced (Optional)",
-            "title_zh": "§1.2 进阶（选做）",
+            "title_zh": "\u00a71.2 \u8fdb\u9636\uff08\u9009\u505a\uff09",
             "problems": [
               {
                 "id": "567",
                 "title": "Permutation in String",
                 "slug": "permutation-in-string",
-                "rating": 1575,
+                "rating": 1523,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2326,19 +2326,19 @@
       },
       {
         "title": "Variable-Length Sliding Window",
-        "title_zh": "二、不定长滑动窗口",
+        "title_zh": "\u4e8c\u3001\u4e0d\u5b9a\u957f\u6ed1\u52a8\u7a97\u53e3",
         "description": "Variable-length sliding window has three types: Max Length, Min Length, and Count Subarrays.\nNote: Sliding window is like maintaining a Queue. Right pointer moving = Enqueue, Left pointer moving = Dequeue.",
-        "description_zh": "不定长滑动窗口主要分为三类：求最长子数组，求最短子数组，求子数组个数。\n注：滑动窗口相当于在维护一个队列。右指针的移动可以视作入队，左指针的移动可以视作出队。",
+        "description_zh": "\u4e0d\u5b9a\u957f\u6ed1\u52a8\u7a97\u53e3\u4e3b\u8981\u5206\u4e3a\u4e09\u7c7b\uff1a\u6c42\u6700\u957f\u5b50\u6570\u7ec4\uff0c\u6c42\u6700\u77ed\u5b50\u6570\u7ec4\uff0c\u6c42\u5b50\u6570\u7ec4\u4e2a\u6570\u3002\n\u6ce8\uff1a\u6ed1\u52a8\u7a97\u53e3\u76f8\u5f53\u4e8e\u5728\u7ef4\u62a4\u4e00\u4e2a\u961f\u5217\u3002\u53f3\u6307\u9488\u7684\u79fb\u52a8\u53ef\u4ee5\u89c6\u4f5c\u5165\u961f\uff0c\u5de6\u6307\u9488\u7684\u79fb\u52a8\u53ef\u4ee5\u89c6\u4f5c\u51fa\u961f\u3002",
         "subtopics": [
           {
             "title": "Shorter is Valid / Find Longest",
-            "title_zh": "§2.1 越短越合法/求最长/最大",
+            "title_zh": "\u00a72.1 \u8d8a\u77ed\u8d8a\u5408\u6cd5/\u6c42\u6700\u957f/\u6700\u5927",
             "problems": [
               {
                 "id": "3",
                 "title": "Longest Substring Without Repeating Characters",
                 "slug": "longest-substring-without-repeating-characters",
-                "rating": 1600,
+                "rating": 1423,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2350,13 +2350,13 @@
           },
           {
             "title": "Longer is Valid / Find Shortest",
-            "title_zh": "§2.2 越长越合法/求最短/最小",
+            "title_zh": "\u00a72.2 \u8d8a\u957f\u8d8a\u5408\u6cd5/\u6c42\u6700\u77ed/\u6700\u5c0f",
             "problems": [
               {
                 "id": "76",
                 "title": "Minimum Window Substring",
                 "slug": "minimum-window-substring",
-                "rating": 1889,
+                "rating": 1987,
                 "is_predicted": true,
                 "difficulty": "Hard",
                 "is_premium": false,
@@ -2366,13 +2366,13 @@
           },
           {
             "title": "Other (Optional)",
-            "title_zh": "§2.4 其他（选做）",
+            "title_zh": "\u00a72.4 \u5176\u4ed6\uff08\u9009\u505a\uff09",
             "problems": [
               {
                 "id": "424",
                 "title": "Longest Repeating Character Replacement",
                 "slug": "longest-repeating-character-replacement",
-                "rating": 1505,
+                "rating": 1523,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2385,19 +2385,19 @@
       },
       {
         "title": "Single-Sequence Two Pointers",
-        "title_zh": "三、单序列双指针",
+        "title_zh": "\u4e09\u3001\u5355\u5e8f\u5217\u53cc\u6307\u9488",
         "subtopics": [
           {
             "title": "Opposite-Direction Two Pointers",
-            "title_zh": "§3.2 相向双指针",
+            "title_zh": "\u00a73.2 \u76f8\u5411\u53cc\u6307\u9488",
             "description": "Two pointers left=0, right=n-1 moving towards the middle is 'Opposite Direction Two Pointers'. Sliding window is 'Same Direction Two Pointers'.",
-            "description_zh": "两个指针 left=0, right=n−1，从数组的两端开始，向中间移动，这叫相向双指针。上面的滑动窗口相当于同向双指针。",
+            "description_zh": "\u4e24\u4e2a\u6307\u9488 left=0,\u00a0right=n\u22121\uff0c\u4ece\u6570\u7ec4\u7684\u4e24\u7aef\u5f00\u59cb\uff0c\u5411\u4e2d\u95f4\u79fb\u52a8\uff0c\u8fd9\u53eb\u76f8\u5411\u53cc\u6307\u9488\u3002\u4e0a\u9762\u7684\u6ed1\u52a8\u7a97\u53e3\u76f8\u5f53\u4e8e\u540c\u5411\u53cc\u6307\u9488\u3002",
             "problems": [
               {
                 "id": "125",
                 "title": "Valid Palindrome",
                 "slug": "valid-palindrome",
-                "rating": 1250,
+                "rating": 1223,
                 "is_predicted": true,
                 "difficulty": "Easy",
                 "is_premium": false,
@@ -2407,7 +2407,7 @@
                 "id": "167",
                 "title": "Two Sum II - Input Array Is Sorted",
                 "slug": "two-sum-ii-input-array-is-sorted",
-                "rating": 1400,
+                "rating": 1312,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2417,7 +2417,7 @@
                 "id": "15",
                 "title": "3Sum",
                 "slug": "3sum",
-                "rating": 1650,
+                "rating": 1623,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2427,7 +2427,7 @@
                 "id": "11",
                 "title": "Container With Most Water",
                 "slug": "container-with-most-water",
-                "rating": 1600,
+                "rating": 1427,
                 "is_predicted": true,
                 "difficulty": "Medium",
                 "is_premium": false,
@@ -2447,17 +2447,17 @@
     "sections": [
       {
         "title": "KMP (Prefix-Suffix Matching)",
-        "title_zh": "一、KMP（前缀的后缀）",
-        "description": "KMP Principle Explanation\nDefine a proper prefix of s as a prefix not equal to s, and a proper suffix of s as a suffix not equal to s.\nDefine a border of s as a string that is both a proper prefix and a proper suffix of s. For example, in s=aabcaa, 'a' and 'aa' are borders.\nFor each prefix p[:i] of pattern p, calculate the length of its longest border and store it in the π array.\nUsing the π array, we can quickly calculate the positions where pattern p appears in text t.\nNote: The definition of the π array refers to CLRS. Common Chinese textbooks usually define it as the 'next' array. The relationship is often next[i+1]=π[i]+1.",
-        "description_zh": "KMP 原理讲解\n定义 s 的真前缀为不等于 s 的前缀，s 的真后缀为不等于 s 的后缀。\n定义 s 的 border 为既是 s 的真前缀又是 s 的真后缀的字符串。例如在 s=aabcaa 中，a 和 aa 都是 s 的 border。\n对于模式串 p 的每个前缀 p[:i]，计算这个前缀的最长 border 长度，记在 π 数组中。\n利用 π 数组，可以快速计算模式串 p 出现在文本串 t 的哪些位置上。\n注：π 数组的定义参考《算法导论》，国内数据结构教材通常定义为 next 数组。以严蔚敏那本为例，二者的关系是 next[i+1]=π[i]+1，即 π 数组整体右移一位，元素值加一。",
+        "title_zh": "\u4e00\u3001KMP\uff08\u524d\u7f00\u7684\u540e\u7f00\uff09",
+        "description": "KMP Principle Explanation\nDefine a proper prefix of s as a prefix not equal to s, and a proper suffix of s as a suffix not equal to s.\nDefine a border of s as a string that is both a proper prefix and a proper suffix of s. For example, in s=aabcaa, 'a' and 'aa' are borders.\nFor each prefix p[:i] of pattern p, calculate the length of its longest border and store it in the \u03c0 array.\nUsing the \u03c0 array, we can quickly calculate the positions where pattern p appears in text t.\nNote: The definition of the \u03c0 array refers to CLRS. Common Chinese textbooks usually define it as the 'next' array. The relationship is often next[i+1]=\u03c0[i]+1.",
+        "description_zh": "KMP \u539f\u7406\u8bb2\u89e3\n\u5b9a\u4e49 s \u7684\u771f\u524d\u7f00\u4e3a\u4e0d\u7b49\u4e8e s \u7684\u524d\u7f00\uff0cs \u7684\u771f\u540e\u7f00\u4e3a\u4e0d\u7b49\u4e8e s \u7684\u540e\u7f00\u3002\n\u5b9a\u4e49 s \u7684 border \u4e3a\u65e2\u662f s \u7684\u771f\u524d\u7f00\u53c8\u662f s \u7684\u771f\u540e\u7f00\u7684\u5b57\u7b26\u4e32\u3002\u4f8b\u5982\u5728 s=aabcaa \u4e2d\uff0ca \u548c aa \u90fd\u662f s \u7684 border\u3002\n\u5bf9\u4e8e\u6a21\u5f0f\u4e32 p \u7684\u6bcf\u4e2a\u524d\u7f00 p[:i]\uff0c\u8ba1\u7b97\u8fd9\u4e2a\u524d\u7f00\u7684\u6700\u957f border \u957f\u5ea6\uff0c\u8bb0\u5728 \u03c0 \u6570\u7ec4\u4e2d\u3002\n\u5229\u7528 \u03c0 \u6570\u7ec4\uff0c\u53ef\u4ee5\u5feb\u901f\u8ba1\u7b97\u6a21\u5f0f\u4e32 p \u51fa\u73b0\u5728\u6587\u672c\u4e32 t \u7684\u54ea\u4e9b\u4f4d\u7f6e\u4e0a\u3002\n\u6ce8\uff1a\u03c0 \u6570\u7ec4\u7684\u5b9a\u4e49\u53c2\u8003\u300a\u7b97\u6cd5\u5bfc\u8bba\u300b\uff0c\u56fd\u5185\u6570\u636e\u7ed3\u6784\u6559\u6750\u901a\u5e38\u5b9a\u4e49\u4e3a next \u6570\u7ec4\u3002\u4ee5\u4e25\u851a\u654f\u90a3\u672c\u4e3a\u4f8b\uff0c\u4e8c\u8005\u7684\u5173\u7cfb\u662f next[i+1]=\u03c0[i]+1\uff0c\u5373 \u03c0 \u6570\u7ec4\u6574\u4f53\u53f3\u79fb\u4e00\u4f4d\uff0c\u5143\u7d20\u503c\u52a0\u4e00\u3002",
         "subtopics": [],
         "problems": [
           {
             "id": "242",
             "title": "Valid Anagram",
             "slug": "valid-anagram",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1087,
+            "is_predicted": true,
             "difficulty": "Easy",
             "is_premium": false,
             "tags": []
@@ -2466,17 +2466,17 @@
       },
       {
         "title": "String Hashing",
-        "title_zh": "四、字符串哈希",
+        "title_zh": "\u56db\u3001\u5b57\u7b26\u4e32\u54c8\u5e0c",
         "description": "Most problems here can be solved by String Hash.\nRecommend 2156 and 3756 first to understand Polynomial Rolling Hash.\nTemplate code in my solution (includes Single and Double Modulo Hash).\nTip: Compare substring lexicographical order using String Hash. Binary search length for LCP, then compare next char. Time: O(logn). See 3722.",
-        "description_zh": "本题单的大多数题目都可以用字符串哈希解决。\n推荐先把 2156. 查找给定哈希值的子串 和 3756. 连接非零数字并乘以其数字和 II 做了，对理解多项式哈希的计算方法有帮助。\n模板代码见 我的题解，包含单模哈希和双模哈希。\n小技巧：我们可以用字符串哈希比较两个子串的字典序大小。做法是二分长度，计算最长公共前缀（LCP），然后比较 LCP 的下一个字母。时间复杂度：O(logn)。见 3722 题。",
+        "description_zh": "\u672c\u9898\u5355\u7684\u5927\u591a\u6570\u9898\u76ee\u90fd\u53ef\u4ee5\u7528\u5b57\u7b26\u4e32\u54c8\u5e0c\u89e3\u51b3\u3002\n\u63a8\u8350\u5148\u628a 2156. \u67e5\u627e\u7ed9\u5b9a\u54c8\u5e0c\u503c\u7684\u5b50\u4e32 \u548c 3756. \u8fde\u63a5\u975e\u96f6\u6570\u5b57\u5e76\u4e58\u4ee5\u5176\u6570\u5b57\u548c II \u505a\u4e86\uff0c\u5bf9\u7406\u89e3\u591a\u9879\u5f0f\u54c8\u5e0c\u7684\u8ba1\u7b97\u65b9\u6cd5\u6709\u5e2e\u52a9\u3002\n\u6a21\u677f\u4ee3\u7801\u89c1 \u6211\u7684\u9898\u89e3\uff0c\u5305\u542b\u5355\u6a21\u54c8\u5e0c\u548c\u53cc\u6a21\u54c8\u5e0c\u3002\n\u5c0f\u6280\u5de7\uff1a\u6211\u4eec\u53ef\u4ee5\u7528\u5b57\u7b26\u4e32\u54c8\u5e0c\u6bd4\u8f83\u4e24\u4e2a\u5b50\u4e32\u7684\u5b57\u5178\u5e8f\u5927\u5c0f\u3002\u505a\u6cd5\u662f\u4e8c\u5206\u957f\u5ea6\uff0c\u8ba1\u7b97\u6700\u957f\u516c\u5171\u524d\u7f00\uff08LCP\uff09\uff0c\u7136\u540e\u6bd4\u8f83 LCP \u7684\u4e0b\u4e00\u4e2a\u5b57\u6bcd\u3002\u65f6\u95f4\u590d\u6742\u5ea6\uff1aO(logn)\u3002\u89c1 3722 \u9898\u3002",
         "subtopics": [],
         "problems": [
           {
             "id": "271",
             "title": "Encode and Decode Strings",
             "slug": "encode-and-decode-strings",
-            "rating": null,
-            "is_predicted": false,
+            "rating": 1347,
+            "is_predicted": true,
             "difficulty": "Medium",
             "is_premium": true,
             "tags": []

@@ -15,3 +15,12 @@ dist-ssr
 # Editor
 .vscode/
 .idea/
+# Rating predictor
+scripts/rating-predictor/api_key.txt
+scripts/rating-predictor/predictions.json
+scripts/rating-predictor/data/*.json
+scripts/rating-predictor/.venv/
+__pycache__/
+
+# Large data files
+src/raw-data/*.json

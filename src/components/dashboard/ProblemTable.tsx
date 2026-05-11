@@ -36,7 +36,7 @@ const TAG_COLORS: Record<string, string> = {
 import { useProgress } from "@/context/ProgressContext";
 
 export function ProblemTable({ problems }: ProblemTableProps) {
-    const [sortDirection, setSortDirection] = useState<SortDirection>(null);
+    const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
     const { isSolved, toggleProblem } = useProgress();
 
     const handleSort = () => {

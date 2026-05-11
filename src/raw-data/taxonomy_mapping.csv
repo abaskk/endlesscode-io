@@ -1,0 +1,350 @@
+visual_group,top_level_topic,row_title,source_file,header_regex,default_labels
+LINEAR FOUNDATIONS,binary-search,Binary Search,binary_search.html,^一、二分查找,PATTERN
+LINEAR FOUNDATIONS,binary-search,Fundamentals,binary_search.html,^§1.1\s+基础,CORE
+LINEAR FOUNDATIONS,binary-search,Advanced,binary_search.html,^§1.2\s+进阶,ADVANCED
+LINEAR FOUNDATIONS,binary-search,Binary Search on Answer,binary_search.html,^二、二分答案,PATTERN
+LINEAR FOUNDATIONS,binary-search,Minimize Maximum,binary_search.html,^§2.1\s+求最小,PATTERN
+LINEAR FOUNDATIONS,binary-search,Maximize Minimum,binary_search.html,^§2.2\s+求最大,PATTERN
+LINEAR FOUNDATIONS,binary-search,Binary Search Indirect Values,binary_search.html,^§2.3\s+二分间接值,PATTERN
+LINEAR FOUNDATIONS,binary-search,Minimize the Maximum,binary_search.html,^§2.4\s+最小化最大值,PATTERN
+LINEAR FOUNDATIONS,binary-search,Maximize the Minimum,binary_search.html,^§2.5\s+最大化最小值,PATTERN
+LINEAR FOUNDATIONS,binary-search,Kth Smallest/Largest,binary_search.html,^§2.6\s+第\s+K\s+小/大,PATTERN
+LINEAR FOUNDATIONS,binary-search,Ternary Search,binary_search.html,^三、三分法,PATTERN
+LINEAR FOUNDATIONS,binary-search,Miscellaneous,binary_search.html,^四、其他,PATTERN
+SPECIALIZED LOGIC,bitwise,Basic Problems,bitwise.html,^一、基础题,CORE
+SPECIALIZED LOGIC,bitwise,XOR Properties,bitwise.html,^二、异或（XOR）的性质,PATTERN
+SPECIALIZED LOGIC,bitwise,AND/OR Properties,bitwise.html,^三、与或（AND/OR）的性质,PATTERN
+SPECIALIZED LOGIC,bitwise,Bit Manipulation / Contribution Method,bitwise.html,^四、拆位\s+/\s+贡献法,PATTERN
+SPECIALIZED LOGIC,bitwise,Trial Filling,bitwise.html,^五、试填法,PATTERN
+SPECIALIZED LOGIC,bitwise,Identities,bitwise.html,^六、恒等式,PATTERN
+SPECIALIZED LOGIC,bitwise,Linear Basis,bitwise.html,^七、线性基,PATTERN
+SPECIALIZED LOGIC,bitwise,Logical Thinking,bitwise.html,^八、思维题,THINKING
+SPECIALIZED LOGIC,bitwise,Miscellaneous,bitwise.html,^九、其他,PATTERN
+CORE DATA STRUCTURES,data-structures,Enumerate Right and Maintain Left,data_structures.html,^§0.1\s+枚举右，维护左,PATTERN
+CORE DATA STRUCTURES,data-structures,Fundamentals,data_structures.html,^§0.1.1\s+基础,CORE
+CORE DATA STRUCTURES,data-structures,Advanced,data_structures.html,^§0.1.2\s+进阶,ADVANCED
+CORE DATA STRUCTURES,data-structures,Enumerate Middle,data_structures.html,^§0.2\s+枚举中间,PATTERN
+CORE DATA STRUCTURES,data-structures,Traverse Diagonals,data_structures.html,^§0.3\s+遍历对角线,PATTERN
+CORE DATA STRUCTURES,data-structures,Prefix Sum,data_structures.html,^一、前缀和,PATTERN
+CORE DATA STRUCTURES,data-structures,Fundamentals,data_structures.html,^§1.1\s+基础,CORE
+CORE DATA STRUCTURES,data-structures,Prefix Sum with Hash Table,data_structures.html,^§1.2\s+前缀和与哈希表,PATTERN
+CORE DATA STRUCTURES,data-structures,Distance Sum,data_structures.html,^§1.3\s+距离和,PATTERN
+CORE DATA STRUCTURES,data-structures,Bitmask Prefix Sum,data_structures.html,^§1.4\s+状态压缩前缀和,PATTERN
+CORE DATA STRUCTURES,data-structures,Advanced,data_structures.html,^§1.5\s+进阶,ADVANCED
+CORE DATA STRUCTURES,data-structures,2D Prefix Sum,data_structures.html,^§1.6\s+二维前缀和,PATTERN
+CORE DATA STRUCTURES,data-structures,Difference Array,data_structures.html,^二、差分,PATTERN
+CORE DATA STRUCTURES,data-structures,1D Difference Array,data_structures.html,^§2.1\s+一维差分,PATTERN
+CORE DATA STRUCTURES,data-structures,Fundamentals,data_structures.html,^§2.1.1\s+基础,CORE
+CORE DATA STRUCTURES,data-structures,Advanced,data_structures.html,^§2.1.2\s+进阶,ADVANCED
+CORE DATA STRUCTURES,data-structures,2D Difference Array,data_structures.html,^§2.2\s+二维差分,PATTERN
+CORE DATA STRUCTURES,data-structures,Stack,data_structures.html,^三、栈,PATTERN
+CORE DATA STRUCTURES,data-structures,Fundamentals,data_structures.html,^§3.1\s+基础,CORE
+CORE DATA STRUCTURES,data-structures,Advanced,data_structures.html,^§3.2\s+进阶,ADVANCED
+CORE DATA STRUCTURES,data-structures,Adjacent Element Removal,data_structures.html,^§3.3\s+邻项消除,PATTERN
+CORE DATA STRUCTURES,data-structures,Valid Parentheses (RBS),data_structures.html,^§3.4\s+合法括号字符串（RBS）,PATTERN
+CORE DATA STRUCTURES,data-structures,Expression Parsing,data_structures.html,^§3.5\s+表达式解析,PATTERN
+CORE DATA STRUCTURES,data-structures,Double-Ended Stack,data_structures.html,^§3.6\s+对顶栈,PATTERN
+CORE DATA STRUCTURES,data-structures,Monotonic Stack,data_structures.html,^§3.7\s+单调栈,PATTERN
+CORE DATA STRUCTURES,data-structures,Queue,data_structures.html,^四、队列,PATTERN
+CORE DATA STRUCTURES,data-structures,Fundamentals,data_structures.html,^§4.1\s+基础,CORE
+CORE DATA STRUCTURES,data-structures,Design,data_structures.html,^§4.2\s+设计,PATTERN
+CORE DATA STRUCTURES,data-structures,Deque,data_structures.html,^§4.3\s+双端队列,PATTERN
+CORE DATA STRUCTURES,data-structures,Monotonic Queue,data_structures.html,^§4.4\s+单调队列,PATTERN
+CORE DATA STRUCTURES,data-structures,Heap (Priority Queue),data_structures.html,^五、堆（优先队列）,PATTERN
+CORE DATA STRUCTURES,data-structures,Fundamentals,data_structures.html,^§5.1\s+基础,CORE
+CORE DATA STRUCTURES,data-structures,Advanced,data_structures.html,^§5.2\s+进阶,ADVANCED
+CORE DATA STRUCTURES,data-structures,Kth Smallest/Largest,data_structures.html,^§5.3\s+第\s+K\s+小/大,PATTERN
+CORE DATA STRUCTURES,data-structures,Rearrange Elements,data_structures.html,^§5.4\s+重排元素,PATTERN
+CORE DATA STRUCTURES,data-structures,Regret Heap,data_structures.html,^§5.5\s+反悔堆,PATTERN
+CORE DATA STRUCTURES,data-structures,Lazy Deletion Heap,data_structures.html,^§5.6\s+懒删除堆,PATTERN
+CORE DATA STRUCTURES,data-structures,Double Heap (Sliding Window Kth),data_structures.html,^§5.7\s+对顶堆（滑动窗口第\s+K\s+小/大）,PATTERN
+CORE DATA STRUCTURES,data-structures,Trie,data_structures.html,^六、字典树（trie）,PATTERN
+CORE DATA STRUCTURES,data-structures,Fundamentals,data_structures.html,^§6.1\s+基础,CORE
+CORE DATA STRUCTURES,data-structures,Advanced,data_structures.html,^§6.2\s+进阶,ADVANCED
+CORE DATA STRUCTURES,data-structures,Trie Optimization,data_structures.html,^§6.3\s+字典树优化\s+DP,DP
+CORE DATA STRUCTURES,data-structures,0-1 Trie (XOR Trie),data_structures.html,^§6.4\s+0-1\s+字典树（异或字典树）,PATTERN
+CORE DATA STRUCTURES,data-structures,Union Find (DSU),data_structures.html,^七、并查集,PATTERN
+CORE DATA STRUCTURES,data-structures,Fundamentals,data_structures.html,^§7.1\s+基础,CORE
+CORE DATA STRUCTURES,data-structures,Advanced,data_structures.html,^§7.2\s+进阶,ADVANCED
+CORE DATA STRUCTURES,data-structures,GCD Union Find,data_structures.html,^§7.3\s+GCD\s+并查集,PATTERN
+CORE DATA STRUCTURES,data-structures,Union Find on Arrays,data_structures.html,^§7.4\s+数组上的并查集,PATTERN
+CORE DATA STRUCTURES,data-structures,Interval Union Find,data_structures.html,^§7.5\s+区间并查集,PATTERN
+CORE DATA STRUCTURES,data-structures,Weighted Union Find,data_structures.html,^§7.6\s+带权并查集（边权并查集）,PATTERN
+CORE DATA STRUCTURES,data-structures,Fenwick Tree & Segment Tree,data_structures.html,^八、树状数组和线段树,PATTERN
+CORE DATA STRUCTURES,data-structures,Fenwick Tree (BIT),data_structures.html,^§8.1\s+树状数组,PATTERN
+CORE DATA STRUCTURES,data-structures,Inversion Count,data_structures.html,^§8.2\s+逆序对,PATTERN
+CORE DATA STRUCTURES,data-structures,Segment Tree (Point Update),data_structures.html,^§8.3\s+线段树（无区间更新）,PATTERN
+CORE DATA STRUCTURES,data-structures,Lazy Segment Tree (Range Update),data_structures.html,^§8.4\s+Lazy\s+线段树（有区间更新）,PATTERN
+CORE DATA STRUCTURES,data-structures,Dynamic Segment Tree,data_structures.html,^§8.5\s+动态开点线段树,PATTERN
+CORE DATA STRUCTURES,data-structures,Persistent Segment Tree,data_structures.html,^§8.6\s+可持久化线段树,PATTERN
+CORE DATA STRUCTURES,data-structures,Sparse Table,data_structures.html,^§8.7\s+ST\s+表（Sparse\s+Table）,PATTERN
+CORE DATA STRUCTURES,data-structures,Splay Tree,data_structures.html,^九、伸展树（Splay\s+树）,PATTERN
+CORE DATA STRUCTURES,data-structures,Square Root Algorithms,data_structures.html,^十、根号算法,PATTERN
+CORE DATA STRUCTURES,data-structures,Square Root Decomposition,data_structures.html,^§8.1\s+根号分解（Sqrt\s+Decomposition）,PATTERN
+CORE DATA STRUCTURES,data-structures,Mo's Algorithm,data_structures.html,^§8.2\s+莫队算法,PATTERN
+CORE DATA STRUCTURES,data-structures,Miscellaneous,data_structures.html,^§8.3\s+其他,PATTERN
+DYNAMIC PROGRAMMING,dp,Intro DP,dp.html,^一、入门\s+DP,CORE|DP
+DYNAMIC PROGRAMMING,dp,Climbing Stairs,dp.html,^§1.1\s+爬楼梯,PATTERN
+DYNAMIC PROGRAMMING,dp,House Robber,dp.html,^§1.2\s+打家劫舍,PATTERN
+DYNAMIC PROGRAMMING,dp,Maximum Subarray Sum,dp.html,^§1.3\s+最大子数组和（最大子段和）,PATTERN
+DYNAMIC PROGRAMMING,dp,Grid DP,dp.html,^二、网格图\s+DP,DP|GRAPH
+DYNAMIC PROGRAMMING,dp,Fundamentals,dp.html,^§2.1\s+基础,CORE
+DYNAMIC PROGRAMMING,dp,Advanced,dp.html,^§2.2\s+进阶,ADVANCED
+DYNAMIC PROGRAMMING,dp,Knapsack,dp.html,^三、背包,PATTERN
+DYNAMIC PROGRAMMING,dp,0-1 Knapsack,dp.html,^§3.1\s+0-1\s+背包,PATTERN
+DYNAMIC PROGRAMMING,dp,Unbounded Knapsack,dp.html,^§3.2\s+完全背包,PATTERN
+DYNAMIC PROGRAMMING,dp,Bounded Knapsack (Optional),dp.html,^§3.3\s+多重背包（选做）,OPTIONAL
+DYNAMIC PROGRAMMING,dp,Grouped Knapsack,dp.html,^§3.4\s+分组背包,PATTERN
+DYNAMIC PROGRAMMING,dp,Tree Knapsack (Optional),dp.html,^§3.5\s+树形背包（选做）,OPTIONAL
+DYNAMIC PROGRAMMING,dp,Classic Linear DP,dp.html,^四、经典线性\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Longest Common Subsequence (LCS),dp.html,^§4.1\s+最长公共子序列（LCS）,PATTERN
+DYNAMIC PROGRAMMING,dp,Fundamentals,dp.html,^§4.1.1\s+基础,CORE
+DYNAMIC PROGRAMMING,dp,Advanced,dp.html,^§4.1.2\s+进阶,ADVANCED
+DYNAMIC PROGRAMMING,dp,Longest Increasing Subsequence (LIS),dp.html,^§4.2\s+最长递增子序列（LIS）,PATTERN
+DYNAMIC PROGRAMMING,dp,Fundamentals,dp.html,^§4.2.1\s+基础,CORE
+DYNAMIC PROGRAMMING,dp,Advanced,dp.html,^§4.2.2\s+进阶,ADVANCED
+DYNAMIC PROGRAMMING,dp,Partition DP,dp.html,^五、划分型\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Partition Feasibility,dp.html,^§5.1\s+判定能否划分,PATTERN
+DYNAMIC PROGRAMMING,dp,Optimal Partition,dp.html,^§5.2\s+最优划分,PATTERN
+DYNAMIC PROGRAMMING,dp,Constrained Partition Count,dp.html,^§5.3\s+约束划分个数,PATTERN
+DYNAMIC PROGRAMMING,dp,State Machine DP,dp.html,^六、状态机\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Stock Trading,dp.html,^§6.1\s+买卖股票,PATTERN
+DYNAMIC PROGRAMMING,dp,Fundamentals,dp.html,^§6.2\s+基础,CORE
+DYNAMIC PROGRAMMING,dp,Advanced,dp.html,^§6.3\s+进阶,ADVANCED
+DYNAMIC PROGRAMMING,dp,Other Linear DP,dp.html,^七、其他线性\s+DP,DP
+DYNAMIC PROGRAMMING,dp,1D DP,dp.html,^§7.1\s+一维\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Non-overlapping Intervals,dp.html,^§7.2\s+不相交区间,PATTERN
+DYNAMIC PROGRAMMING,dp,Subarray DP,dp.html,^§7.3\s+子数组\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Valid Subsequence DP,dp.html,^§7.4\s+合法子序列\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Subrectangle DP,dp.html,^§7.5\s+子矩形\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Multidimensional DP,dp.html,^§7.6\s+多维\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Counting DP,dp.html,^§7.7\s+计数\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Interval DP,dp.html,^八、区间\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Longest Palindromic Subsequence,dp.html,^§8.1\s+最长回文子序列,PATTERN
+DYNAMIC PROGRAMMING,dp,Interval DP,dp.html,^§8.2\s+区间\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Bitmask DP,dp.html,^九、状态压缩\s+DP（状压\s+DP）,DP
+DYNAMIC PROGRAMMING,dp,Permutation Bitmask DP (Independent Adjacent),dp.html,^§9.1\s+排列型状压\s+DP\s+①\s+相邻无关,DP
+DYNAMIC PROGRAMMING,dp,Permutation Bitmask DP (Dependent Adjacent),dp.html,^§9.2\s+排列型状压\s+DP\s+②\s+相邻相关,DP
+DYNAMIC PROGRAMMING,dp,Traveling Salesman Problem (TSP),dp.html,^§9.3\s+旅行商问题（TSP）,PATTERN
+DYNAMIC PROGRAMMING,dp,Subset Bitmask DP,dp.html,^§9.4\s+子集状压\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Profile DP,dp.html,^§9.5\s+轮廓线\s+DP,DP
+DYNAMIC PROGRAMMING,dp,SOS DP (Sum over Subsets),dp.html,^§9.6\s+SOS\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Other Bitmask DP,dp.html,^§9.7\s+其他状压\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Digit DP,dp.html,^十、数位\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Count Valid Elements,dp.html,^§10.1\s+统计合法元素的数目,PATTERN
+DYNAMIC PROGRAMMING,dp,Sum of Valid Element Values,dp.html,^§10.2\s+统计合法元素的价值总和,PATTERN
+DYNAMIC PROGRAMMING,dp,Other Digit DP,dp.html,^§10.3\s+其他数位\s+DP,DP
+DYNAMIC PROGRAMMING,dp,DP Optimizations,dp.html,^十一、优化\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Prefix Sum Optimization,dp.html,^§11.1\s+前缀和优化\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Monotonic Stack Optimization,dp.html,^§11.2\s+单调栈优化\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Monotonic Queue Optimization,dp.html,^§11.3\s+单调队列优化\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Fenwick/Segment Tree Optimization,dp.html,^§11.4\s+树状数组/线段树优化\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Trie Optimization,dp.html,^§11.5\s+字典树优化\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Matrix Exponentiation Optimization,dp.html,^§11.6\s+矩阵快速幂优化\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Convex Hull Trick,dp.html,^§11.7\s+斜率优化\s+DP,DP
+DYNAMIC PROGRAMMING,dp,WQS Binary Search Optimization,dp.html,^§11.8\s+WQS\s+二分优化\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Other Optimizations,dp.html,^§11.9\s+其他优化\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Tree DP,dp.html,^十二、树形\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Tree Diameter,dp.html,^§12.1\s+树的直径,PATTERN
+DYNAMIC PROGRAMMING,dp,Maximum Independent Set,dp.html,^§12.2\s+树上最大独立集,PATTERN
+DYNAMIC PROGRAMMING,dp,Minimum Dominating Set,dp.html,^§12.3\s+树上最小支配集,PATTERN
+DYNAMIC PROGRAMMING,dp,Rerooting DP,dp.html,^§12.4\s+换根\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Other Tree DP,dp.html,^§12.5\s+其他树形\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Graph DP,dp.html,^十三、图\s+DP,DP|GRAPH
+DYNAMIC PROGRAMMING,dp,Game Theory DP,dp.html,^十四、博弈\s+DP,DP
+DYNAMIC PROGRAMMING,dp,Probability/Expected Value DP,dp.html,^十五、概率/期望\s+DP,DP
+GRAPH ALGORITHMS,graph,Graph Traversal,graph.html,^一、图的遍历,GRAPH
+GRAPH ALGORITHMS,graph,Depth First Search (DFS),graph.html,^§1.1\s+深度优先搜索（DFS）,GRAPH
+GRAPH ALGORITHMS,graph,Breadth First Search (BFS),graph.html,^§1.2\s+广度优先搜索（BFS）,GRAPH
+GRAPH ALGORITHMS,graph,Graph Modeling + BFS Shortest Path,graph.html,^§1.3\s+图论建模\s++\s+BFS\s+最短路,GRAPH
+GRAPH ALGORITHMS,graph,Topological Sort,graph.html,^二、拓扑排序,PATTERN
+GRAPH ALGORITHMS,graph,Topological Sort,graph.html,^§2.1\s+拓扑排序,PATTERN
+GRAPH ALGORITHMS,graph,DP on Topological Order,graph.html,^§2.2\s+在拓扑序上\s+DP,DP
+GRAPH ALGORITHMS,graph,Cycle-Based Tree,graph.html,^§2.3\s+基环树,PATTERN
+GRAPH ALGORITHMS,graph,Shortest Path,graph.html,^三、最短路,PATTERN
+GRAPH ALGORITHMS,graph,Single Source: Dijkstra,graph.html,^§3.1\s+单源最短路：Dijkstra\s+算法,GRAPH
+GRAPH ALGORITHMS,graph,All Pairs: Floyd-Warshall,graph.html,^§3.2\s+全源最短路：Floyd\s+算法,GRAPH
+GRAPH ALGORITHMS,graph,Minimum Spanning Tree,graph.html,^四、最小生成树,PATTERN
+GRAPH ALGORITHMS,graph,Eulerian Path/Circuit,graph.html,^五、欧拉路径/欧拉回路,PATTERN
+GRAPH ALGORITHMS,graph,Strongly/Biconnected Components,graph.html,^六、强连通分量/双连通分量,PATTERN
+GRAPH ALGORITHMS,graph,Bipartite Graph Coloring,graph.html,^七、二分图染色,GRAPH
+GRAPH ALGORITHMS,graph,Network Flow,graph.html,^八、网络流,PATTERN
+GRAPH ALGORITHMS,graph,Miscellaneous,graph.html,^九、其他,PATTERN
+GRAPH ALGORITHMS,graph,Tree Algorithms,graph.html,^十、树上算法,PATTERN
+SPECIALIZED LOGIC,greedy,Greedy Strategies,greedy.html,^一、贪心策略,THINKING
+SPECIALIZED LOGIC,greedy,Start from Min/Max,greedy.html,^§1.1\s+从最小/最大开始贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Single Sequence Pairing,greedy.html,^§1.2\s+单序列配对,PATTERN
+SPECIALIZED LOGIC,greedy,Two Sequence Pairing,greedy.html,^§1.3\s+双序列配对,PATTERN
+SPECIALIZED LOGIC,greedy,Start from Left/Right,greedy.html,^§1.4\s+从最左/最右开始贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Partition Greedy,greedy.html,^§1.5\s+划分型贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Enumerate then Greedy,greedy.html,^§1.6\s+先枚举，再贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Exchange Argument,greedy.html,^§1.7\s+交换论证法,PATTERN
+SPECIALIZED LOGIC,greedy,Adjacent Difference,greedy.html,^§1.8\s+相邻不同,PATTERN
+SPECIALIZED LOGIC,greedy,Regret Greedy,greedy.html,^§1.9\s+反悔贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Interval Greedy,greedy.html,^二、区间贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Non-overlapping Intervals,greedy.html,^§2.1\s+不相交区间,PATTERN
+SPECIALIZED LOGIC,greedy,Interval Partitioning,greedy.html,^§2.2\s+区间分组,PATTERN
+SPECIALIZED LOGIC,greedy,Interval Point Selection,greedy.html,^§2.3\s+区间选点,PATTERN
+SPECIALIZED LOGIC,greedy,Interval Covering,greedy.html,^§2.4\s+区间覆盖,PATTERN
+SPECIALIZED LOGIC,greedy,Merge Intervals,greedy.html,^§2.5\s+合并区间,PATTERN
+SPECIALIZED LOGIC,greedy,Other Interval Greedy,greedy.html,^§2.6\s+其他区间贪心,PATTERN
+SPECIALIZED LOGIC,greedy,String Greedy,greedy.html,^三、字符串贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Lexicographically Smallest/Largest,greedy.html,^§3.1\s+字典序最小/最大,PATTERN
+SPECIALIZED LOGIC,greedy,Palindrome Greedy,greedy.html,^§3.2\s+回文串贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Valid Parentheses,greedy.html,^§3.3\s+合法括号字符串,PATTERN
+SPECIALIZED LOGIC,greedy,Mathematical Greedy,greedy.html,^四、数学贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Fundamentals,greedy.html,^§4.1\s+基础,CORE
+SPECIALIZED LOGIC,greedy,Product Greedy,greedy.html,^§4.2\s+乘积贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Rearrangement Inequality,greedy.html,^§4.3\s+排序不等式,PATTERN
+SPECIALIZED LOGIC,greedy,AM-GM Inequality,greedy.html,^§4.4\s+均值不等式,PATTERN
+SPECIALIZED LOGIC,greedy,Median Greedy,greedy.html,^§4.5\s+中位数贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Mathematical Induction,greedy.html,^§4.6\s+归纳法,PATTERN
+SPECIALIZED LOGIC,greedy,Other Mathematical Greedy,greedy.html,^§4.7\s+其他数学贪心,PATTERN
+SPECIALIZED LOGIC,greedy,Logical Thinking,greedy.html,^五、思维题,THINKING
+SPECIALIZED LOGIC,greedy,Special to General,greedy.html,^§5.1\s+从特殊到一般,PATTERN
+SPECIALIZED LOGIC,greedy,Brain Teasers,greedy.html,^§5.2\s+脑筋急转弯,PATTERN
+SPECIALIZED LOGIC,greedy,Equivalent Transformation,greedy.html,^§5.3\s+等价转换,PATTERN
+SPECIALIZED LOGIC,greedy,Reverse Thinking,greedy.html,^§5.4\s+逆向思维,THINKING
+SPECIALIZED LOGIC,greedy,Contribution Method,greedy.html,^§5.5\s+贡献法,PATTERN
+SPECIALIZED LOGIC,greedy,Two-Pass Scan,greedy.html,^§5.6\s+两次扫描,PATTERN
+SPECIALIZED LOGIC,greedy,Case Analysis,greedy.html,^§5.7\s+分类讨论,PATTERN
+SPECIALIZED LOGIC,greedy,Constructive Problems,greedy.html,^六、构造题,PATTERN
+SPECIALIZED LOGIC,greedy,Interactive Problems,greedy.html,^七、交互题,PATTERN
+SPECIALIZED LOGIC,greedy,Miscellaneous,greedy.html,^八、其他,PATTERN
+RECURSION & TREES,grid-graph,Grid DFS,grid_graph.html,^一、网格图\s+DFS,GRAPH
+RECURSION & TREES,grid-graph,Grid BFS,grid_graph.html,^二、网格图\s+BFS,GRAPH
+RECURSION & TREES,grid-graph,Grid 0-1 BFS,grid_graph.html,^三、网格图\s+0-1\s+BFS,GRAPH
+RECURSION & TREES,grid-graph,Grid Dijkstra,grid_graph.html,^四、网格图\s+Dijkstra,GRAPH
+RECURSION & TREES,grid-graph,Comprehensive Applications,grid_graph.html,^五、综合应用,PATTERN
+RECURSION & TREES,linked-list-tree,Linked List,linked_list_tree.html,^一、链表,PATTERN
+RECURSION & TREES,linked-list-tree,Traverse Linked List,linked_list_tree.html,^§1.1\s+遍历链表,PATTERN
+RECURSION & TREES,linked-list-tree,Delete Node,linked_list_tree.html,^§1.2\s+删除节点,PATTERN
+RECURSION & TREES,linked-list-tree,Insert Node,linked_list_tree.html,^§1.3\s+插入节点,PATTERN
+RECURSION & TREES,linked-list-tree,Reverse Linked List,linked_list_tree.html,^§1.4\s+反转链表,PATTERN
+RECURSION & TREES,linked-list-tree,Front-Back Pointers,linked_list_tree.html,^§1.5\s+前后指针,PATTERN
+RECURSION & TREES,linked-list-tree,Fast-Slow Pointers,linked_list_tree.html,^§1.6\s+快慢指针,PATTERN
+RECURSION & TREES,linked-list-tree,Two Pointers,linked_list_tree.html,^§1.7\s+双指针,PATTERN
+RECURSION & TREES,linked-list-tree,Merge Lists,linked_list_tree.html,^§1.8\s+合并链表,PATTERN
+RECURSION & TREES,linked-list-tree,Divide and Conquer,linked_list_tree.html,^§1.9\s+分治,PATTERN
+RECURSION & TREES,linked-list-tree,Comprehensive Applications,linked_list_tree.html,^§1.10\s+综合应用,PATTERN
+RECURSION & TREES,linked-list-tree,Miscellaneous,linked_list_tree.html,^§1.11\s+其他,PATTERN
+RECURSION & TREES,linked-list-tree,Binary Tree,linked_list_tree.html,^二、二叉树,PATTERN
+RECURSION & TREES,linked-list-tree,Tree Traversal,linked_list_tree.html,^§2.1\s+遍历二叉树,PATTERN
+RECURSION & TREES,linked-list-tree,Top-Down DFS (Preorder),linked_list_tree.html,^§2.2\s+自顶向下\s+DFS（先序遍历）,GRAPH
+RECURSION & TREES,linked-list-tree,Bottom-Up DFS (Postorder),linked_list_tree.html,^§2.3\s+自底向上\s+DFS（后序遍历）,GRAPH
+RECURSION & TREES,linked-list-tree,Bottom-Up DFS: Node Deletion,linked_list_tree.html,^§2.4\s+自底向上\s+DFS：删点,GRAPH
+RECURSION & TREES,linked-list-tree,Recursion with Return,linked_list_tree.html,^§2.5\s+有递有归,PATTERN
+RECURSION & TREES,linked-list-tree,Binary Tree Diameter,linked_list_tree.html,^§2.6\s+二叉树的直径,PATTERN
+RECURSION & TREES,linked-list-tree,Backtracking,linked_list_tree.html,^§2.7\s+回溯,PATTERN
+RECURSION & TREES,linked-list-tree,Lowest Common Ancestor (LCA),linked_list_tree.html,^§2.8\s+最近公共祖先,PATTERN
+RECURSION & TREES,linked-list-tree,Binary Search Tree (BST),linked_list_tree.html,^§2.9\s+二叉搜索树,PATTERN
+RECURSION & TREES,linked-list-tree,Construct Binary Tree,linked_list_tree.html,^§2.10\s+创建二叉树,PATTERN
+RECURSION & TREES,linked-list-tree,Insert/Delete Node,linked_list_tree.html,^§2.11\s+插入/删除节点,PATTERN
+RECURSION & TREES,linked-list-tree,Tree DP,linked_list_tree.html,^§2.12\s+树形\s+DP,DP
+RECURSION & TREES,linked-list-tree,Binary Tree BFS,linked_list_tree.html,^§2.13\s+二叉树\s+BFS,GRAPH
+RECURSION & TREES,linked-list-tree,Linked List + Binary Tree,linked_list_tree.html,^§2.14\s+链表+二叉树,PATTERN
+RECURSION & TREES,linked-list-tree,N-ary Tree,linked_list_tree.html,^§2.15\s+N\s+叉树,PATTERN
+RECURSION & TREES,linked-list-tree,Miscellaneous,linked_list_tree.html,^§2.16\s+其他,PATTERN
+RECURSION & TREES,linked-list-tree,General Tree,linked_list_tree.html,^三、一般树,PATTERN
+RECURSION & TREES,linked-list-tree,Traversal,linked_list_tree.html,^§3.1\s+遍历,PATTERN
+RECURSION & TREES,linked-list-tree,Top-Down DFS,linked_list_tree.html,^§3.2\s+自顶向下\s+DFS,GRAPH
+RECURSION & TREES,linked-list-tree,Bottom-Up DFS,linked_list_tree.html,^§3.3\s+自底向上\s+DFS,GRAPH
+RECURSION & TREES,linked-list-tree,Recursion with Return,linked_list_tree.html,^§3.4\s+有递有归,PATTERN
+RECURSION & TREES,linked-list-tree,Tree Diameter,linked_list_tree.html,^§3.5\s+树的直径,PATTERN
+RECURSION & TREES,linked-list-tree,Tree Topological Sort,linked_list_tree.html,^§3.6\s+树的拓扑排序,PATTERN
+RECURSION & TREES,linked-list-tree,DFS Timestamp,linked_list_tree.html,^§3.7\s+DFS\s+时间戳,GRAPH
+RECURSION & TREES,linked-list-tree,LCA & Binary Lifting,linked_list_tree.html,^§3.8\s+最近公共祖先（LCA）、倍增算法,PATTERN
+RECURSION & TREES,linked-list-tree,Virtual Tree,linked_list_tree.html,^§3.9\s+虚树,PATTERN
+RECURSION & TREES,linked-list-tree,DSU on Tree,linked_list_tree.html,^§3.10\s+树上启发式合并,PATTERN
+RECURSION & TREES,linked-list-tree,Centroid Decomposition,linked_list_tree.html,^§3.11\s+点分治,PATTERN
+RECURSION & TREES,linked-list-tree,Tree Sliding Window,linked_list_tree.html,^§3.12\s+树上滑动窗口,PATTERN
+RECURSION & TREES,linked-list-tree,Miscellaneous,linked_list_tree.html,^§3.13\s+其他,PATTERN
+RECURSION & TREES,linked-list-tree,Backtracking,linked_list_tree.html,^四、回溯,PATTERN
+RECURSION & TREES,linked-list-tree,Intro Backtracking,linked_list_tree.html,^§4.1\s+入门回溯,CORE
+RECURSION & TREES,linked-list-tree,Subset Backtracking,linked_list_tree.html,^§4.2\s+子集型回溯,PATTERN
+RECURSION & TREES,linked-list-tree,Partition Backtracking,linked_list_tree.html,^§4.3\s+划分型回溯,PATTERN
+RECURSION & TREES,linked-list-tree,Combination Backtracking,linked_list_tree.html,^§4.4\s+组合型回溯,PATTERN
+RECURSION & TREES,linked-list-tree,Permutation Backtracking,linked_list_tree.html,^§4.5\s+排列型回溯,PATTERN
+RECURSION & TREES,linked-list-tree,Backtracking with Duplicates,linked_list_tree.html,^§4.6\s+有重复元素的回溯,PATTERN
+RECURSION & TREES,linked-list-tree,Search,linked_list_tree.html,^§4.7\s+搜索,PATTERN
+RECURSION & TREES,linked-list-tree,Meet in the Middle,linked_list_tree.html,^§4.8\s+折半枚举,PATTERN
+RECURSION & TREES,linked-list-tree,Other Recursion/Divide & Conquer,linked_list_tree.html,^五、其他递归/分治,PATTERN
+SPECIALIZED LOGIC,math,Number Theory,math.html,^一、数论,PATTERN
+SPECIALIZED LOGIC,math,Primality Test,math.html,^§1.1\s+判断质数,PATTERN
+SPECIALIZED LOGIC,math,Sieve of Primes,math.html,^§1.2\s+预处理质数（筛质数）,PATTERN
+SPECIALIZED LOGIC,math,Prime Factorization,math.html,^§1.3\s+质因数分解,PATTERN
+SPECIALIZED LOGIC,math,Factorial Decomposition,math.html,^§1.4\s+阶乘分解,PATTERN
+SPECIALIZED LOGIC,math,Divisors,math.html,^§1.5\s+因子,PATTERN
+SPECIALIZED LOGIC,math,Greatest Common Divisor (GCD),math.html,^§1.6\s+最大公约数（GCD）,PATTERN
+SPECIALIZED LOGIC,math,Least Common Multiple (LCM),math.html,^§1.7\s+最小公倍数（LCM）,PATTERN
+SPECIALIZED LOGIC,math,Coprime,math.html,^§1.8\s+互质,PATTERN
+SPECIALIZED LOGIC,math,Modular Arithmetic,math.html,^§1.9\s+同余,PATTERN
+SPECIALIZED LOGIC,math,Number Theoretic Blocks,math.html,^§1.10\s+数论分块,PATTERN
+SPECIALIZED LOGIC,math,Miscellaneous,math.html,^§1.11\s+其他,PATTERN
+SPECIALIZED LOGIC,math,Combinatorics,math.html,^二、组合数学,PATTERN
+SPECIALIZED LOGIC,math,Multiplication Principle,math.html,^§2.1\s+乘法原理,PATTERN
+SPECIALIZED LOGIC,math,Combinatorial Counting,math.html,^§2.2\s+组合计数,PATTERN
+SPECIALIZED LOGIC,math,Balls and Boxes,math.html,^§2.3\s+放球问题,PATTERN
+SPECIALIZED LOGIC,math,Inclusion-Exclusion,math.html,^§2.4\s+容斥原理,PATTERN
+SPECIALIZED LOGIC,math,Generating Functions,math.html,^§2.5\s+生成函数（母函数）,PATTERN
+SPECIALIZED LOGIC,math,Probability/Expected Value,math.html,^三、概率期望,PATTERN
+SPECIALIZED LOGIC,math,Game Theory,math.html,^四、博弈论,PATTERN
+SPECIALIZED LOGIC,math,Computational Geometry,math.html,^五、计算几何,PATTERN
+SPECIALIZED LOGIC,math,Points & Lines,math.html,^§5.1\s+点、线,PATTERN
+SPECIALIZED LOGIC,math,Circles,math.html,^§5.2\s+圆,PATTERN
+SPECIALIZED LOGIC,math,Rectangles & Polygons,math.html,^§5.3\s+矩形、多边形,PATTERN
+SPECIALIZED LOGIC,math,Convex Hull,math.html,^§5.4\s+凸包,PATTERN
+SPECIALIZED LOGIC,math,Randomized Algorithms,math.html,^六、随机算法,PATTERN
+SPECIALIZED LOGIC,math,Random Numbers,math.html,^§6.1\s+随机数,PATTERN
+SPECIALIZED LOGIC,math,Randomization Techniques,math.html,^§6.2\s+随机化技巧,PATTERN
+SPECIALIZED LOGIC,math,Miscellaneous,math.html,^七、杂项,PATTERN
+SPECIALIZED LOGIC,math,Palindrome Numbers,math.html,^§7.1\s+回文数,PATTERN
+SPECIALIZED LOGIC,math,Integer Partition,math.html,^§7.2\s+整数拆分,PATTERN
+SPECIALIZED LOGIC,math,Manhattan & Chebyshev Distance,math.html,^§7.3\s+曼哈顿距离与切比雪夫距离,PATTERN
+SPECIALIZED LOGIC,math,Polynomials,math.html,^§7.4\s+多项式,PATTERN
+SPECIALIZED LOGIC,math,Fast Walsh Transform (FWT),math.html,^§7.5\s+快速沃尔什变换（FWT）,PATTERN
+SPECIALIZED LOGIC,math,Linear Basis,math.html,^§7.6\s+线性基,PATTERN
+SPECIALIZED LOGIC,math,Boyer-Moore Voting,math.html,^§7.7\s+摩尔投票法,PATTERN
+SPECIALIZED LOGIC,math,Miscellaneous,math.html,^§7.8\s+其他,PATTERN
+CORE DATA STRUCTURES,monotonic-stack,Monotonic Stack,monotonic_stack.html,^一、单调栈,PATTERN
+CORE DATA STRUCTURES,monotonic-stack,Fundamentals,monotonic_stack.html,^§1.1\s+基础,CORE
+CORE DATA STRUCTURES,monotonic-stack,Advanced,monotonic_stack.html,^§1.2\s+进阶,ADVANCED
+CORE DATA STRUCTURES,monotonic-stack,Rectangles,monotonic_stack.html,^二、矩形,PATTERN
+CORE DATA STRUCTURES,monotonic-stack,Contribution Method,monotonic_stack.html,^三、贡献法,PATTERN
+CORE DATA STRUCTURES,monotonic-stack,Minimum Lexicographical Order,monotonic_stack.html,^四、最小字典序,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Fixed-Length Sliding Window,sliding_window.html,^一、定长滑动窗口,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Fundamentals,sliding_window.html,^§1.1\s+基础,CORE
+LINEAR FOUNDATIONS,sliding-window,Advanced (Optional),sliding_window.html,^§1.2\s+进阶（选做）,ADVANCED|OPTIONAL
+LINEAR FOUNDATIONS,sliding-window,Others (Optional),sliding_window.html,^§1.3\s+其他（选做）,OPTIONAL
+LINEAR FOUNDATIONS,sliding-window,Variable-Length Sliding Window,sliding_window.html,^二、不定长滑动窗口,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Shorter is Valid / Find Longest,sliding_window.html,^§2.1\s+越短越合法/求最长/最大,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Fundamentals,sliding_window.html,^§2.1.1\s+基础,CORE
+LINEAR FOUNDATIONS,sliding-window,Advanced (Optional),sliding_window.html,^§2.1.2\s+进阶（选做）,ADVANCED|OPTIONAL
+LINEAR FOUNDATIONS,sliding-window,Longer is Valid / Find Shortest,sliding_window.html,^§2.2\s+越长越合法/求最短/最小,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Count Subarrays,sliding_window.html,^§2.3\s+求子数组个数,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Shorter is Valid,sliding_window.html,^§2.3.1\s+越短越合法,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Longer is Valid,sliding_window.html,^§2.3.2\s+越长越合法,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Exactly K Window,sliding_window.html,^§2.3.3\s+恰好型滑动窗口,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Others (Optional),sliding_window.html,^§2.4\s+其他（选做）,OPTIONAL
+LINEAR FOUNDATIONS,sliding-window,Single Sequence Two Pointers,sliding_window.html,^三、单序列双指针,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Reverse String,sliding_window.html,^§3.1\s+反转字符串,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Opposite Direction,sliding_window.html,^§3.2\s+相向双指针,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Same Direction,sliding_window.html,^§3.3\s+同向双指针,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Outward Two Pointers,sliding_window.html,^§3.4\s+背向双指针,PATTERN
+LINEAR FOUNDATIONS,sliding-window,In-Place Modification,sliding_window.html,^§3.5\s+原地修改,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Two Pointers on Matrix,sliding_window.html,^§3.6\s+矩阵上的双指针,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Two Sequence Two Pointers,sliding_window.html,^四、双序列双指针,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Two Pointers,sliding_window.html,^§4.1\s+双指针,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Subsequence Matching,sliding_window.html,^§4.2\s+判断子序列,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Three Pointers,sliding_window.html,^五、三指针,PATTERN
+LINEAR FOUNDATIONS,sliding-window,Grouped Iteration,sliding_window.html,^六、分组循环,PATTERN
+SPECIALIZED LOGIC,strings,KMP (Prefix Function),strings.html,^一、KMP（前缀的后缀）,PATTERN
+SPECIALIZED LOGIC,strings,Z-function (Z-Algorithm),strings.html,^二、Z\s+函数（后缀的前缀）,PATTERN
+SPECIALIZED LOGIC,strings,Manacher (Palindromes),strings.html,^三、Manacher\s+算法（回文串）,PATTERN
+SPECIALIZED LOGIC,strings,String Hashing,strings.html,^四、字符串哈希,PATTERN
+SPECIALIZED LOGIC,strings,Minimum Representation,strings.html,^五、最小表示法,PATTERN
+SPECIALIZED LOGIC,strings,字典树,strings.html,^六、字典树,PATTERN
+SPECIALIZED LOGIC,strings,Aho-Corasick Automaton,strings.html,^七、AC\s+自动机,PATTERN
+SPECIALIZED LOGIC,strings,Suffix Array/Automaton,strings.html,^八、后缀数组/后缀自动机,PATTERN
+SPECIALIZED LOGIC,strings,Subsequence Automaton,strings.html,^九、子序列自动机,PATTERN
+SPECIALIZED LOGIC,strings,Miscellaneous,strings.html,^十、其他,PATTERN
