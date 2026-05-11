@@ -86,9 +86,8 @@ export function SearchBar({ taxonomy }: { taxonomy: Topic[] }) {
             <Badge
               key={tag}
               variant="outline"
-              className={`cursor-pointer transition-all duration-200 text-[11px] h-6 px-2 font-medium ${
-                TAG_COLORS[tag] || 'border-border/60 text-muted-foreground'
-              } ${selectedTags.includes(tag) ? 'ring-1 ring-offset-1 ring-offset-background ring-current' : 'opacity-60 hover:opacity-100'}`}
+              className={`cursor-pointer transition-all duration-200 text-[11px] h-6 px-2 font-medium ${TAG_COLORS[tag] || 'border-border/60 text-muted-foreground'
+                } ${selectedTags.includes(tag) ? 'ring-1 ring-offset-1 ring-offset-background ring-current' : 'opacity-60 hover:opacity-100'}`}
               onClick={() => toggleTag(tag)}
             >
               {tag}
@@ -96,7 +95,7 @@ export function SearchBar({ taxonomy }: { taxonomy: Topic[] }) {
           ))}
         </div>
 
-        <div className="ml-auto w-[350px]">
+        <div className="ml-auto w-[260px]">
           <Combobox
             multiple
             items={allSections}
