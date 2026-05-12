@@ -72,7 +72,7 @@ function SubtopicBlock({ subtopic, topicId, sectionIdx, subIdx }: {
 
 export function TopicAccordion({ taxonomy }: { taxonomy: Topic[] }) {
     const totalProblems = getTotalProblemCount(taxonomy);
-    const { solvedProblems, isSolved, resetProgress } = useProgress();
+    const { solvedProblems, isSolved, resetTaxonomyProgress } = useProgress();
     const { searchQuery, selectedTags, selectedSections } = useSearch();
 
     // Get all problem IDs in the current taxonomy to filter solved problems
@@ -133,8 +133,8 @@ export function TopicAccordion({ taxonomy }: { taxonomy: Topic[] }) {
                             {solvedInCurrentTaxonomy > 0 && (
                                 <button
                                     onClick={() => {
-                                        if (window.confirm('Reset all progress? This cannot be undone.')) {
-                                            resetProgress();
+                                        if (window.confirm('Reset progress for this tab? This cannot be undone.')) {
+                                            resetTaxonomyProgress(taxonomyProblemIds);
                                         }
                                     }}
                                     className="p-1 rounded-md text-muted-foreground/50 hover:text-destructive hover:bg-destructive/10 transition-colors"

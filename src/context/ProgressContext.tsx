@@ -5,6 +5,7 @@ interface ProgressContextType {
     toggleProblem: (id: string) => void;
     isSolved: (id: string) => boolean;
     resetProgress: () => void;
+    resetTaxonomyProgress: (taxonomyIds: Set<string>) => void;
     progressPercentage: number;
     totalSolvedCount: number;
 }
@@ -37,6 +38,16 @@ export function ProgressProvider({ children, totalProblems }: { children: React.
         setSolvedProblems(new Set());
     };
 
+    const resetTaxonomyProgress = (taxonomyIds: Set<string>) => {
+        setSolvedProblems(prev => {
+            const newSolved = new Set(prev);
+            for (const id of taxonomyIds) {
+                newSolved.delete(id);
+            }
+            return newSolved;
+        });
+    };
+
     const isSolved = (id: string) => solvedProblems.has(id);
 
     const totalSolvedCount = solvedProblems.size;
@@ -50,6 +61,7 @@ export function ProgressProvider({ children, totalProblems }: { children: React.
             toggleProblem,
             isSolved,
             resetProgress,
+            resetTaxonomyProgress,
             progressPercentage,
             totalSolvedCount
         }}>
