@@ -1,6 +1,7 @@
 import { TaxonomyTabs } from "@/components/dashboard/TaxonomyTabs";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { SearchProvider } from "@/context/SearchContext";
+import { ReviewProvider } from "@/context/ReviewContext";
 
 
 function Dashboard() {
@@ -35,12 +36,14 @@ function App() {
   return (
     <ProgressProvider totalProblems={totalProblems}>
       <SearchProvider>
-        <BrowserRouter basename="/endlesscode-io/">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </BrowserRouter>
+        <ReviewProvider>
+          <BrowserRouter basename="/endlesscode-io/">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </BrowserRouter>
+        </ReviewProvider>
       </SearchProvider>
     </ProgressProvider>
   )

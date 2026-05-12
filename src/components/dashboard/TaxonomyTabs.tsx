@@ -2,7 +2,9 @@ import { useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { TopicAccordion } from './TopicAccordion';
-import { TABS } from '@/data/tabs';
+import { ReviewTab } from './ReviewTab';
+import { GauntletTab } from './GauntletTab';
+import { TABS, TAB_GROUPS } from '@/data/tabs';
 import type { TabId } from '@/types/tabs';
 import { getTaxonomy, getMasteryTaxonomy, getNeetcodeTaxonomy } from '@/data/adapter';
 import type { Topic } from '@/data/types';
@@ -52,21 +54,59 @@ export function TaxonomyTabs() {
         return map;
     }, []);
 
+    const renderTabContent = (tabId: string) => {
+        const tab = TABS.find(t => t.id === tabId);
+
+        if (!tab) return null;
+
+        // Practice tabs will be rendered by their own components
+        if (tab.group === 'practice') {
+            return (
+                <TabsContent key={tab.id} value={tab.id} className="mt-0">
+                    {tab.id === 'review' && <ReviewTab />}
+                    {tab.id === 'gauntlet' && <GauntletTab />}
+                </TabsContent>
+            );
+        }
+
+        // Taxonomy tabs use TopicAccordion
+        return (
+            <TabsContent key={tab.id} value={tab.id} className="mt-0">
+                <TopicAccordion taxonomy={taxonomyMap[tab.id] || []} />
+            </TabsContent>
+        );
+    };
+
     return (
         <Tabs value={activeTab} onValueChange={handleTabChange}>
-            <TabsList className="mb-6">
-                {TABS.map((tab) => (
-                    <TabsTrigger key={tab.id} value={tab.id}>
-                        {tab.label}
-                    </TabsTrigger>
-                ))}
-            </TabsList>
+            <div className="flex flex-row items-start gap-8 mb-6">
+                <div>
+                    <div className="text-xs font-medium text-muted-foreground mb-2 px-1">
+                        TAXONOMY
+                    </div>
+                    <TabsList>
+                        {TAB_GROUPS[0].tabs.map((tab) => (
+                            <TabsTrigger key={tab.id} value={tab.id}>
+                                {tab.label}
+                            </TabsTrigger>
+                        ))}
+                    </TabsList>
+                </div>
+                <div className="ml-auto">
+                    <div className="text-xs font-medium text-muted-foreground mb-2 px-1">
+                        PRACTICE
+                    </div>
+                    <TabsList>
+                        {TAB_GROUPS[1].tabs.map((tab) => (
+                            <TabsTrigger key={tab.id} value={tab.id}>
+                                {tab.label}
+                            </TabsTrigger>
+                        ))}
+                    </TabsList>
+                </div>
+            </div>
 
-            {TABS.map((tab) => (
-                <TabsContent key={tab.id} value={tab.id} className="mt-0">
-                    <TopicAccordion taxonomy={taxonomyMap[tab.id] || []} />
-                </TabsContent>
-            ))}
+            {TABS.map((tab) => renderTabContent(tab.id))}
         </Tabs>
     );
 }

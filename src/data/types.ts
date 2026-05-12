@@ -10,6 +10,23 @@ export type Problem = {
     is_predicted?: boolean;
 };
 
+export type ProblemReview = {
+    difficulty: "Struggle" | "Confident" | "Mastered";
+    nextReview: string; // ISO timestamp
+    reviewCount: number;
+    lastReviewed: string; // ISO timestamp
+    notes?: string;
+};
+
+export type Gauntlet = {
+    id: string;
+    name: string;
+    problems: string[];
+    createdAt: string;
+    ratingRange: { min: number; max: number };
+    categories: string[];
+};
+
 export type Subtopic = {
     title: string;
     title_zh?: string;

@@ -10,7 +10,7 @@ import {
     TableRow,
 } from "@/components/ui/table";
 import type { Problem } from "@/data/types";
-import { ArrowDown, ArrowUp, ArrowUpDown, ExternalLink, Lock, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUp, ArrowUpDown, ExternalLink, Lock, Sparkles, BookOpen, BookCheck } from "lucide-react";
 import { useState } from "react";
 import {
     Tooltip,
@@ -18,6 +18,8 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { ReviewModal } from "./ReviewModal";
+import { useReview } from "@/context/ReviewContext";
 
 interface ProblemTableProps {
     problems: Problem[];
@@ -38,6 +40,7 @@ import { useProgress } from "@/context/ProgressContext";
 export function ProblemTable({ problems }: ProblemTableProps) {
     const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
     const { isSolved, toggleProblem } = useProgress();
+    const { isInReview } = useReview();
 
     const handleSort = () => {
         if (sortDirection === null) {
@@ -71,6 +74,7 @@ export function ProblemTable({ problems }: ProblemTableProps) {
                 <TableRow>
                     <TableHead className="w-[50px]">Done</TableHead>
                     <TableHead>Problem</TableHead>
+                    <TableHead className="w-[60px]">Review</TableHead>
                     <TableHead className="w-[100px]">
                         <Button
                             variant="ghost"
@@ -113,6 +117,17 @@ export function ProblemTable({ problems }: ProblemTableProps) {
                                     <Lock className="w-3 h-3 text-amber-500 shrink-0" />
                                 )}
                             </div>
+                        </TableCell>
+                        <TableCell>
+                            <ReviewModal problemId={prob.id} problemTitle={prob.title}>
+                                <Button variant="ghost" size="icon" className="h-8 w-8">
+                                    {isInReview(prob.id) ? (
+                                        <BookCheck className="w-4 h-4" />
+                                    ) : (
+                                        <BookOpen className="w-4 h-4 text-muted-foreground" />
+                                    )}
+                                </Button>
+                            </ReviewModal>
                         </TableCell>
                         <TableCell>
                             {prob.rating !== null ? (
