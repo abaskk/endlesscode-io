@@ -14,6 +14,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Textarea } from '@/components/ui/textarea';
 import { useReview } from '@/context/ReviewContext';
 import type { ProblemReview } from '@/data/types';
+import { calculateNextReview } from '@/utils/spacedRepetition';
 
 interface ReviewModalProps {
     problemId: string;
@@ -54,10 +55,15 @@ export function ReviewModal({ problemId, problemTitle, children }: ReviewModalPr
                 lastReviewed: now,
             });
         } else {
-            // Create new review
+            // Create new review - calculate proper next review date (1 day out)
             const newReview: ProblemReview = {
                 difficulty,
-                nextReview: now, // Will be updated by spaced repetition algo
+                nextReview: calculateNextReview({
+                    difficulty,
+                    nextReview: now,
+                    reviewCount: 0,
+                    lastReviewed: now,
+                }),
                 reviewCount: 0,
                 lastReviewed: now,
                 notes: notes || undefined,

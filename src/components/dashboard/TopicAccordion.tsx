@@ -5,7 +5,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { getTotalProblemCount } from "@/data/adapter";
+import { getAllProblemIds, getTotalProblemCount } from "@/data/adapter";
 import { filterTaxonomy } from "@/data/filterTaxonomy";
 import type { Section, Subtopic, Topic } from "@/data/types";
 import { ProblemTable } from "./ProblemTable";
@@ -72,8 +72,15 @@ function SubtopicBlock({ subtopic, topicId, sectionIdx, subIdx }: {
 
 export function TopicAccordion({ taxonomy }: { taxonomy: Topic[] }) {
     const totalProblems = getTotalProblemCount(taxonomy);
-    const { isSolved, totalSolvedCount, resetProgress } = useProgress();
+    const { solvedProblems, isSolved, resetProgress } = useProgress();
     const { searchQuery, selectedTags, selectedSections } = useSearch();
+
+    // Get all problem IDs in the current taxonomy to filter solved problems
+    const taxonomyProblemIds = useMemo(() => new Set(getAllProblemIds(taxonomy)), [taxonomy]);
+    const solvedInCurrentTaxonomy = useMemo(() =>
+        Array.from(solvedProblems).filter(id => taxonomyProblemIds.has(id)).length,
+        [solvedProblems, taxonomyProblemIds]
+    );
 
     const filteredTaxonomy = useMemo(() =>
         filterTaxonomy(taxonomy, searchQuery, selectedTags, selectedSections),
@@ -117,13 +124,13 @@ export function TopicAccordion({ taxonomy }: { taxonomy: Topic[] }) {
                     </div>
                     <div className="text-right">
                         <span className="text-3xl font-bold text-primary block leading-none">
-                            {totalSolvedCount} <span className="text-lg text-muted-foreground">/ {totalProblems}</span>
+                            {solvedInCurrentTaxonomy} <span className="text-lg text-muted-foreground">/ {totalProblems}</span>
                         </span>
                         <div className="flex items-center justify-end gap-2 mt-1">
                             <span className="text-sm text-muted-foreground mt-1">
                                 Problems Solved
                             </span>
-                            {totalSolvedCount > 0 && (
+                            {solvedInCurrentTaxonomy > 0 && (
                                 <button
                                     onClick={() => {
                                         if (window.confirm('Reset all progress? This cannot be undone.')) {

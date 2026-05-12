@@ -213,3 +213,24 @@ export const getTotalProblemCount = (taxonomy?: Topic[]): number => {
     }
     return count;
 };
+
+/**
+ * Get all problem IDs from a taxonomy.
+ * Used to filter solved problems to only count those in the current taxonomy.
+ */
+export const getAllProblemIds = (taxonomy: Topic[]): string[] => {
+    const ids: string[] = [];
+    for (const topic of taxonomy) {
+        for (const section of topic.sections) {
+            for (const p of section.problems) {
+                ids.push(p.id);
+            }
+            for (const sub of section.subtopics) {
+                for (const p of sub.problems) {
+                    ids.push(p.id);
+                }
+            }
+        }
+    }
+    return ids;
+};
